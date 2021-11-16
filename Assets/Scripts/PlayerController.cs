@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     //Variable para poder modificar las propiedades de Player
     private Rigidbody2D rPlayer;
 
+    //Variable para obtener el valor de las animaciones
+    private Animator aPlayer;
+
     //Variable que toma el valor horizontal
     private float horizontal;
 
@@ -26,6 +29,9 @@ public class PlayerController : MonoBehaviour
     {
         //a rPlayer le asignamos el componente rigiBody
         rPlayer = GetComponent<Rigidbody2D>();
+         
+        //a Player se le asigna el componente Animator
+        aPlayer = GetComponent<Animator>();
     }
 
     
@@ -33,6 +39,15 @@ public class PlayerController : MonoBehaviour
     {
         //Enviamos al método girarPlayer el valor del eje horizontal
         girarPlayer(horizontal);
+
+        //Pasar la velocidad del jugador a la variable Velocidad en el eje X
+        aPlayer.SetFloat("VelocidadX", Mathf.Abs(rPlayer.velocity.x));
+
+        //Pasar la velocidad del jugador a la variable Velocidad en el eje Y
+        aPlayer.SetFloat("VelocidadY",(rPlayer.velocity.y));
+
+        //Pasar el valor de colPies a la Variable TocaSuelo
+        aPlayer.SetBool("TocaSuelo", colPies);
 
         //Código para el salto
         //Comprobar si estamos tocando Terreno
