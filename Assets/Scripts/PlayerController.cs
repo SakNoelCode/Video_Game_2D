@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float velocidad;
     public float velocidadMax;
     public float fuerzaSalto;
+    public float friccionSuelo;
 
     //Variable del colisionador Pies
     public bool colPies = false;
@@ -80,6 +81,15 @@ public class PlayerController : MonoBehaviour
 
         //Asignamos esa velocidad al Player, la velocidad en el eje Y, lo dejamos tál cuál esta
         rPlayer.velocity = new Vector2(limiteVelocidad,rPlayer.velocity.y);
+
+        //Codigo para arreglar la velocidad por friccion
+        if (horizontal == 0 && colPies)//Si no existe movimiento y si esta tocando el suelo
+        {
+            //Aplicamos una friccion solo a la velocidad del eje x
+            Vector3 velocidadArreglada = rPlayer.velocity;
+            velocidadArreglada.x *= friccionSuelo;
+            rPlayer.velocity = velocidadArreglada;
+        }
     }
 
     //Método para girar al Player de Derecha a Izquierda o Viceversa
