@@ -16,13 +16,28 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform checkGround;
     [SerializeField] private float checkGroundRadio;
     [SerializeField] private LayerMask capaSuelo;
+    [SerializeField] private float addRayo;
+    [SerializeField] private float anguloMax;
+    [SerializeField] private PhysicsMaterial2D sinF;
+    [SerializeField] private PhysicsMaterial2D maxF;
+
+
+    [Header("Valores Informátivas")]
+    [SerializeField] private bool tocaSuelo = false;
+    [SerializeField] private bool enPendiente;
+
+
+    //Variables Capsule Colider para recoger los valores de la cápsula (Método chechPendiente)
+    private CapsuleCollider2D ccPlayer;
+    private Vector2 ccSize;
+
+    //Variables booleanas y float para los rayos de las pendientes (Método chechPendiente)
+    private float anguloLateral;
+    private float anguloPendiente;
+    private float anguloAnterior;
+    private Vector2 anguloPerpendicular;
 
     
-    [Header("Valores de Referencia")]
-
-
-    //Variable para verificar si el player toca el suelo
-    private bool tocaSuelo = false;
 
     //Variable para poder modificar las propiedades de Player
     private Rigidbody2D rPlayer;
@@ -30,7 +45,7 @@ public class PlayerController : MonoBehaviour
     //Variable para poder obtener el valor de las animaciones
     private Animator aPlayer;
 
-    //Variable flotante que tomara el valor del eje horizontal
+    //Variable flotante que tomara el valor del eje horizontal valores ( 1 , -1)
     private float horizontal;
 
     //Variable que tendrá dos valores(x,y) y será encargada de la velocidad del Player
@@ -45,6 +60,9 @@ public class PlayerController : MonoBehaviour
     //Variable que se usa para verificar si el personaje puede saltar
     private bool puedoSaltar = false;
 
+    //Variable que se usa para verificar si el personaje puede caminar
+    private bool puedoCaminar;
+
 
 
     //---------------------------------------Método Start---------------------------------------------------
@@ -55,6 +73,10 @@ public class PlayerController : MonoBehaviour
 
         //a Player se le asigna el componente Animator, podremos modificar las propiedades Animator Player
         aPlayer = GetComponent<Animator>();
+
+        //Obtener el Capsule Colider y el tamaño(Método chechPendiente)
+        ccPlayer = GetComponent<CapsuleCollider2D>();
+        ccSize = ccPlayer.size;
     }
 
 
@@ -71,6 +93,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         checkTocaSuelo();
+        checkPendiente();
         movimientoPlayer();
     }
 
@@ -78,21 +101,25 @@ public class PlayerController : MonoBehaviour
     private void movimientoPlayer()
     {
         //Player en el suelo
-        if(tocaSuelo && !estaSaltando)
+        if(tocaSuelo && !estaSaltando && !enPendiente)
         {
             nuevaVelocidad.Set(velocidad * horizontal, 0.0f);
+            rPlayer.velocity = nuevaVelocidad;
+
+        //Player en una pendiente
+        }else if(tocaSuelo && !estaSaltando && puedoCaminar && enPendiente)
+        {
+            nuevaVelocidad.Set(velocidad * anguloPerpendicular.x * -horizontal,velocidad * anguloPerpendicular.y * -horizontal);
             rPlayer.velocity = nuevaVelocidad;
         }
 
         //Player Saltando
-        else
+        else if (!tocaSuelo)
         {
-            if (!tocaSuelo)
-            {
-                nuevaVelocidad.Set(velocidad * horizontal, rPlayer.velocity.y);
-                rPlayer.velocity = nuevaVelocidad;
-            }     
-        }
+            nuevaVelocidad.Set(velocidad * horizontal, rPlayer.velocity.y);
+            rPlayer.velocity = nuevaVelocidad;
+        }     
+        
         
     }
 
@@ -142,7 +169,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    //Función que permite verificar si el Player esta saltando o si puede Saltar
+    //Función que permite verificar si el Player esta tocando el suelo
     private void checkTocaSuelo()
     {
         tocaSuelo = Physics2D.OverlapCircle(checkGround.position, checkGroundRadio, capaSuelo);
@@ -156,7 +183,67 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-   
+
+    //Función que permite verificar si el Player esta en una pendiente
+    private void checkPendiente()
+    {
+
+        //----------------------------------COLISIONES HORIZONTALES-------------------------------
+        //Obtener la posición de los pies
+        Vector2 posPies = transform.position - (Vector3)(new Vector2(0.0f, ccSize.y / 2));
+
+        //Crear un rayo hacia la derecha
+        RaycastHit2D hitDelante = Physics2D.Raycast(posPies, Vector2.right, addRayo, capaSuelo);
+
+        //Crear un rayo hacia la izquierda
+        RaycastHit2D hitDetras = Physics2D.Raycast(posPies, -Vector2.right, addRayo, capaSuelo);
+
+        //Pintar los Rayos en la escena
+        Debug.DrawRay(posPies, Vector2.right * addRayo, Color.cyan);
+        Debug.DrawRay(posPies, -Vector2.right * addRayo, Color.red);
+
+        if (hitDelante)
+        {
+            enPendiente = true;
+            anguloLateral = Vector2.Angle(hitDelante.normal, Vector2.up);
+        } else if (hitDetras)
+        {
+            enPendiente = true;
+            anguloLateral = Vector2.Angle(hitDetras.normal, Vector2.up);
+        }
+        else
+        {
+            enPendiente = false;
+            anguloLateral = 0;
+        }
+
+        //----------------------------------COLISIONES VERTICALES-------------------------------
+        RaycastHit2D hitVertical = Physics2D.Raycast(posPies, Vector2.down, addRayo, capaSuelo);
+
+        if (hitVertical)
+        {
+            anguloPendiente = Vector2.Angle(hitVertical.normal, Vector2.up);
+            anguloPerpendicular = Vector2.Perpendicular(hitVertical.normal).normalized;
+            if (anguloPendiente != anguloAnterior) enPendiente = true;
+            anguloAnterior = anguloPendiente;
+            //Pintar los rayos en escena
+            Debug.DrawRay(hitVertical.point, anguloPerpendicular, Color.blue);
+            Debug.DrawRay(hitVertical.point, hitVertical.normal, Color.green);
+        }
+
+
+        //----------------------------------OTRAS COMPROBACIONES-------------------------------
+        //Si el angulo es mayor que el anguloMax, no se podrá caminar
+        if (anguloPendiente > anguloMax || anguloLateral > anguloMax) puedoCaminar = false;
+        else puedoCaminar = true;
+        
+        //Comprobar pendientes y asignar un tipo de material
+        if (enPendiente && puedoCaminar && horizontal == 0.0f) rPlayer.sharedMaterial = maxF;
+        else rPlayer.sharedMaterial = sinF;   
+
+    }
+
+
     //Recoger los valores de las animaciones
     private void variablesAnimador()
     {
@@ -174,7 +261,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
+      
     //Método para girar al Player de Derecha a Izquierda o Viceversa
     void girarPlayer()
     {        
@@ -183,10 +270,10 @@ public class PlayerController : MonoBehaviour
         escalaGiro.x = escalaGiro.x * -1;
         transform.localScale = escalaGiro;
     }
-
-
-   /* private void OnDrawGizmos()
+     
+    //Para dibujar el Gizmo en escena 
+   private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(checkGround.position, checkGroundRadio);
-    }*/
+    }
 } 

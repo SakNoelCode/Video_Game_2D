@@ -292,10 +292,14 @@ MonoBehaviour:
   saltoLargo: 1.3
   saltoCorto: 1
   checkGround: {fileID: 647776685}
-  checkGroundRadio: 0.33
+  checkGroundRadio: 0.34
   capaSuelo:
     serializedVersion: 2
     m_Bits: 8
+  addRayo: 0.15
+  anguloMax: 46
+  sinF: {fileID: 6200000, guid: e76d5b171d086df419d0e71daf96eac5, type: 2}
+  maxF: {fileID: 6200000, guid: 1faff5a9b5bab2a4f94f27accf711d25, type: 2}
 --- !u!70 &1169736243
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -392,7 +396,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169736241}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.19, y: -2.53, z: 0}
+  m_LocalPosition: {x: -2, y: -2.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 647776685}
