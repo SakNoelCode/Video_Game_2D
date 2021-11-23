@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
     private float anguloAnterior;
     private Vector2 anguloPerpendicular;
 
+    private Vector3 posIni;
+
     
 
     //Variable para poder modificar las propiedades de Player
@@ -63,11 +65,17 @@ public class PlayerController : MonoBehaviour
     //Variable que se usa para verificar si el personaje puede caminar
     private bool puedoCaminar;
 
+    private bool enPlataforma = false;  //estado Plataforma
+
 
 
     //---------------------------------------Método Start---------------------------------------------------
     void Start()
     {
+        //Asignar al jugador la posicion Inicial
+        posIni = transform.position;
+
+
         //a rPlayer le asignamos el componente rigiBody, podremos modificar las propiedades de Player
         rPlayer = GetComponent<Rigidbody2D>();
 
@@ -103,8 +111,8 @@ public class PlayerController : MonoBehaviour
         //Player en el suelo
         if(tocaSuelo && !estaSaltando && !enPendiente)
         {
-            nuevaVelocidad.Set(velocidad * horizontal, 0.0f);
-            rPlayer.velocity = nuevaVelocidad;
+            nuevaVelocidad.Set(velocidad * horizontal, rPlayer.velocity.y);
+            rPlayer.velocity = nuevaVelocidad; 
 
         //Player en una pendiente
         }else if(tocaSuelo && !estaSaltando && puedoCaminar && enPendiente)
@@ -127,6 +135,9 @@ public class PlayerController : MonoBehaviour
     //Método para controlar las teclas que pulsa el jugador
     private void recibePulsaciones()
     {
+        //Colocar al Player en la posicion Inicial
+        if (Input.GetKey(KeyCode.R)) transform.position = posIni;
+
         //La variable horizontal toma el valor del eje horizontal
         horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -184,14 +195,20 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    //Función que permite verificar si el Player esta en una pendiente
+    //----------------------------------------CHECK PENDIENTE------------------------------------------
+
     private void checkPendiente()
     {
-
-        //----------------------------------COLISIONES HORIZONTALES-------------------------------
-        //Obtener la posición de los pies
+        if (!enPlataforma) { 
         Vector2 posPies = transform.position - (Vector3)(new Vector2(0.0f, ccSize.y / 2));
+        checkPenHorizontal(posPies);
+            checkPenVertical(posPies);
+        }
+    }
 
+
+     private void checkPenHorizontal(Vector2 posPies)
+    {
         //Crear un rayo hacia la derecha
         RaycastHit2D hitDelante = Physics2D.Raycast(posPies, Vector2.right, addRayo, capaSuelo);
 
@@ -204,45 +221,45 @@ public class PlayerController : MonoBehaviour
 
         if (hitDelante)
         {
-            enPendiente = true;
             anguloLateral = Vector2.Angle(hitDelante.normal, Vector2.up);
-        } else if (hitDetras)
-        {
-            enPendiente = true;
-            anguloLateral = Vector2.Angle(hitDetras.normal, Vector2.up);
+            if (anguloLateral > 0)enPendiente = true;
         }
-        else
+        else if (hitDetras)
         {
-            enPendiente = false;
-            anguloLateral = 0;
+            anguloLateral = Vector2.Angle(hitDetras.normal, Vector2.up);
+            if (anguloLateral > 0)enPendiente = true;
+        }
+        else  
+        {
+            enPendiente = false; 
+            anguloLateral = 0.0f;
         }
 
-        //----------------------------------COLISIONES VERTICALES-------------------------------
-        RaycastHit2D hitVertical = Physics2D.Raycast(posPies, Vector2.down, addRayo, capaSuelo);
+    }
+
+    private void checkPenVertical(Vector2 posPies)
+    {
+        RaycastHit2D hitVertical = Physics2D.Raycast(ccPlayer.bounds.center, Vector2.down, ccPlayer.bounds.extents.y + addRayo, capaSuelo);
 
         if (hitVertical)
         {
             anguloPendiente = Vector2.Angle(hitVertical.normal, Vector2.up);
             anguloPerpendicular = Vector2.Perpendicular(hitVertical.normal).normalized;
-            if (anguloPendiente != anguloAnterior) enPendiente = true;
-            anguloAnterior = anguloPendiente;
+            if (anguloPendiente != anguloAnterior && anguloPendiente >0) enPendiente = true;
+            anguloAnterior = anguloPendiente; 
             //Pintar los rayos en escena
             Debug.DrawRay(hitVertical.point, anguloPerpendicular, Color.blue);
             Debug.DrawRay(hitVertical.point, hitVertical.normal, Color.green);
         }
 
-
-        //----------------------------------OTRAS COMPROBACIONES-------------------------------
-        //Si el angulo es mayor que el anguloMax, no se podrá caminar
         if (anguloPendiente > anguloMax || anguloLateral > anguloMax) puedoCaminar = false;
         else puedoCaminar = true;
         
         //Comprobar pendientes y asignar un tipo de material
         if (enPendiente && puedoCaminar && horizontal == 0.0f) rPlayer.sharedMaterial = maxF;
         else rPlayer.sharedMaterial = sinF;   
-
+        
     }
-
 
     //Recoger los valores de las animaciones
     private void variablesAnimador()
@@ -276,4 +293,28 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.DrawWireSphere(checkGround.position, checkGroundRadio);
     }
-} 
+
+
+
+    //----------------------------------DETECCION DE PLATAFORMAS MOVILES---------------
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "PlataformaMovil")
+        {  
+            rPlayer.velocity = Vector3.zero;
+            transform.parent = collision.transform; //Hereda tipo de colision
+            enPlataforma = true;                    //Cambio de estado
+        }
+    }
+     
+    private void OnCollisionExit2D(Collision2D collision) 
+    {
+        if (collision.gameObject.tag == "PlataformaMovil")
+        {
+            transform.parent = null;               //Herencia Nula
+            enPlataforma = false;                  //Cambio de estado
+        }
+    }
+
+    //----------------------------------FIN DETECCION DE PLATAFORMAS MOVILES---------------
+}

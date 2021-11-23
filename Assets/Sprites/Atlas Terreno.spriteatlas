@@ -49,7 +49,13 @@ SpriteAtlas:
   - {fileID: 4232660420539637911, guid: 8a8836b909bdff9439637b20ee0edd1b, type: 3}
   - {fileID: -647659582792096605, guid: 8a8836b909bdff9439637b20ee0edd1b, type: 3}
   - {fileID: 19265276689281515, guid: 8a8836b909bdff9439637b20ee0edd1b, type: 3}
+  - {fileID: 8199091459665533944, guid: 8a8836b909bdff9439637b20ee0edd1b, type: 3}
   - {fileID: -6707348297711411794, guid: 8a8836b909bdff9439637b20ee0edd1b, type: 3}
+  - {fileID: -7705915554213588428, guid: 8a8836b909bdff9439637b20ee0edd1b, type: 3}
+  - {fileID: 2226125465879208075, guid: 8a8836b909bdff9439637b20ee0edd1b, type: 3}
+  - {fileID: -8029902576277914806, guid: 8a8836b909bdff9439637b20ee0edd1b, type: 3}
+  - {fileID: 3048003544979397898, guid: 8a8836b909bdff9439637b20ee0edd1b, type: 3}
+  - {fileID: -8817313468105668547, guid: 8a8836b909bdff9439637b20ee0edd1b, type: 3}
   - {fileID: 4088906857370236938, guid: 8a8836b909bdff9439637b20ee0edd1b, type: 3}
   - {fileID: -7282072761693281333, guid: 8a8836b909bdff9439637b20ee0edd1b, type: 3}
   - {fileID: 3136569533222070941, guid: 8a8836b909bdff9439637b20ee0edd1b, type: 3}
@@ -73,7 +79,13 @@ SpriteAtlas:
   - TierraTileSet_6
   - TierraTileSet_21
   - TierraTileSet_20
+  - TierraTileSet_23
   - TierraTileSet_22
+  - TierraTileSet_25
+  - TierraTileSet_24
+  - TierraTileSet_27
+  - TierraTileSet_26
+  - TierraTileSet_28
   - TierraTileSet_18
   - TierraTileSet_19
   - TierraTileSet_10
