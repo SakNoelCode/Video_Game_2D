@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Terreno
   - PlataformaMovil
+  - Pinchos
+  - CaidaVacio
   layers:
   - Default
   - TransparentFX

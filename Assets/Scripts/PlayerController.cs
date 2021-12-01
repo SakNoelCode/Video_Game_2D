@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float anguloMax;
     [SerializeField] private PhysicsMaterial2D sinF;
     [SerializeField] private PhysicsMaterial2D maxF;
+    [SerializeField] private int vida=3;
 
 
     [Header("Valores Informátivas")]
@@ -136,7 +137,7 @@ public class PlayerController : MonoBehaviour
     private void recibePulsaciones()
     {
         //Colocar al Player en la posicion Inicial
-        if (Input.GetKey(KeyCode.R)) transform.position = posIni;
+        if (Input.GetKey(KeyCode.R)) Reaparece();
 
         //La variable horizontal toma el valor del eje horizontal
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -145,7 +146,7 @@ public class PlayerController : MonoBehaviour
         if ((horizontal > 0 && !miraDerecha) || (horizontal < 0 && miraDerecha)) girarPlayer();
 
         //Si se oprime el boton se Salto se ejecuta la función Salto
-        if (Input.GetButton("Jump") && puedoSaltar) Salto();
+        if (Input.GetButton("Jump") && puedoSaltar && tocaSuelo) Salto();
 
         //Si la variable isSaltoMejorado es verdadera, se ejecuta el salto Mejorado
         if (isSaltoMejorado) SaltoMejorado();
@@ -316,5 +317,41 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //----------------------------------FIN DETECCION DE PLATAFORMAS MOVILES---------------
+
+    //-------------------------DETECCION DE COLISIONES PARA EL PLAYER------------------
+    private void OnTriggerEnter2D(Collider2D collision) 
+    {
+        if(collision.gameObject.tag == "Pinchos")//COLISION CON LOS PINCHOS
+        {
+            Debug.Log("Quita Salud");
+            pierdeVida();
+        }
+
+        if(collision.gameObject.tag == "CaidaVacio")//COLISION CON CAIDA AL VACIO
+        {
+            Debug.Log("Muerte por caida al vacio");
+            pierdeVida(); 
+        }
+    }
+
+    private void pierdeVida()
+    {
+        Debug.Log("estoy perdiendo vida");
+        Reaparece();
+    }
+
+    private void Reaparece()
+    {
+        transform.position = posIni;
+        rPlayer.velocity = Vector3.zero;
+    }
+
+
+
+
+
+
+
+
+
 }
