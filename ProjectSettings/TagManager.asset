@@ -8,6 +8,7 @@ TagManager:
   - PlataformaMovil
   - Pinchos
   - CaidaVacio
+  - Sonido
   layers:
   - Default
   - TransparentFX
