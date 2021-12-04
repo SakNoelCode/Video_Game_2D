@@ -53,7 +53,9 @@
     <UnityVersion>2020.3.21f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Game Controller.cs" />
     <Compile Include="Assets\Scripts\ActivarMensaje.cs" />
+    <Compile Include="Assets\Menu\MenuController.cs" />
     <Compile Include="Assets\Scripts\MuestraPuntos.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\EnemigoSimple.cs" />
@@ -62,8 +64,8 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\RecorridoPlataforma.cs" />
     <Compile Include="Assets\Scripts\BloquePinchos.cs" />
-    <Compile Include="Assets\Scripts\Game Controller.cs" />
-    <Compile Include="Assets\Menu\MenuController.cs" />
+    <Compile Include="Assets\Scripts\Scena2\PlayerContoller.cs" />
+    <Compile Include="Assets\Scripts\Scena2\CheckGround.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
