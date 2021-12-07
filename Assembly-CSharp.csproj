@@ -55,9 +55,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Game Controller.cs" />
     <Compile Include="Assets\Scripts\ActivarMensaje.cs" />
+    <Compile Include="Assets\Scripts\Scena2\CheckGround.cs" />
     <Compile Include="Assets\Menu\MenuController.cs" />
     <Compile Include="Assets\Scripts\MuestraPuntos.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Scena2\SaltoMejorado.cs" />
     <Compile Include="Assets\Scripts\EnemigoSimple.cs" />
     <Compile Include="Assets\Scripts\PlataformaCae.cs" />
     <Compile Include="Assets\Scripts\PlataformaMovil.cs" />
@@ -65,7 +67,11 @@
     <Compile Include="Assets\Scripts\RecorridoPlataforma.cs" />
     <Compile Include="Assets\Scripts\BloquePinchos.cs" />
     <Compile Include="Assets\Scripts\Scena2\PlayerContoller.cs" />
-    <Compile Include="Assets\Scripts\Scena2\CheckGround.cs" />
+    <Compile Include="Assets\Scripts\Scena2\SeguirCamara.cs" />
+    <Compile Include="Assets\Scripts\Scena3\PlayerController3.cs" />
+    <Compile Include="Assets\Scripts\Scena3\CheckGround3.cs" />
+    <Compile Include="Assets\Scripts\Scena3\SaltoMejorado3.cs" />
+    <Compile Include="Assets\Scripts\Scena3\SeguirCamara3.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

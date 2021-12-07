@@ -9,6 +9,8 @@ public class PlayerContoller : MonoBehaviour
     [SerializeField] private float velocidadPlayer;
     [SerializeField] private float velocidadMaxPlayer;
     [SerializeField] private float fuerzaSaltoPlayer;
+    [SerializeField] private bool  isColisionPies = false;
+    [SerializeField] private float friccionSuelo;
 
 
     //Variables para acceder a las propiedades del personaje
@@ -17,14 +19,14 @@ public class PlayerContoller : MonoBehaviour
     private bool        isMirandoDerecha = true;
 
 
-    //Variable para colision Pies
-    public bool isColisionPies = false;
-
+    //Variables para las animaciones
+    private Animator animatorPlayer;   //aPlayer
 
     //------------------------------------------METODO START-----------------------------------
     void Start()
     {
         rigibodyPlayer = GetComponent<Rigidbody2D>();
+        animatorPlayer = GetComponent<Animator>();
     }
 
 
@@ -32,6 +34,7 @@ public class PlayerContoller : MonoBehaviour
     void Update()
     {
         girarPlayer(ejeHorizontal);
+        asignarValoresAnimaciones();
         saltarPlayer();
     }
 
@@ -40,6 +43,7 @@ public class PlayerContoller : MonoBehaviour
     void FixedUpdate()
     {
         moverPlayer();
+        asignarFriccionPlayer();
     }
 
     
@@ -75,4 +79,22 @@ public class PlayerContoller : MonoBehaviour
             rigibodyPlayer.AddForce(new Vector2(0, fuerzaSaltoPlayer), ForceMode2D.Impulse);
         }
     }
+
+    private void asignarValoresAnimaciones()
+    {
+        animatorPlayer.SetFloat("velocidadX",Mathf.Abs(rigibodyPlayer.velocity.x));
+        animatorPlayer.SetFloat("velocidadY", rigibodyPlayer.velocity.y);
+        animatorPlayer.SetBool("isTocaSuelo", isColisionPies);
+    }
+
+    private void asignarFriccionPlayer()
+    {
+        if(ejeHorizontal == 0 && isColisionPies)
+        {
+            Vector3 velocidadConFriccion = rigibodyPlayer.velocity;
+            velocidadConFriccion.x *= friccionSuelo;
+            rigibodyPlayer.velocity = velocidadConFriccion;
+        }
+    }
 }
+  
