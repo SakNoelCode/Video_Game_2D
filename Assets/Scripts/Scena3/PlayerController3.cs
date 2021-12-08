@@ -8,8 +8,11 @@ public class PlayerController3 : MonoBehaviour
     [SerializeField] private float velocidadPlayer;
     [SerializeField] private float velocidadMaxPlayer;
     [SerializeField] private float fuerzaSaltoPlayer;
-    [SerializeField] private bool isColisionPies = false;
     [SerializeField] private float friccionSuelo;
+
+
+    [Header("Valores informativos del Personaje")]
+    [SerializeField] private bool isColisionPies = false;
 
 
     //Variables para acceder a las propiedades del personaje
@@ -94,5 +97,5 @@ public class PlayerController3 : MonoBehaviour
             velocidadConFriccion.x *= friccionSuelo;
             rigibodyPlayer.velocity = velocidadConFriccion;
         }
-    }  
+    }
 }
