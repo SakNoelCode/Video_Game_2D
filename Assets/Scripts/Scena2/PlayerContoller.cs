@@ -61,7 +61,7 @@ public class PlayerContoller : MonoBehaviour
 
     private void recibePulsaciones()
     {
-        if (Input.GetKey(KeyCode.R)) transform.position = posInicialPlayer;
+        if (Input.GetKey(KeyCode.R)) reaparecePlayer(); 
 
         ejeHorizontal = Input.GetAxisRaw("Horizontal");
 
@@ -91,7 +91,7 @@ public class PlayerContoller : MonoBehaviour
      {
         if (isTocaSuelo && !isSaltando) //Velocidad en el Suelo
         {
-            nuevaVelocidad.Set(velocidadPlayer * ejeHorizontal, 0.0f);
+            nuevaVelocidad.Set(velocidadPlayer * ejeHorizontal, rigibodyPlayer.velocity.y);
             rigibodyPlayer.velocity = nuevaVelocidad;
         }
         else
@@ -175,6 +175,32 @@ public class PlayerContoller : MonoBehaviour
             transform.parent = null;
             //inPlataforma = false;
         }
+    }
+
+
+    //------------------------------DETECCION CON TRIGGERS-----------------------------------------------
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Pinchos")  //DETECCION PINCHOS
+        {
+            pierdeVida();
+        }
+
+        if(collision.gameObject.tag == "CaidaVacio") //DETECCION CAIDA VACIO
+        {
+            pierdeVida();
+        }
+    }
+
+    private void pierdeVida()
+    {
+        reaparecePlayer();
+    }
+
+    private void reaparecePlayer()
+    {
+        rigibodyPlayer.velocity = Vector3.zero;
+        transform.position = posInicialPlayer;
     }
 
 }
