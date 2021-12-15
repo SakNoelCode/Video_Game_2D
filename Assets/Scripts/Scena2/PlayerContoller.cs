@@ -13,6 +13,7 @@ public class PlayerContoller : MonoBehaviour
     [SerializeField] private Transform  checkGround;
     [SerializeField] private float      checkGroundRadio;
     [SerializeField] private LayerMask  capaSuelo;
+    [SerializeField] private float      fuerzaToqueEnemigo;
 
 
     [Header("Valores informativos del Personaje")] 
@@ -24,15 +25,20 @@ public class PlayerContoller : MonoBehaviour
     //Variables auxiliares
    // private bool       inPlataforma = false;
     private Vector2    nuevaVelocidad;
+    private Color      colorInicialPlayer;
 
     //Variables para acceder a las propiedades del personaje
-    private Rigidbody2D  rigibodyPlayer; //rPlayer
-    private float        ejeHorizontal;        //h
-    private bool         isMirandoDerecha = true;
-    private Vector3      posInicialPlayer;
+    private SpriteRenderer spritePlayer;  //sPlayer
+    private Rigidbody2D    rigibodyPlayer; //rPlayer
+    private float          ejeHorizontal;        //h
+    private bool           isMirandoDerecha = true;
+    private Vector3        posInicialPlayer;   
 
     //Variables para las animaciones
     private Animator animatorPlayer;   //aPlayer
+
+    //Variables para colision con el enemigo
+    private bool isTocado = false;
 
     //------------------------------------------METODO START-----------------------------------
     void Start()
@@ -40,6 +46,8 @@ public class PlayerContoller : MonoBehaviour
         posInicialPlayer = transform.position;
         rigibodyPlayer = GetComponent<Rigidbody2D>();
         animatorPlayer = GetComponent<Animator>();
+        spritePlayer = GetComponent<SpriteRenderer>();
+        colorInicialPlayer = spritePlayer.color;
     }
 
 
@@ -55,7 +63,8 @@ public class PlayerContoller : MonoBehaviour
     void FixedUpdate()
     {
         comprobarSiTocamosSuelo();
-        moverPlayer();
+
+        if(!isTocado) moverPlayer();
     }
 
 
@@ -122,10 +131,18 @@ public class PlayerContoller : MonoBehaviour
         if (rigibodyPlayer.velocity.y <= 0f)
         {
             isSaltando = false;
+
+            //para comprobar si el enemigo nos toca
+            if (isTocado && isTocaSuelo)
+            {
+                rigibodyPlayer.velocity = Vector2.zero;
+                isTocado = false;
+                spritePlayer.color = colorInicialPlayer;
+            }
         }
         if(isTocaSuelo && !isSaltando)
         {
-            isPuedoSaltar = true;
+            isPuedoSaltar = true;     
         }
     }
 
@@ -157,7 +174,7 @@ public class PlayerContoller : MonoBehaviour
     }
 
 
-    //------------------------------DETECCION PLATAFORMAS MOVILES---------------------------------------
+    //------------------------------DETECCION MEDIANTE TAGS Y COLISIONES---------------------------------------
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "PlataformaMovil")
@@ -165,6 +182,17 @@ public class PlayerContoller : MonoBehaviour
             rigibodyPlayer.velocity = Vector3.zero;
             transform.parent = collision.transform; //Heredamos el transform de la plataforma que colisionemos
             //inPlataforma = true;
+        }
+        if (collision.gameObject.tag == "EnemigoPupa")
+        {
+            tocarEnemigo(collision.transform.position.x);
+        }
+        if (collision.gameObject.tag == "ChepaEnemigo" && !isTocado)
+        {
+            //Impulsar hacia arriba
+            rigibodyPlayer.velocity = Vector2.zero;
+            rigibodyPlayer.AddForce(new Vector2 (0f, 10f), ForceMode2D.Impulse);
+            collision.gameObject.SendMessage("Muere");
         }
     }
 
@@ -201,6 +229,21 @@ public class PlayerContoller : MonoBehaviour
     {
         rigibodyPlayer.velocity = Vector3.zero;
         transform.position = posInicialPlayer;
+    }
+
+    private void tocarEnemigo(float posX)
+    {
+        if (!isTocado)
+        {
+            //Cambiar color
+            Color nuevoColor = new Color(255f/255, 100f/255, 100f/255);
+            spritePlayer.color = nuevoColor;
+
+            isTocado = true;
+            float lado = Mathf.Sign(posX - transform.position.x);
+            rigibodyPlayer.velocity = Vector2.zero;
+            rigibodyPlayer.AddForce(new Vector2(fuerzaToqueEnemigo * -lado, fuerzaToqueEnemigo), ForceMode2D.Impulse);
+        }
     }
 
 }

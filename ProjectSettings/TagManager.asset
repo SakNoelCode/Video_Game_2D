@@ -9,6 +9,8 @@ TagManager:
   - Pinchos
   - CaidaVacio
   - Sonido
+  - EnemigoPupa
+  - ChepaEnemigo
   layers:
   - Default
   - TransparentFX
