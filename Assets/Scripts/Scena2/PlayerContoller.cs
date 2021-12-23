@@ -14,6 +14,7 @@ public class PlayerContoller : MonoBehaviour
     [SerializeField] private float      checkGroundRadio;
     [SerializeField] private LayerMask  capaSuelo;
     [SerializeField] private float      fuerzaToqueEnemigo;
+    [SerializeField] private int        vidaPlayer = 3;
 
 
     [Header("Valores informativos del Personaje")] 
@@ -28,11 +29,13 @@ public class PlayerContoller : MonoBehaviour
     private Color      colorInicialPlayer;
 
     //Variables para acceder a las propiedades del personaje
-    private SpriteRenderer spritePlayer;  //sPlayer
-    private Rigidbody2D    rigibodyPlayer; //rPlayer
-    private float          ejeHorizontal;        //h
-    private bool           isMirandoDerecha = true;
-    private Vector3        posInicialPlayer;   
+    private CapsuleCollider2D capsulecoliderPlayer; //ccPlayer
+    private SpriteRenderer    spritePlayer;  //sPlayer
+    private Rigidbody2D       rigibodyPlayer; //rPlayer
+    private float             ejeHorizontal;        //h
+    private bool              isMirandoDerecha = true;
+    //private Vector3           posInicialPlayer;
+    private Camera            camara;
 
     //Variables para las animaciones
     private Animator animatorPlayer;   //aPlayer
@@ -40,38 +43,60 @@ public class PlayerContoller : MonoBehaviour
     //Variables para colision con el enemigo
     private bool isTocado = false;
 
+    //Variable para saber si el Player esta muerto
+    private bool isMuerto = false;
+
+    //Calcular valores para la camara (Recarga escena)
+    private float posPlayer, altCamara, altPlayer;
+
     //------------------------------------------METODO START-----------------------------------
     void Start()
     {
-        posInicialPlayer = transform.position;
+        //posInicialPlayer = transform.position;
         rigibodyPlayer = GetComponent<Rigidbody2D>();
         animatorPlayer = GetComponent<Animator>();
         spritePlayer = GetComponent<SpriteRenderer>();
         colorInicialPlayer = spritePlayer.color;
+        capsulecoliderPlayer = GetComponent<CapsuleCollider2D>();
+        camara = Camera.main;
+
+        altCamara = camara.orthographicSize * 2;
+        altPlayer = GetComponent<Renderer>().bounds.size.y; 
     }
 
 
     //------------------------------------------METODO UPDATE-----------------------------------
     void Update()
     {
-        recibePulsaciones();
-        asignarValoresAnimaciones();
+        if (GameController2.gameOn)
+        {
+            recibePulsaciones();
+            asignarValoresAnimaciones();
+        }
+
+        if (isMuerto)
+        {
+            recargarEscena();
+           
+        }
     }
 
 
     //------------------------------------------METODO FIXED UPDATE-----------------------------------
     void FixedUpdate()
     {
-        comprobarSiTocamosSuelo();
-
-        if(!isTocado) moverPlayer();
+        if (GameController2.gameOn)
+        {
+            comprobarSiTocamosSuelo();
+            if (!isTocado) moverPlayer();
+        }
     }
 
 
     private void recibePulsaciones()
     {
-        if (Input.GetKey(KeyCode.R)) reaparecePlayer(); 
-
+        if (Input.GetKey(KeyCode.R)) GameController2.playerMuerto = true; 
+         
         ejeHorizontal = Input.GetAxisRaw("Horizontal");
 
         //Para girar al Player
@@ -165,6 +190,22 @@ public class PlayerContoller : MonoBehaviour
         }
     }
 
+    private void recargarEscena()
+    {
+        posPlayer = camara.transform.InverseTransformDirection(transform.position - camara.transform.position).y;
+
+        if(posPlayer < ((altCamara/2)*-1) - (altPlayer/2) )
+        {
+           Invoke("llamaFuncionRecarga", 1);
+            isMuerto = false;
+        }
+    }
+
+    private void llamaFuncionRecarga()
+    {
+        GameController2.playerMuerto = true;
+    }
+
 
     //--------------------------------------GIZMOS--------------------------------------------  
     //Dibujar una esfera para detectar cuando se toca Tierra
@@ -183,10 +224,12 @@ public class PlayerContoller : MonoBehaviour
             transform.parent = collision.transform; //Heredamos el transform de la plataforma que colisionemos
             //inPlataforma = true;
         }
+
         if (collision.gameObject.tag == "EnemigoPupa")
         {
             tocarEnemigo(collision.transform.position.x);
         }
+
         if (collision.gameObject.tag == "ChepaEnemigo" && !isTocado)
         {
             //Impulsar hacia arriba
@@ -209,41 +252,53 @@ public class PlayerContoller : MonoBehaviour
     //------------------------------DETECCION CON TRIGGERS-----------------------------------------------
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Pinchos")  //DETECCION PINCHOS
+        if(collision.gameObject.tag == "Pinchos" )  //DETECCION PINCHOS
         {
-            pierdeVida();
+            muertePlayer();
         }
 
         if(collision.gameObject.tag == "CaidaVacio") //DETECCION CAIDA VACIO
         {
-            pierdeVida();
+            Invoke("llamaFuncionRecarga", 1);
         }
     }
 
-    private void pierdeVida()
-    {
-        reaparecePlayer();
-    }
-
-    private void reaparecePlayer()
-    {
-        rigibodyPlayer.velocity = Vector3.zero;
-        transform.position = posInicialPlayer;
-    }
 
     private void tocarEnemigo(float posX)
     {
         if (!isTocado)
         {
-            //Cambiar color
-            Color nuevoColor = new Color(255f/255, 100f/255, 100f/255);
-            spritePlayer.color = nuevoColor;
+            if (vidaPlayer > 1)
+            {
+                //Cambiar color
+                Color nuevoColor = new Color(255f / 255, 100f / 255, 100f / 255);
+                spritePlayer.color = nuevoColor;
 
-            isTocado = true;
-            float lado = Mathf.Sign(posX - transform.position.x);
-            rigibodyPlayer.velocity = Vector2.zero;
-            rigibodyPlayer.AddForce(new Vector2(fuerzaToqueEnemigo * -lado, fuerzaToqueEnemigo), ForceMode2D.Impulse);
+                isTocado = true;
+                float lado = Mathf.Sign(posX - transform.position.x);
+                rigibodyPlayer.velocity = Vector2.zero;
+                rigibodyPlayer.AddForce(new Vector2(fuerzaToqueEnemigo * -lado, fuerzaToqueEnemigo), ForceMode2D.Impulse);
+                vidaPlayer--;
+            }
+            else
+            {
+                muertePlayer();
+            }
         }
+    }
+
+    private void muertePlayer()
+    {
+        animatorPlayer.Play("Muerte");  //Animación de muerte
+        GameController2.gameOn = false; //Detener el juego
+
+        //Cuando nos matan, hacemos un salto
+        rigibodyPlayer.velocity = Vector2.zero;
+        rigibodyPlayer.AddForce(new Vector2(0.0f, fuerzaSaltoPlayer), ForceMode2D.Impulse);
+
+        capsulecoliderPlayer.enabled = false; //Desactivar el Colider
+        isMuerto = true;
+        
     }
 
 }
