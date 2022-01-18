@@ -27,9 +27,13 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private GameObject barraVida;
     [SerializeField] private Sprite sprVida3, sprVida2, sprVida1, sprVida0;
 
-      
+    [Header("Efectos de Sonido")]
+    [SerializeField] private GameObject objSaltoPlayer;
+    [SerializeField] private GameObject objMuertePlayer;
+
+
     //Variables auxiliares
-   // private bool       inPlataforma = false;
+    // private bool       inPlataforma = false;
     private Vector2    nuevaVelocidad;
     private Color      colorInicialPlayer;
 
@@ -54,6 +58,9 @@ public class PlayerController2 : MonoBehaviour
     //Calcular valores para la camara (Recarga escena)
     private float posPlayer, altCamara, altPlayer;
 
+    //Variables para obtener los sonidos del Player
+    private AudioSource asSaltoPlayer, asMuertePlayer;
+
     //------------------------------------------METODO START-----------------------------------
     void Start()
     {
@@ -66,7 +73,10 @@ public class PlayerController2 : MonoBehaviour
         camara = Camera.main;
 
         altCamara = camara.orthographicSize * 2;
-        altPlayer = GetComponent<Renderer>().bounds.size.y; 
+        altPlayer = GetComponent<Renderer>().bounds.size.y;
+
+        asSaltoPlayer = objSaltoPlayer.GetComponent<AudioSource>();
+        asMuertePlayer = objMuertePlayer.GetComponent<AudioSource>();
     }
 
 
@@ -151,6 +161,9 @@ public class PlayerController2 : MonoBehaviour
             isPuedoSaltar = false;
             rigibodyPlayer.velocity = new Vector2(rigibodyPlayer.velocity.x, 0f);//Anular cualquier velocidad en el ejer Y
             rigibodyPlayer.AddForce(new Vector2(0, fuerzaSaltoPlayer), ForceMode2D.Impulse);
+
+            //Aplicar efecto de sonido (Jump)
+            asSaltoPlayer.Play();
         }
     }
 
@@ -301,6 +314,7 @@ public class PlayerController2 : MonoBehaviour
 
     private void muertePlayer()
     {
+        asMuertePlayer.Play();  //Efecto de Sonido Muerte
         barraVida.GetComponent<Image>().sprite = sprVida0; //Cambiar al Sprite Vida0  
         animatorPlayer.Play("Muerte");  //Animación de muerte
         GameController2.gameOn = false; //Detener el juego

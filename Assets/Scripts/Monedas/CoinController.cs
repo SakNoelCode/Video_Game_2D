@@ -6,12 +6,14 @@ public class CoinController : MonoBehaviour
     private ParticleSystem particulas;
     private SpriteRenderer sprMoneda;
     private bool isActiva = true;
+    private AudioSource snd_Moneda;
 
 
     private void Awake()
     {
         particulas = GetComponent<ParticleSystem>();
         sprMoneda = GetComponent<SpriteRenderer>();
+        snd_Moneda = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,6 +25,7 @@ public class CoinController : MonoBehaviour
             sprMoneda.enabled = false;
             particulas.Play();
             isActiva = false;
+            snd_Moneda.Play();//Hacer sonido de la moneda
         }  
     }
 }

@@ -10,26 +10,33 @@ public class GameController2 : MonoBehaviour
 
     [SerializeField] private GameObject fundidoNegro;
     [SerializeField] private Text contadorMonedas;
+    [SerializeField] private GameObject camaraPrincipal;
 
-    private int monedas;
+    
 
     //Variable que controla al Player y a la camara, si se pueden mover o no
     public static bool gameOn = false;
 
-    private Image sprFundidoNegro;
+    private Image       sprFundidoNegro;
+    private AudioSource musicaFondo;
+    private int         monedas;
 
     public static bool playerMuerto;
 
 
+
     private void Start()
     {
+        musicaFondo = camaraPrincipal.GetComponent<AudioSource>();
         sprFundidoNegro = fundidoNegro.GetComponent<Image>(); 
+
         Invoke("quitarFundido", 0.5f);
     }
 
     private void Update()
     {
         if(playerMuerto){
+            musicaFondo.Stop();  
             StartCoroutine("PonFC");
             playerMuerto = false;
         }
@@ -37,15 +44,15 @@ public class GameController2 : MonoBehaviour
 
     private void Awake()
     {
-        #region
+       /* #region
         if (current != null && current != this)
         {
             Destroy(gameObject);
             return;
-        }
+        }*/
         current = this;
-        DontDestroyOnLoad(gameObject);
-        #endregion
+       // DontDestroyOnLoad(gameObject);
+       // #endregion
 
         fundidoNegro.SetActive(true); 
     }
@@ -82,6 +89,7 @@ public class GameController2 : MonoBehaviour
             yield return null; 
         }
         gameOn = true;
+        musicaFondo.Play();  /////Poner a la musica en Play
     }
 
     IEnumerator PonFC()
