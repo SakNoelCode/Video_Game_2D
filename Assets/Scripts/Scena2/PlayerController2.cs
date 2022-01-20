@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class PlayerController2 : MonoBehaviour
 {
+
+    //Delegado y Eventos
+    public delegate void MiDelegado();
+    public event MiDelegado PlayerMuerto;
+
     [Header("Valores del Personaje")]
     [SerializeField] private float      velocidadPlayer;
     [SerializeField] private float      fuerzaSaltoPlayer;
@@ -33,7 +38,6 @@ public class PlayerController2 : MonoBehaviour
 
 
     //Variables auxiliares
-    // private bool       inPlataforma = false;
     private Vector2    nuevaVelocidad;
     private Color      colorInicialPlayer;
 
@@ -43,7 +47,7 @@ public class PlayerController2 : MonoBehaviour
     private Rigidbody2D       rigibodyPlayer; //rPlayer
     private float             ejeHorizontal;        //h
     private bool              isMirandoDerecha = true;
-    //private Vector3           posInicialPlayer;
+    public static Vector3           posInicialPlayer;
     private Camera            camara;
 
     //Variables para las animaciones
@@ -64,7 +68,7 @@ public class PlayerController2 : MonoBehaviour
     //------------------------------------------METODO START-----------------------------------
     void Start()
     {
-        //posInicialPlayer = transform.position;
+        posInicialPlayer = transform.position;
         rigibodyPlayer = GetComponent<Rigidbody2D>();
         animatorPlayer = GetComponent<Animator>();
         spritePlayer = GetComponent<SpriteRenderer>();
@@ -77,22 +81,19 @@ public class PlayerController2 : MonoBehaviour
 
         asSaltoPlayer = objSaltoPlayer.GetComponent<AudioSource>();
         asMuertePlayer = objMuertePlayer.GetComponent<AudioSource>();
+
+        GameController2.respawn += Respawn;
     }
 
 
     //------------------------------------------METODO UPDATE-----------------------------------
     void Update()
     {
+        animatorPlayer.SetBool("GameOn", GameController2.gameOn);
         if (GameController2.gameOn)
         {
             recibePulsaciones();
             asignarValoresAnimaciones();
-        }
-
-        if (isMuerto)
-        {
-            recargarEscena();
-           
         }
     }
 
@@ -105,6 +106,24 @@ public class PlayerController2 : MonoBehaviour
             comprobarSiTocamosSuelo();
             if (!isTocado) moverPlayer();
         }
+    }
+
+
+    //------------------------------------------METODO RESPAWN-----------------------------------
+    private void Respawn()
+    {
+        rigibodyPlayer.velocity = Vector2.zero;
+        animatorPlayer.Play("quieto");
+        if (!isMirandoDerecha) girarPlayer(1);
+        if (capsulecoliderPlayer.enabled == false) capsulecoliderPlayer.enabled = true;
+        isMuerto = false;
+        transform.parent = null;
+        transform.position = posInicialPlayer;
+
+        //Vida y barra de vida
+        barraVida.GetComponent<Image>().sprite = sprVida3;
+        vidaPlayer = 3;
+        
     }
 
 
@@ -219,10 +238,11 @@ public class PlayerController2 : MonoBehaviour
         }
     }
 
-    private void llamaFuncionRecarga()
+    /*private void llamaFuncionRecarga()
     {
+        asMuertePlayer.Play();
         GameController2.playerMuerto = true;
-    }
+    }*/
 
 
     //--------------------------------------GIZMOS--------------------------------------------  
@@ -272,12 +292,13 @@ public class PlayerController2 : MonoBehaviour
     {
         if(collision.gameObject.tag == "Pinchos" )  //DETECCION PINCHOS
         {
-            muertePlayer();
+            muertePlayer(true);
         }
 
         if(collision.gameObject.tag == "CaidaVacio") //DETECCION CAIDA VACIO
         {
-            Invoke("llamaFuncionRecarga", 1);
+            //Invoke("llamaFuncionRecarga", 1);
+            muertePlayer(false);
         }
     }
 
@@ -301,7 +322,7 @@ public class PlayerController2 : MonoBehaviour
             }
             else
             {
-                muertePlayer();
+                muertePlayer(true);
             }
         }
     }
@@ -312,20 +333,29 @@ public class PlayerController2 : MonoBehaviour
         if (salud == 1) barraVida.GetComponent<Image>().sprite = sprVida1;
     }
 
-    private void muertePlayer()
+    private void muertePlayer(bool anim)
     {
         asMuertePlayer.Play();  //Efecto de Sonido Muerte
         barraVida.GetComponent<Image>().sprite = sprVida0; //Cambiar al Sprite Vida0  
-        animatorPlayer.Play("Muerte");  //Animación de muerte
+        if (anim)
+        {
+            animatorPlayer.Play("Muerte");  //Animación de muerte
+                                            
+            rigibodyPlayer.velocity = Vector2.zero;
+            rigibodyPlayer.AddForce(new Vector2(0.0f, fuerzaSaltoPlayer), ForceMode2D.Impulse);//Cuando nos matan, hacemos un salto
+        }
         GameController2.gameOn = false; //Detener el juego
-
-        //Cuando nos matan, hacemos un salto
-        rigibodyPlayer.velocity = Vector2.zero;
-        rigibodyPlayer.AddForce(new Vector2(0.0f, fuerzaSaltoPlayer), ForceMode2D.Impulse);
 
         capsulecoliderPlayer.enabled = false; //Desactivar el Colider
         isMuerto = true;
-        
+
+        //Lanzar el evento de Delegado
+        PlayerMuerto?.Invoke(); 
+    }
+
+    private void OnDisable()
+    {
+        GameController2.respawn -= Respawn;
     }
 
 }

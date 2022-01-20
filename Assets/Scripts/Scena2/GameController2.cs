@@ -6,11 +6,17 @@ using UnityEngine.UI;
 
 public class GameController2 : MonoBehaviour
 {
+    public delegate void Respawn();
+    public static event Respawn respawn;
+
     static GameController2 current; 
 
     [SerializeField] private GameObject fundidoNegro;
     [SerializeField] private Text contadorMonedas;
     [SerializeField] private GameObject camaraPrincipal;
+
+    [SerializeField] private PlayerController2 playerController;
+    [SerializeField] private CheckPoint checkP;
 
     
 
@@ -20,42 +26,45 @@ public class GameController2 : MonoBehaviour
     private Image       sprFundidoNegro;
     private AudioSource musicaFondo;
     private int         monedas;
+    private int         monedasIni;
 
     public static bool playerMuerto;
 
 
 
+    private void Awake()
+    {
+        current = this;
+        fundidoNegro.SetActive(true);
+        monedasIni = 0;
+    }
+
+
     private void Start()
     {
         musicaFondo = camaraPrincipal.GetComponent<AudioSource>();
-        sprFundidoNegro = fundidoNegro.GetComponent<Image>(); 
+        sprFundidoNegro = fundidoNegro.GetComponent<Image>();
 
-        Invoke("quitarFundido", 0.5f);
+        playerController.PlayerMuerto += PlayerMuerto;//Suscribirse al evento
+        checkP.checkP += chekPoint;
+
+        StartCoroutine(FundidoNegroOFF(0.5f));
     }
 
-    private void Update()
+
+    private void chekPoint()
     {
-        if(playerMuerto){
-            musicaFondo.Stop();  
-            StartCoroutine("PonFC");
-            playerMuerto = false;
-        }
+        monedasIni = current.monedas;
     }
 
-    private void Awake()
+    private void PlayerMuerto()
     {
-       /* #region
-        if (current != null && current != this)
-        {
-            Destroy(gameObject);
-            return;
-        }*/
-        current = this;
-       // DontDestroyOnLoad(gameObject);
-       // #endregion
-
-        fundidoNegro.SetActive(true); 
+        gameOn = false;
+        musicaFondo.Stop();
+        StartCoroutine("FundidoNegroON");
     }
+
+    
 
     public static void sumaMonedas()
     {
@@ -70,16 +79,11 @@ public class GameController2 : MonoBehaviour
         }
     }
 
-       
-    private void quitarFundido()
+
+    IEnumerator FundidoNegroOFF(float retardo) 
     {
-        StartCoroutine("QuitaFC");
-    }
+        yield return new WaitForSeconds(retardo);
 
-
-
-    IEnumerator QuitaFC()
-    {
         for (float alpha = 1f; alpha >= 0; alpha -= Time.deltaTime * 2f)
         {
             sprFundidoNegro.color = new Color(sprFundidoNegro.color.r, 
@@ -92,7 +96,7 @@ public class GameController2 : MonoBehaviour
         musicaFondo.Play();  /////Poner a la musica en Play
     }
 
-    IEnumerator PonFC()
+    IEnumerator FundidoNegroON()
     {
         for (float alpha = 0f; alpha <= 1; alpha += Time.deltaTime * 2f)
         {
@@ -102,10 +106,14 @@ public class GameController2 : MonoBehaviour
                                                        alpha);
             yield return null;
         }
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        current.monedas = monedasIni - 1;
+        sumaMonedas();
+
+        respawn();
+
+        StartCoroutine(FundidoNegroOFF(0.5f));
     }
-
-
-
     
 }
+   

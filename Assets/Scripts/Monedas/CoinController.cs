@@ -14,6 +14,9 @@ public class CoinController : MonoBehaviour
         particulas = GetComponent<ParticleSystem>();
         sprMoneda = GetComponent<SpriteRenderer>();
         snd_Moneda = GetComponent<AudioSource>();
+
+        //Eventos y Delegados
+        GameController2.respawn += Respawn;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,11 +24,22 @@ public class CoinController : MonoBehaviour
         if (collision.gameObject.tag == "Player" && isActiva)
         {
             GameController2.sumaMonedas();
-            //Destroy(gameObject);
             sprMoneda.enabled = false;
             particulas.Play();
             isActiva = false;
             snd_Moneda.Play();//Hacer sonido de la moneda
         }  
+    }
+
+    private void Respawn()
+    {
+        isActiva = true;
+        gameObject.SetActive(true);
+        sprMoneda.enabled = true;
+    }
+
+    private void OnDestroy()
+    {
+        GameController2.respawn -= Respawn;
     }
 }

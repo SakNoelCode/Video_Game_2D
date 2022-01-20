@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -2224568970228967862}
   m_Layer: 6
   m_Name: Monedas
-  m_TagString: Untagged
+  m_TagString: Monedas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,7 +155,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 0.35
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 1
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
