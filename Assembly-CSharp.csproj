@@ -63,14 +63,16 @@
     <Compile Include="Assets\Menu\MenuController.cs" />
     <Compile Include="Assets\Scripts\PinchosRoca\Pinchos_Roca_Recorrido.cs" />
     <Compile Include="Assets\Scripts\Enemigo\RecorridoEnemigo.cs" />
+    <Compile Include="Assets\Scripts\CheckPoint\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\Scena3\SeguirCamara3.cs" />
     <Compile Include="Assets\Scripts\Plataformas\Plataforma_Cae.cs" />
     <Compile Include="Assets\Scripts\Scena3\PlayerController3.cs" />
     <Compile Include="Assets\Scripts\Scena2\CameraController2.cs" />
+    <Compile Include="Assets\Scripts\Monedas\MonedaPuerta.cs" />
     <Compile Include="Assets\Scripts\Plataformas\Plataforma_Movil.cs" />
     <Compile Include="Assets\Scripts\Scena2\PlayerController2.cs" />
     <Compile Include="Assets\Scripts\PinchosRoca\Pinchos_Roca_Movil.cs" />
-    <Compile Include="Assets\Scripts\CheckPoint\CheckPoint.cs" />
+    <Compile Include="Assets\Scripts\Puerta\Puerta.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

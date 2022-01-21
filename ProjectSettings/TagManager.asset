@@ -12,6 +12,10 @@ TagManager:
   - EnemigoPupa
   - ChepaEnemigo
   - Monedas
+  - NoSaltar
+  - MonedaPuerta
+  - SueltaMonedas
+  - FinNivel
   layers:
   - Default
   - TransparentFX

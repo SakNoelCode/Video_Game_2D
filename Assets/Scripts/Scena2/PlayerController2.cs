@@ -36,6 +36,9 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private GameObject objSaltoPlayer;
     [SerializeField] private GameObject objMuertePlayer;
 
+    [Header("Moneda Para Puerta")]
+    [SerializeField] private GameObject monedaParaPuerta;
+
 
     //Variables auxiliares
     private Vector2    nuevaVelocidad;
@@ -64,6 +67,9 @@ public class PlayerController2 : MonoBehaviour
 
     //Variables para obtener los sonidos del Player
     private AudioSource asSaltoPlayer, asMuertePlayer;
+
+    //Variable para permitir al personaje saltar o no
+    private bool noSaltes = false;
 
     //------------------------------------------METODO START-----------------------------------
     void Start()
@@ -174,7 +180,7 @@ public class PlayerController2 : MonoBehaviour
 
     private void saltarPlayer()
     {
-        if (Input.GetButtonDown("Jump") && isPuedoSaltar && isTocaSuelo)
+        if (Input.GetButtonDown("Jump") && isPuedoSaltar && isTocaSuelo && !noSaltes)
         {
             isSaltando = true;
             isPuedoSaltar = false;
@@ -297,9 +303,39 @@ public class PlayerController2 : MonoBehaviour
 
         if(collision.gameObject.tag == "CaidaVacio") //DETECCION CAIDA VACIO
         {
-            //Invoke("llamaFuncionRecarga", 1);
             muertePlayer(false);
         }
+        if (collision.gameObject.tag == "FinNivel") //DETECCION CON FIN DE NIVEL
+        {
+            GameController2.gameOn = false;
+            rigibodyPlayer.velocity = Vector3.zero;
+            GameController2.finNivel();
+        }
+    }
+
+
+    //------------------------------DETECCION CON LA  PUERTA FINAL-----------------------------------------------
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "NoSaltar")
+        {
+            noSaltes = true;
+        }
+        if (collision.gameObject.tag == "SueltaMonedas" && !GameController2.isSoltandoMonedas && GameController2.monedas > 0
+            && GameController2.monedasPuerta > 0)
+        {
+            GameController2.isSoltandoMonedas = true;
+            Instantiate(monedaParaPuerta, transform.position, Quaternion.identity);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "NoSaltar")
+        {
+            noSaltes = false;
+        }
+        
     }
 
 
