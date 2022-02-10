@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,11 +47,14 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.12</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.14</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.21f1</UnityVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="D:\Data Program\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemigo\EnemigoSimple1.cs" />
     <Compile Include="Assets\Scripts\Scena2\GameController2.cs" />
@@ -66,13 +69,14 @@
     <Compile Include="Assets\Scripts\CheckPoint\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\Scena3\SeguirCamara3.cs" />
     <Compile Include="Assets\Scripts\Plataformas\Plataforma_Cae.cs" />
+    <Compile Include="Assets\Scripts\Puerta\Puerta.cs" />
     <Compile Include="Assets\Scripts\Scena3\PlayerController3.cs" />
     <Compile Include="Assets\Scripts\Scena2\CameraController2.cs" />
     <Compile Include="Assets\Scripts\Monedas\MonedaPuerta.cs" />
     <Compile Include="Assets\Scripts\Plataformas\Plataforma_Movil.cs" />
     <Compile Include="Assets\Scripts\Scena2\PlayerController2.cs" />
     <Compile Include="Assets\Scripts\PinchosRoca\Pinchos_Roca_Movil.cs" />
-    <Compile Include="Assets\Scripts\Puerta\Puerta.cs" />
+    <Compile Include="Assets\Scripts\Plataformas\PlataformasAtravesables.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

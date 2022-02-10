@@ -16,11 +16,17 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private bool       saltoMejorado;
     [SerializeField] private float      saltoLargo;
     [SerializeField] private float      saltoCorto;
-    [SerializeField] private Transform  checkGround;
-    [SerializeField] private float      checkGroundRadio;
-    [SerializeField] private LayerMask  capaSuelo;
+    [SerializeField] private float      checkGroundRadio;  
     [SerializeField] private float      fuerzaToqueEnemigo;
     [SerializeField] private int        vidaPlayer = 3;
+    [SerializeField] private float      addRayoDebajo;
+
+
+    [Header("Objetos")]
+    [SerializeField] private GameObject monedaParaPuerta;
+    [SerializeField] private LayerMask  capaSuelo;
+    [SerializeField] private LayerMask  capaEscalera;
+    [SerializeField] private Transform  checkGround;
 
 
     [Header("Valores informativos del Personaje")] 
@@ -36,11 +42,11 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private GameObject objSaltoPlayer;
     [SerializeField] private GameObject objMuertePlayer;
 
-    [Header("Moneda Para Puerta")]
-    [SerializeField] private GameObject monedaParaPuerta;
+
 
 
     //Variables auxiliares
+    private Vector2    ccSize;   //Tamaño del Player
     private Vector2    nuevaVelocidad;
     private Color      colorInicialPlayer;
 
@@ -49,9 +55,11 @@ public class PlayerController2 : MonoBehaviour
     private SpriteRenderer    spritePlayer;  //sPlayer
     private Rigidbody2D       rigibodyPlayer; //rPlayer
     private float             ejeHorizontal;        //h
+    private float             ejeVertical;          //v
     private bool              isMirandoDerecha = true;
-    public static Vector3           posInicialPlayer;
-    private Camera            camara;
+    public static Vector3     posInicialPlayer;
+    private float             dirX = 1;
+    //private Camera            camara;
 
     //Variables para las animaciones
     private Animator animatorPlayer;   //aPlayer
@@ -63,7 +71,7 @@ public class PlayerController2 : MonoBehaviour
     private bool isMuerto = false;
 
     //Calcular valores para la camara (Recarga escena)
-    private float posPlayer, altCamara, altPlayer;
+    //private float posPlayer, altCamara, altPlayer;
 
     //Variables para obtener los sonidos del Player
     private AudioSource asSaltoPlayer, asMuertePlayer;
@@ -71,19 +79,24 @@ public class PlayerController2 : MonoBehaviour
     //Variable para permitir al personaje saltar o no
     private bool noSaltes = false;
 
+    //Variables para la escalera
+    private GameObject escaleraActiva;
+    public static bool enEscalera = false;
+
     //------------------------------------------METODO START-----------------------------------
     void Start()
     {
-        posInicialPlayer = transform.position;
         rigibodyPlayer = GetComponent<Rigidbody2D>();
         animatorPlayer = GetComponent<Animator>();
-        spritePlayer = GetComponent<SpriteRenderer>();
-        colorInicialPlayer = spritePlayer.color;
         capsulecoliderPlayer = GetComponent<CapsuleCollider2D>();
-        camara = Camera.main;
-
-        altCamara = camara.orthographicSize * 2;
-        altPlayer = GetComponent<Renderer>().bounds.size.y;
+        spritePlayer = GetComponent<SpriteRenderer>();
+        ccSize = capsulecoliderPlayer.size;
+        colorInicialPlayer = spritePlayer.color;
+        posInicialPlayer = transform.position;
+        
+        //camara = Camera.main;
+        //altCamara = camara.orthographicSize * 2;
+        //altPlayer = GetComponent<Renderer>().bounds.size.y;
 
         asSaltoPlayer = objSaltoPlayer.GetComponent<AudioSource>();
         asMuertePlayer = objMuertePlayer.GetComponent<AudioSource>();
@@ -109,8 +122,9 @@ public class PlayerController2 : MonoBehaviour
     {
         if (GameController2.gameOn)
         {
+            checkEscalera();
             comprobarSiTocamosSuelo();
-            if (!isTocado) moverPlayer();
+            if (!enEscalera && !isTocado) moverPlayer();
         }
     }
 
@@ -139,14 +153,21 @@ public class PlayerController2 : MonoBehaviour
          
         ejeHorizontal = Input.GetAxisRaw("Horizontal");
 
+        ejeVertical = Input.GetAxisRaw("Vertical");
+
         //Para girar al Player
         girarPlayer(ejeHorizontal);
 
         //Para hacer saltar al Player
-        saltarPlayer();
-
-        //Salto Mejorado
-        if (saltoMejorado) saltoMejoradoPlayerController();
+        if (!enEscalera)
+        {
+            if (Input.GetButtonDown("Jump") && isPuedoSaltar && isTocaSuelo)
+            {
+                saltarPlayer();
+            }
+            //Salto Mejorado
+            if (saltoMejorado) saltoMejoradoPlayerController();
+        }
     }
 
 
@@ -178,9 +199,16 @@ public class PlayerController2 : MonoBehaviour
         }
      }
 
-    private void saltarPlayer()
+    private void saltarPlayer() 
     {
-        if (Input.GetButtonDown("Jump") && isPuedoSaltar && isTocaSuelo && !noSaltes)
+        if (ejeVertical >= 0) saltoNormal();
+        else saltoParaAbajo();
+    }
+
+
+    private void saltoNormal()
+    {
+        if (!noSaltes)
         {
             isSaltando = true;
             isPuedoSaltar = false;
@@ -189,6 +217,27 @@ public class PlayerController2 : MonoBehaviour
 
             //Aplicar efecto de sonido (Jump)
             asSaltoPlayer.Play();
+        }
+    }
+
+    private void saltoParaAbajo()
+    {
+       // Debug.Log(ejeVertical);
+        RaycastHit2D hitTerreno = Physics2D.Raycast(transform.position,
+                                                    Vector2.down,
+                                                    (ccSize.y / 2) + addRayoDebajo,
+                                                    capaSuelo);
+
+
+        if (hitTerreno)
+        {
+            if (hitTerreno.transform.gameObject.tag == "TerrenoAtravesable")
+            {
+                hitTerreno.transform.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+                hitTerreno.transform.gameObject.tag = "Untagged";
+                hitTerreno.transform.gameObject.layer = LayerMask.NameToLayer("Default");
+                Debug.Log(hitTerreno);
+            }
         }
     }
 
@@ -232,23 +281,6 @@ public class PlayerController2 : MonoBehaviour
             rigibodyPlayer.velocity += Vector2.up * Physics2D.gravity.y * saltoCorto * Time.deltaTime;
         }
     }
-
-    private void recargarEscena()
-    {
-        posPlayer = camara.transform.InverseTransformDirection(transform.position - camara.transform.position).y;
-
-        if(posPlayer < ((altCamara/2)*-1) - (altPlayer/2) )
-        {
-           Invoke("llamaFuncionRecarga", 1);
-            isMuerto = false;
-        }
-    }
-
-    /*private void llamaFuncionRecarga()
-    {
-        asMuertePlayer.Play();
-        GameController2.playerMuerto = true;
-    }*/
 
 
     //--------------------------------------GIZMOS--------------------------------------------  
@@ -320,6 +352,7 @@ public class PlayerController2 : MonoBehaviour
         if(collision.gameObject.tag == "NoSaltar")
         {
             noSaltes = true;
+            isPuedoSaltar = false;
         }
         if (collision.gameObject.tag == "SueltaMonedas" && !GameController2.isSoltandoMonedas && GameController2.monedas > 0
             && GameController2.monedasPuerta > 0)
@@ -387,6 +420,95 @@ public class PlayerController2 : MonoBehaviour
 
         //Lanzar el evento de Delegado
         PlayerMuerto?.Invoke(); 
+    }
+
+    //-------------METODO PARA COMPROBAR SI ESTAMOS INTERACTUANDO CON UNA ESCALERA----
+    private void checkEscalera()
+    {
+        comprobarDir();
+
+        Vector2 posRayoDerecha = new Vector2(transform.position.x + (ccSize.x / 2) * dirX,
+                                             transform.position.y - (ccSize.y / 2) + 0.01f);
+
+        Vector2 posRayoMedio = new Vector2(transform.position.x,
+                                           transform.position.y - (ccSize.y / 2) + 0.01f);
+
+        //Zona de Debug
+        //Debug.DrawRay(posRayoDerecha, Vector2.up * (ccSize.y), Color.blue);
+        //Debug.DrawRay(posRayoMedio, Vector2.up * (ccSize.y), Color.blue); 
+
+        RaycastHit2D hitRayoDerecha = Physics2D.Raycast(posRayoDerecha,
+                                                        Vector2.up,
+                                                        (ccSize.y - 0.01f),
+                                                        capaEscalera);
+
+        RaycastHit2D hitRayoMedio = Physics2D.Raycast(posRayoMedio,
+                                                        Vector2.up,
+                                                        (ccSize.y - 0.01f),
+                                                        capaEscalera);
+
+        if (hitRayoDerecha || hitRayoMedio) //Si se activan cualquier RayCast
+        {
+            if (hitRayoDerecha) escaleraActiva = hitRayoDerecha.transform.gameObject;
+            if (hitRayoMedio) escaleraActiva = hitRayoMedio.transform.gameObject;
+
+            //Comnprobación si pulsamos arriba y si estamos dentro de una escalera
+            if (ejeVertical > 0 && !enEscalera && rigibodyPlayer.velocity.y >= 0) entroEscalera(escaleraActiva);
+        }
+        else if (enEscalera) salgoEscalera(); 
+
+
+        //Comprobación si pulsamos abajo y tenemos una escalera justo debajo
+        if (ejeVertical < 0)
+        {
+            Vector2 posRayoAB = new Vector2(transform.position.x - (ccSize.x / 2),
+                                            transform.position.y - (ccSize.y / 2) - 0.1f);
+
+            RaycastHit2D hitRayoAB = Physics2D.Raycast(posRayoAB,
+                                                       Vector2.right,
+                                                       ccSize.x,
+                                                       capaEscalera);
+
+            //Debug.DrawRay(posRayoAB, Vector2.right * (ccSize.x), Color.red);
+            //Si se activa el RayCast
+            if (hitRayoAB) entroEscalera(hitRayoAB.transform.gameObject);
+            //Si bajamos de la escalera y nos topamos con el suelo
+            else if (enEscalera && isTocaSuelo) salgoEscalera();
+        }
+
+
+        //Movernos cuando estamos en la escalera
+        if (enEscalera) 
+        {
+            //Cambiar animaciones
+            if (velocidadPlayer != 0) animatorPlayer.Play("SubeEscalera");
+            else animatorPlayer.Play("QuietoEscalera");
+
+            nuevaVelocidad = new Vector2(rigibodyPlayer.velocity.x, 
+                                         velocidadPlayer * ejeVertical);
+            rigibodyPlayer.MovePosition(rigibodyPlayer.position + nuevaVelocidad * Time.deltaTime);
+        }
+    } 
+
+    private void entroEscalera(GameObject escalera)
+    {
+        //rigibodyPlayer.gravityScale = 0;
+        isTocaSuelo = false;
+        enEscalera = true;
+        rigibodyPlayer.velocity = Vector2.zero;
+    }
+
+    private void salgoEscalera()
+    {
+        enEscalera = false;
+        animatorPlayer.Play("quieto");
+    }
+
+    private void comprobarDir()
+    {
+        if (isMirandoDerecha) dirX = 1;
+        else dirX = -1;
+
     }
 
     private void OnDisable()

@@ -29,6 +29,21 @@ TextureImporter:
   - first:
       213: 3912618699475993757
     second: SpritesDino_8
+  - first:
+      213: -5250956795668890801
+    second: SpritesDino_9
+  - first:
+      213: 8117757166987134064
+    second: SpritesDino_10
+  - first:
+      213: 2228991834350606197
+    second: SpritesDino_11
+  - first:
+      213: 4795872268879785958
+    second: SpritesDino_12
+  - first:
+      213: 433794505215206358
+    second: SpritesDino_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -134,7 +149,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 247
+        y: 256
         width: 105
         height: 128
       alignment: 0
@@ -155,7 +170,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 105
-        y: 247
+        y: 256
         width: 105
         height: 128
       alignment: 0
@@ -176,7 +191,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 210
-        y: 247
+        y: 256
         width: 105
         height: 128
       alignment: 0
@@ -197,7 +212,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 315
-        y: 247
+        y: 256
         width: 105
         height: 128
       alignment: 0
@@ -218,7 +233,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 420
-        y: 247
+        y: 256
         width: 105
         height: 128
       alignment: 0
@@ -239,7 +254,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 525
-        y: 247
+        y: 256
         width: 105
         height: 128
       alignment: 0
@@ -260,7 +275,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 119
+        y: 128
         width: 105
         height: 128
       alignment: 0
@@ -280,8 +295,8 @@ TextureImporter:
       name: SpritesDino_7
       rect:
         serializedVersion: 2
-        x: 105
-        y: 119
+        x: 106
+        y: 128
         width: 105
         height: 128
       alignment: 0
@@ -302,7 +317,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 210
-        y: 119
+        y: 128
         width: 105
         height: 128
       alignment: 0
@@ -314,6 +329,111 @@ TextureImporter:
       bones: []
       spriteID: d9441db2af96c4630800000000000000
       internalID: 3912618699475993757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesDino_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 105
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b7b377d9ad027b0800000000000000
+      internalID: -5250956795668890801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesDino_10
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 105
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0744627322118a070800000000000000
+      internalID: 8117757166987134064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesDino_11
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 105
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577d6bd7348feee10800000000000000
+      internalID: 2228991834350606197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesDino_12
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 105
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efe9be3b6c5e8240800000000000000
+      internalID: 4795872268879785958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesDino_13
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 105
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d36edcddc5250600800000000000000
+      internalID: 433794505215206358
       vertices: []
       indices: 
       edges: []
