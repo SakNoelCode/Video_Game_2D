@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +18,6 @@ public class GameController2 : MonoBehaviour
     [SerializeField] private GameObject camaraPrincipal;
     [SerializeField] private GameObject zonapuerta;
     [SerializeField] private GameObject puerta;
-
     [SerializeField] private PlayerController2 playerController;
     [SerializeField] private CheckPoint checkP;
 
@@ -36,6 +36,15 @@ public class GameController2 : MonoBehaviour
     private int monedasIni;
     private TextMesh textoPuerta;
 
+    //Variables para controlar el fundido con efecto de la mascar
+    [SerializeField] private Transform mascara;
+    [SerializeField] private SpriteRenderer sprColorMascara;
+    [SerializeField] private float velocidadMascara;
+    private Vector3 escalaFinal;
+    private Vector3 diferencia;
+    private float opacidadMascara;
+    private bool fundidoOn;
+
     public static bool playerMuerto;
 
     private BoxCollider2D boxColPuerta;
@@ -48,6 +57,7 @@ public class GameController2 : MonoBehaviour
         current = this;
         fundidoNegro.SetActive(true);
         monedasIni = 0;
+        fundidoOn = false;
     }
 
 
@@ -74,6 +84,61 @@ public class GameController2 : MonoBehaviour
     }
 
 
+    private void Update()
+    {
+        if (fundidoOn)
+        {
+            //Mover la escala del Sprite Renderer de la máscara
+            mascara.localScale = Vector3.MoveTowards(mascara.localScale,
+                                                     escalaFinal,
+                                                     velocidadMascara * Time.deltaTime);
+
+            //Sumar la opacidad con cada segundo del tiempo(de transparente a oscuro)
+            opacidadMascara += Time.deltaTime * 1.25f;
+
+            //Aplicar esta opacidad al Sprite renderer de la mascara
+            sprColorMascara.color = new Color(sprColorMascara.color.r,
+                                              sprColorMascara.color.g,
+                                              sprColorMascara.color.b,
+                                              opacidadMascara);
+
+            //Si se ha llegado al final de la escala hacer:
+            diferencia = mascara.localScale - escalaFinal;
+            if (diferencia.sqrMagnitude < 0.0001f)
+            {
+                mascara.localScale = escalaFinal;
+
+                //Activar fundido negro
+                sprFundidoNegro.color = new Color(sprFundidoNegro.color.r,
+                                                           sprFundidoNegro.color.g,
+                                                           sprFundidoNegro.color.b,
+                                                           1);
+                //Desactivar fundido máscara
+                sprColorMascara.color = new Color(sprColorMascara.color.r,
+                                              sprColorMascara.color.g,
+                                              sprColorMascara.color.b,
+                                              0);
+                fundidoOn = false;
+
+                //Realizar acciones después del fundido
+                monedas = monedasIni - 1;
+                sumaMonedas();
+                respawn();
+
+                //Iniciar Courutina de Fundido Negro
+                StartCoroutine(FundidoNegroOFF(0.5f));
+            }
+        }
+    }
+
+    private void activaFundido()
+    {
+        diferencia = Vector3.zero;
+        escalaFinal = new Vector3(0, 0, 1);
+        fundidoOn = true;
+        opacidadMascara = 0;
+    }
+
     private void chekPoint()
     {
         monedasIni = monedas;
@@ -83,10 +148,8 @@ public class GameController2 : MonoBehaviour
     {
         gameOn = false;
         musicaFondo.Stop();
-        StartCoroutine("FundidoNegroON");
+        activaFundido();
     }
-
-
 
     public static void sumaMonedas()
     {
@@ -135,11 +198,21 @@ public class GameController2 : MonoBehaviour
                                                        alpha);
             yield return null;
         }
+            //Hacer al fundido negro completamente transparente
+            sprFundidoNegro.color = new Color(sprFundidoNegro.color.r,
+                                              sprFundidoNegro.color.g,
+                                              sprFundidoNegro.color.b,
+                                              0);
+        
         gameOn = true;
         musicaFondo.Play();  /////Poner a la musica en Play
+
+        //Reiniciar valores de la mascara
+        opacidadMascara = 0;
+        mascara.localScale = new Vector3(2,2,1);
     }
 
-    IEnumerator FundidoNegroON()
+    /*IEnumerator FundidoNegroON()
     {
         for (float alpha = 0f; alpha <= 1; alpha += Time.deltaTime * 2f)
         {
@@ -150,13 +223,18 @@ public class GameController2 : MonoBehaviour
             yield return null;
         }
 
+        //Hacer al fundido negro completamente oscuro
+        sprFundidoNegro.color = new Color(sprFundidoNegro.color.r,
+                                                       sprFundidoNegro.color.g,
+                                                       sprFundidoNegro.color.b,
+                                                       1);
         monedas = monedasIni - 1;
         sumaMonedas();
-
         respawn();
+        Debug.Log("Ejecuta Fundido Negro ON");
 
         StartCoroutine(FundidoNegroOFF(0.5f));
-    }
+    }*/
 
 
     //----------------------MANEJO DE ABRIR Y CERRAR LA PUERTA------------------------------

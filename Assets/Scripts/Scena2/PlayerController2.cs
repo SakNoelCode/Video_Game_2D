@@ -21,13 +21,11 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private int        vidaPlayer = 3;
     [SerializeField] private float      addRayoDebajo;
 
-
     [Header("Objetos")]
     [SerializeField] private GameObject monedaParaPuerta;
     [SerializeField] private LayerMask  capaSuelo;
     [SerializeField] private LayerMask  capaEscalera;
     [SerializeField] private Transform  checkGround;
-
 
     [Header("Valores informativos del Personaje")] 
     [SerializeField] private bool isSaltando = false;
@@ -42,46 +40,37 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private GameObject objSaltoPlayer;
     [SerializeField] private GameObject objMuertePlayer;
 
-
-
-
-    //Variables auxiliares
-    private Vector2    ccSize;   //Tamaño del Player
-    private Vector2    nuevaVelocidad;
-    private Color      colorInicialPlayer;
-
-    //Variables para acceder a las propiedades del personaje
+    //Componentes
+    private Rigidbody2D rigibodyPlayer; //rPlayer
+    private Animator animatorPlayer;   //aPlayer //Variables para las animaciones
     private CapsuleCollider2D capsulecoliderPlayer; //ccPlayer
-    private SpriteRenderer    spritePlayer;  //sPlayer
-    private Rigidbody2D       rigibodyPlayer; //rPlayer
-    private float             ejeHorizontal;        //h
-    private float             ejeVertical;          //v
-    private bool              isMirandoDerecha = true;
-    public static Vector3     posInicialPlayer;
-    private float             dirX = 1;
-    //private Camera            camara;
+    private SpriteRenderer spritePlayer;  //sPlayer                           
+    private AudioSource asSaltoPlayer, asMuertePlayer;//Variables para obtener los sonidos
 
-    //Variables para las animaciones
-    private Animator animatorPlayer;   //aPlayer
+    //Obtención del movimiento Horizontal y Vertical
+    private float ejeHorizontal;        //h
+    private float ejeVertical;          //v
 
-    //Variables para colision con el enemigo
-    private bool isTocado = false;
+    //Variables de Comprobación
+    private bool isMirandoDerecha = true;
+    private bool isTocado = false;//Variables para colision con el enemigo
+    //private bool isMuerto = false;//Variable para saber si el Player esta muerto
+    private bool noSaltes = false;//Variable para permitir al personaje saltar o no
 
-    //Variable para saber si el Player esta muerto
-    private bool isMuerto = false;
+    //Accesibles desde otros Scripts
+    public static Vector3 posInicialPlayer;
+    public static bool enEscalera = false;
 
-    //Calcular valores para la camara (Recarga escena)
-    //private float posPlayer, altCamara, altPlayer;
-
-    //Variables para obtener los sonidos del Player
-    private AudioSource asSaltoPlayer, asMuertePlayer;
-
-    //Variable para permitir al personaje saltar o no
-    private bool noSaltes = false;
+    //OTRAS
+    private Vector2          ccSize;   //Tamaño del Player
+    private Vector2          nuevaVelocidad;
+    private Color            colorInicialPlayer;  
+    private float            dirX = 1;
+    private float            gravedad;
 
     //Variables para la escalera
     private GameObject escaleraActiva;
-    public static bool enEscalera = false;
+    
 
     //------------------------------------------METODO START-----------------------------------
     void Start()
@@ -93,6 +82,7 @@ public class PlayerController2 : MonoBehaviour
         ccSize = capsulecoliderPlayer.size;
         colorInicialPlayer = spritePlayer.color;
         posInicialPlayer = transform.position;
+        gravedad = rigibodyPlayer.gravityScale;
         
         //camara = Camera.main;
         //altCamara = camara.orthographicSize * 2;
@@ -136,7 +126,7 @@ public class PlayerController2 : MonoBehaviour
         animatorPlayer.Play("quieto");
         if (!isMirandoDerecha) girarPlayer(1);
         if (capsulecoliderPlayer.enabled == false) capsulecoliderPlayer.enabled = true;
-        isMuerto = false;
+        //isMuerto = false;
         transform.parent = null;
         transform.position = posInicialPlayer;
 
@@ -416,7 +406,7 @@ public class PlayerController2 : MonoBehaviour
         GameController2.gameOn = false; //Detener el juego
 
         capsulecoliderPlayer.enabled = false; //Desactivar el Colider
-        isMuerto = true;
+        //isMuerto = true;
 
         //Lanzar el evento de Delegado
         PlayerMuerto?.Invoke(); 
@@ -481,8 +471,10 @@ public class PlayerController2 : MonoBehaviour
         if (enEscalera) 
         {
             //Cambiar animaciones
-            if (velocidadPlayer != 0) animatorPlayer.Play("SubeEscalera");
+            if (ejeVertical != 0) animatorPlayer.Play("SubeEscalera");
             else animatorPlayer.Play("QuietoEscalera");
+            
+                
 
             nuevaVelocidad = new Vector2(rigibodyPlayer.velocity.x, 
                                          velocidadPlayer * ejeVertical);
@@ -492,16 +484,19 @@ public class PlayerController2 : MonoBehaviour
 
     private void entroEscalera(GameObject escalera)
     {
-        //rigibodyPlayer.gravityScale = 0;
+        rigibodyPlayer.gravityScale = 0;
         isTocaSuelo = false;
         enEscalera = true;
         rigibodyPlayer.velocity = Vector2.zero;
+        rigibodyPlayer.position = new Vector2(escalera.transform.position.x,
+                                              rigibodyPlayer.position.y + (ejeVertical * 0.01f));
     }
 
     private void salgoEscalera()
     {
         enEscalera = false;
         animatorPlayer.Play("quieto");
+        rigibodyPlayer.gravityScale = gravedad;
     }
 
     private void comprobarDir()
