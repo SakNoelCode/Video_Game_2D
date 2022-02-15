@@ -52,7 +52,7 @@ public class MenuController : MonoBehaviour
     int opcionOpciones, opcionOpcionesAnt;//Encender o Apagar Opciones de Opciones
     bool isPulsadoEnter; //Saber si se pulso enter
     float v, h; //Vertical y horizontal(Desplazamiento)
-    float tiempoV, tiempoH;
+    float tiempoV, tiempoH;  
 
      
     void Awake()
@@ -74,7 +74,7 @@ public class MenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        v = Input.GetAxisRaw("Vertical");
+        v = Input.GetAxisRaw("Vertical"); 
         h = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetButton("Submit")) isPulsadoEnter = false;
@@ -206,7 +206,7 @@ public class MenuController : MonoBehaviour
     //----------------------------------PANTALLA MENU PRINCIPAL------------------------------------------
     void MenuPrincipal()
     {
-        if (v != 0)
+        if (v != 0) //Si tenemos pulsado las teclas del eje Vertical
         {
             if (tiempoV == 0 || tiempoV > tiempoCambiarOpcion)
             {
@@ -239,8 +239,8 @@ public class MenuController : MonoBehaviour
         if (opcionMenuAnt == 1) comenzar.sprite = comenzarOff;
         if (opcionMenuAnt == 2) opciones.sprite = opcionesOff;
         if (opcionMenuAnt == 3) salir.sprite = salirOff;
-        opcionMenuAnt = opc; 
 
+        opcionMenuAnt = opc; 
     }
 
 

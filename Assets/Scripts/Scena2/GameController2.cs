@@ -54,6 +54,7 @@ public class GameController2 : MonoBehaviour
 
     private void Awake()
     {
+        leerPreferencias();  //PlayerPref
         current = this;
         fundidoNegro.SetActive(true);
         monedasIni = 0;
@@ -62,8 +63,7 @@ public class GameController2 : MonoBehaviour
 
 
     private void Start()
-    {
-        musicaFondo = camaraPrincipal.GetComponent<AudioSource>();
+    {  
         sprFundidoNegro = fundidoNegro.GetComponent<Image>();
         boxColPuerta = zonapuerta.GetComponent<BoxCollider2D>();
         animacionPuerta = puerta.GetComponent<Animator>();
@@ -128,6 +128,25 @@ public class GameController2 : MonoBehaviour
                 //Iniciar Courutina de Fundido Negro
                 StartCoroutine(FundidoNegroOFF(0.5f));
             }
+        }
+    }
+
+
+    private void leerPreferencias()
+    {
+        int volumenMusica = PlayerPrefs.GetInt("VolumenMusica", 5);
+        int volumenSonido = PlayerPrefs.GetInt("VolumenSonido", 4);
+
+        musicaFondo = camaraPrincipal.GetComponent<AudioSource>(); //Obtener el objeto
+
+        //Ajustar volumen de música
+        musicaFondo.volume = volumenMusica / 10f;
+
+        //Ajustar volumen de sonido
+        GameObject[] sonidos = GameObject.FindGameObjectsWithTag("Sonido");
+        foreach(GameObject sonido in sonidos)
+        {
+            sonido.GetComponent<AudioSource>().volume = volumenSonido / 10f;
         }
     }
 
@@ -236,6 +255,9 @@ public class GameController2 : MonoBehaviour
         StartCoroutine(FundidoNegroOFF(0.5f));
     }*/
 
+
+
+    //----------------------FUNCIONES Y PROCEDIMIENTOS DE LA PUERTA FINAL------------------------------
 
     //----------------------MANEJO DE ABRIR Y CERRAR LA PUERTA------------------------------
     public static void permitePaso()
