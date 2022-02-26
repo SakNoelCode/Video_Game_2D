@@ -16,14 +16,14 @@ public class CoinController : MonoBehaviour
         snd_Moneda = GetComponent<AudioSource>();
 
         //Eventos y Delegados
-        GameController2.respawn += Respawn;
+        GameController.respawn += Respawn;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" && isActiva)
         {
-            GameController2.sumaMonedas();
+            GameController.sumaMonedas();
             sprMoneda.enabled = false;
             particulas.Play();
             isActiva = false;
@@ -40,6 +40,6 @@ public class CoinController : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameController2.respawn -= Respawn;
+        GameController.respawn -= Respawn;
     }
 }

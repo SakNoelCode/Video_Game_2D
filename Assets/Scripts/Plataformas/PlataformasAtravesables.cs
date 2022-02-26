@@ -36,7 +36,7 @@ public class PlataformasAtravesables : MonoBehaviour
             gameObject.layer = LayerMask.NameToLayer("Suelo");
         }
 
-        if ((!ccplataforma.isTrigger && (piePlayer < topPlataforma - 0.2f)) || PlayerController2.enEscalera)
+        if ((!ccplataforma.isTrigger && (piePlayer < topPlataforma - 0.2f)) || PlayerController.enEscalera)
         {
             ccplataforma.isTrigger = true;
             gameObject.tag = "Untagged";

@@ -32,7 +32,7 @@ public class MonedaPuerta : MonoBehaviour
 
     private void calcularDestino()
     {
-        if(!fin && GameController2.monedasPuerta > 0) {
+        if(!fin && GameController.monedasPuerta > 0) {
             if (transform.position != destinoFix)
             {
                 transform.position = Vector3.MoveTowards(transform.position, destinoFix, velocidad);
@@ -43,9 +43,9 @@ public class MonedaPuerta : MonoBehaviour
                 particulas.Play();
                 snd_monedaPuerta.Play();
                 fin = true;
-                GameController2.RestaMonedas(); 
-                GameController2.RestaMonedasPuerta();
-                if(GameController2.monedasPuerta == 0)
+                GameController.RestaMonedas(); 
+                GameController.RestaMonedasPuerta();
+                if(GameController.monedasPuerta == 0)
                 {
                     Destroy(destino);
                 }
@@ -56,7 +56,11 @@ public class MonedaPuerta : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameController2.isSoltandoMonedas = false;
-        if (GameController2.monedasPuerta == 0) GameController2.abrePuerta();
+        GameController.isSoltandoMonedas = false;
+        if (GameController.monedasPuerta == 0)
+        {
+            GameController.abrePuerta();
+            GameController.NoPermitePaso();
+        }
     }
 }

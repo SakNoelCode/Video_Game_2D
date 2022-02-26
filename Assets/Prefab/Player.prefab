@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6640600263523738055}
   m_Layer: 0
   m_Name: SonidoSalto
-  m_TagString: Untagged
+  m_TagString: Sonido
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,13 +213,18 @@ MonoBehaviour:
   saltoMejorado: 1
   saltoLargo: 1
   saltoCorto: 3
-  checkGround: {fileID: 6640600263545935557}
   checkGroundRadio: 0.28
+  fuerzaToqueEnemigo: 7
+  vidaPlayer: 3
+  addRayoDebajo: 1
+  monedaParaPuerta: {fileID: 1792152078049324770, guid: 8c209b01c6880ab46afaaf5fe311bcf5, type: 3}
   capaSuelo:
     serializedVersion: 2
     m_Bits: 8
-  fuerzaToqueEnemigo: 7
-  vidaPlayer: 3
+  capaEscalera:
+    serializedVersion: 2
+    m_Bits: 128
+  checkGround: {fileID: 6640600263545935557}
   isSaltando: 0
   isPuedoSaltar: 0
   isTocaSuelo: 0
@@ -379,7 +384,7 @@ GameObject:
   - component: {fileID: 6640600263760630176}
   m_Layer: 0
   m_Name: SonidoMuerte
-  m_TagString: Untagged
+  m_TagString: Sonido
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,7 +413,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 99d8e669b6033cd428f726d59d4bac49, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4a6e67d167c34d149b83db443224c513, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

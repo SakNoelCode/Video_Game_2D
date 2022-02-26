@@ -20,7 +20,7 @@ public class Puerta : MonoBehaviour
      
     private void puertaAbierta()
     {
-        GameController2.permitePaso();
+        GameController.permitePaso();
         snd.Stop(); 
     }
 }

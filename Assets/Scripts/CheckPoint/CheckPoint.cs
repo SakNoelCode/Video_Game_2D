@@ -36,7 +36,7 @@ public class CheckPoint : MonoBehaviour
             sonidoCheckPoint.Play();
             sprCheckPoint.sprite = spriteOn;
             checkP?.Invoke();
-            PlayerController2.posInicialPlayer = posPlayer.transform.position;
+            PlayerController.posInicialPlayer = posPlayer.transform.position;
             destruyeObjetos();
         }   
     }

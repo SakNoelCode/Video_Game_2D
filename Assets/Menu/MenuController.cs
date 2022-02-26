@@ -219,7 +219,7 @@ public class MenuController : MonoBehaviour
         if(Input.GetButtonDown("Submit") && !isPulsadoEnter)
         {
             snd_seleccion.Play();
-            if (opcionMenu == 1) SceneManager.LoadScene("Nivel1");
+            if (opcionMenu == 1) SceneManager.LoadScene("Minimapa");
             if (opcionMenu == 2) CargaPantallaOpciones();
             if (opcionMenu == 3) Application.Quit();
         }
