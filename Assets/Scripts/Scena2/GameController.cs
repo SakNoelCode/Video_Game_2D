@@ -173,6 +173,19 @@ public class GameController: MonoBehaviour
         activaFundido();
     }
 
+    //Metodos Publicos para Controlar la Pausa
+    public static void PausarGame()
+    {
+        gameOn = false;
+        current.musicaFondo.Stop();
+    }
+
+    public static void SalirGame()
+    {
+        SceneManager.LoadScene("Minimapa");
+    }
+    // Fin de metodos Publicos para Controlar la Pausa
+
     public static void sumaMonedas()
     {
         monedas++;
@@ -234,32 +247,7 @@ public class GameController: MonoBehaviour
         mascara.localScale = new Vector3(2,2,1);
     }
 
-    /*IEnumerator FundidoNegroON()
-    {
-        for (float alpha = 0f; alpha <= 1; alpha += Time.deltaTime * 2f)
-        {
-            sprFundidoNegro.color = new Color(sprFundidoNegro.color.r,
-                                                       sprFundidoNegro.color.g,
-                                                       sprFundidoNegro.color.b,
-                                                       alpha);
-            yield return null;
-        }
-
-        //Hacer al fundido negro completamente oscuro
-        sprFundidoNegro.color = new Color(sprFundidoNegro.color.r,
-                                                       sprFundidoNegro.color.g,
-                                                       sprFundidoNegro.color.b,
-                                                       1);
-        monedas = monedasIni - 1;
-        sumaMonedas();
-        respawn();
-        Debug.Log("Ejecuta Fundido Negro ON");
-
-        StartCoroutine(FundidoNegroOFF(0.5f));
-    }*/
-
-
-
+    
     //----------------------FUNCIONES Y PROCEDIMIENTOS DE LA PUERTA FINAL------------------------------
 
     //----------------------MANEJO DE ABRIR Y CERRAR LA PUERTA------------------------------

@@ -19,10 +19,18 @@ public class MinimapaController : MonoBehaviour
     private bool puedoMoverme = false;
     private string escena;
 
+    //Ajustar Volumen Audio
+    [SerializeField] private GameObject audioFondo;
+    [SerializeField] private GameObject audioCamino;
+    private AudioSource AudioFondo;
+    private AudioSource AudioCamino;
+
 
     // ----------------------------------------Metodo Start
     void Awake()
     {
+        leerPreferencias();
+
         if (!Variables.isIniciado)//La primera vez que inicia el juego
         {
             Variables.nivel = 0;
@@ -163,5 +171,19 @@ public class MinimapaController : MonoBehaviour
     private void OnApplicationQuit()
     {
         Variables.isIniciado = false;
+    }
+
+    private void leerPreferencias()
+    {
+        int volumenMusica = PlayerPrefs.GetInt("VolumenMusica", 5);
+        int volumenSonido = PlayerPrefs.GetInt("VolumenSonido", 4);
+
+        //Obtener componentes
+        AudioCamino = audioCamino.GetComponent<AudioSource>();
+        AudioFondo = audioFondo.GetComponent<AudioSource>();
+
+        //Ajustar Volumen
+        AudioCamino.volume = volumenSonido / 10f;
+        AudioFondo.volume = volumenMusica / 10f;
     }
 }

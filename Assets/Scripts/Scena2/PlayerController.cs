@@ -11,26 +11,33 @@ public class PlayerController : MonoBehaviour
     public event MiDelegado PlayerMuerto;
 
     [Header("Valores del Personaje")]
-    [SerializeField] private float      velocidadPlayer;
-    [SerializeField] private float      fuerzaSaltoPlayer;
-    [SerializeField] private bool       saltoMejorado;
-    [SerializeField] private float      saltoLargo;
-    [SerializeField] private float      saltoCorto;
-    [SerializeField] private float      checkGroundRadio;  
-    [SerializeField] private float      fuerzaToqueEnemigo;
-    [SerializeField] private int        vidaPlayer = 3;
-    [SerializeField] private float      addRayoDebajo;
+    [SerializeField] private float velocidadPlayer;
+    [SerializeField] private float fuerzaSaltoPlayer;
+    [SerializeField] private bool saltoMejorado;
+    [SerializeField] private float saltoLargo;
+    [SerializeField] private float saltoCorto;
+    [SerializeField] private float checkGroundRadio;
+    [SerializeField] private float fuerzaToqueEnemigo;
+    [SerializeField] private int vidaPlayer = 3;
+    [SerializeField] private float addRayoDebajo;
+    [SerializeField] private float tiempoCoyoteTime = 0.1f;
+    [SerializeField] private float tiempoBufferSalto = 0.2f;
 
     [Header("Objetos")]
     [SerializeField] private GameObject monedaParaPuerta;
-    [SerializeField] private LayerMask  capaSuelo;
-    [SerializeField] private LayerMask  capaEscalera;
-    [SerializeField] private Transform  checkGround;
+    [SerializeField] private LayerMask capaSuelo;
+    [SerializeField] private LayerMask capaEscalera;
+    [SerializeField] private Transform checkGround;
 
-    [Header("Valores informativos del Personaje")] 
+    [Header("Partículas")]
+    [SerializeField] private ParticleSystem polvoPies;
+    [SerializeField] private ParticleSystem polvoSalto;
+
+    [Header("Valores informativos del Personaje")]
     [SerializeField] private bool isSaltando = false;
     [SerializeField] private bool isPuedoSaltar = false;
     [SerializeField] private bool isTocaSuelo = false;
+    [SerializeField] private bool coyoteTime = false;
 
     [Header("Barra de Vida")]
     [SerializeField] private GameObject barraVida;
@@ -39,6 +46,11 @@ public class PlayerController : MonoBehaviour
     [Header("Efectos de Sonido")]
     [SerializeField] private GameObject objSaltoPlayer;
     [SerializeField] private GameObject objMuertePlayer;
+
+    [Header("Componentes para Pausa")]
+    [SerializeField] private GameObject pantallaPausa;
+    private bool isPausa = false;
+    private bool scapePulsada;
 
     //Componentes
     private Rigidbody2D rigibodyPlayer; //rPlayer
@@ -56,21 +68,31 @@ public class PlayerController : MonoBehaviour
     private bool isTocado = false;//Variables para colision con el enemigo
     //private bool isMuerto = false;//Variable para saber si el Player esta muerto
     private bool noSaltes = false;//Variable para permitir al personaje saltar o no
+    private bool isCayendo = false;
 
     //Accesibles desde otros Scripts
     public static Vector3 posInicialPlayer;
     public static bool enEscalera = false;
 
     //OTRAS
-    private Vector2          ccSize;   //Tamaño del Player
-    private Vector2          nuevaVelocidad;
-    private Color            colorInicialPlayer;  
-    private float            dirX = 1;
-    private float            gravedad;
+    private Vector2 ccSize;   //Tamaño del Player
+    private Vector2 nuevaVelocidad;
+    private Color colorInicialPlayer;
+    private float dirX = 1;
+    private float gravedad;
+    private float tiempoCoyote; //Coyote Time
+    private float tiempoBuffer; //Buffer Salto
+
+    //Partículas
+    private ParticleSystem.EmissionModule emisionPolvoPies;
 
     //Variables para la escalera
     private GameObject escaleraActiva;
-    
+
+    private void Awake()
+    {
+        scapePulsada = false;
+    }
 
     //------------------------------------------METODO START-----------------------------------
     void Start()
@@ -83,7 +105,7 @@ public class PlayerController : MonoBehaviour
         colorInicialPlayer = spritePlayer.color;
         posInicialPlayer = transform.position;
         gravedad = rigibodyPlayer.gravityScale;
-        
+
         //camara = Camera.main;
         //altCamara = camara.orthographicSize * 2;
         //altPlayer = GetComponent<Renderer>().bounds.size.y;
@@ -92,6 +114,9 @@ public class PlayerController : MonoBehaviour
         asMuertePlayer = objMuertePlayer.GetComponent<AudioSource>();
 
         GameController.respawn += Respawn;
+
+        //Sistema de Partículas
+        emisionPolvoPies = polvoPies.emission; 
     }
 
 
@@ -101,9 +126,17 @@ public class PlayerController : MonoBehaviour
         animatorPlayer.SetBool("GameOn", GameController.gameOn);
         if (GameController.gameOn)
         {
+            ValidaCoyoteTime();
+            ControlBufferSalto();
             recibePulsaciones();
             asignarValoresAnimaciones();
+            checkPolvoPies();
         }
+
+        if (!Input.GetKeyDown(KeyCode.Escape)) scapePulsada = false;
+
+        //Si el juego esta pausado y damos clic en salir 
+        SalirGame();
     }
 
 
@@ -133,14 +166,14 @@ public class PlayerController : MonoBehaviour
         //Vida y barra de vida
         barraVida.GetComponent<Image>().sprite = sprVida3;
         vidaPlayer = 3;
-        
+
     }
 
 
     private void recibePulsaciones()
     {
-        if (Input.GetKey(KeyCode.R)) GameController.playerMuerto = true; 
-         
+        //if (Input.GetKey(KeyCode.R)) GameController.playerMuerto = true;
+
         ejeHorizontal = Input.GetAxisRaw("Horizontal");
 
         ejeVertical = Input.GetAxisRaw("Vertical");
@@ -151,13 +184,25 @@ public class PlayerController : MonoBehaviour
         //Para hacer saltar al Player
         if (!enEscalera)
         {
-            if (Input.GetButtonDown("Jump") && isPuedoSaltar && isTocaSuelo)
+            if (tiempoBuffer >= 0 && isPuedoSaltar && (isTocaSuelo || coyoteTime))
             {
                 saltarPlayer();
             }
             //Salto Mejorado
             if (saltoMejorado) saltoMejoradoPlayerController();
         }
+
+        //Para Pausar el juego
+        if (Input.GetKeyDown(KeyCode.Escape) && !scapePulsada)
+        {
+            pantallaPausa.SetActive(true);
+            isPausa = true;
+            Time.timeScale = 0;
+            GameController.PausarGame();
+            scapePulsada = true;
+        }
+
+        
     }
 
 
@@ -173,7 +218,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void moverPlayer()
-     {
+    {
         if (isTocaSuelo && !isSaltando) //Velocidad en el Suelo
         {
             nuevaVelocidad.Set(velocidadPlayer * ejeHorizontal, rigibodyPlayer.velocity.y);
@@ -185,11 +230,11 @@ public class PlayerController : MonoBehaviour
             {
                 nuevaVelocidad.Set(velocidadPlayer * ejeHorizontal, rigibodyPlayer.velocity.y);
                 rigibodyPlayer.velocity = nuevaVelocidad;
-            }            
+            }
         }
-     }
+    }
 
-    private void saltarPlayer() 
+    private void saltarPlayer()
     {
         if (ejeVertical >= 0) saltoNormal();
         else saltoParaAbajo();
@@ -207,12 +252,14 @@ public class PlayerController : MonoBehaviour
 
             //Aplicar efecto de sonido (Jump)
             asSaltoPlayer.Play();
-        }
+            //TiempoBufferSalto
+            tiempoBuffer = 0;
+        } 
     }
 
     private void saltoParaAbajo()
     {
-       // Debug.Log(ejeVertical);
+        // Debug.Log(ejeVertical);
         RaycastHit2D hitTerreno = Physics2D.Raycast(transform.position,
                                                     Vector2.down,
                                                     (ccSize.y / 2) + addRayoDebajo,
@@ -235,9 +282,26 @@ public class PlayerController : MonoBehaviour
     {
         isTocaSuelo = Physics2D.OverlapCircle(checkGround.position, checkGroundRadio, capaSuelo);
 
+        //Verificar si tocamos Suelo y establecer los valores para el coyote Time
+        if (isTocaSuelo)
+        {
+            coyoteTime = true;
+            tiempoCoyote = 0;
+        }//Fin de Implementacion del coyote Time
+        else
+        {
+            if (rigibodyPlayer.velocity.y < 0 && !isCayendo) isCayendo = true;
+        }
+
         if (rigibodyPlayer.velocity.y <= 0f)
         {
             isSaltando = false;
+            if (isCayendo && isTocaSuelo)
+            {
+                polvoSalto.Play();
+                isCayendo = false;
+            }
+
 
             //para comprobar si el enemigo nos toca
             if (isTocado && isTocaSuelo)
@@ -247,9 +311,9 @@ public class PlayerController : MonoBehaviour
                 spritePlayer.color = colorInicialPlayer;
             }
         }
-        if(isTocaSuelo && !isSaltando)
+        if (isTocaSuelo && !isSaltando)
         {
-            isPuedoSaltar = true;     
+            isPuedoSaltar = true;
         }
     }
 
@@ -300,7 +364,7 @@ public class PlayerController : MonoBehaviour
         {
             //Impulsar hacia arriba
             rigibodyPlayer.velocity = Vector2.zero;
-            rigibodyPlayer.AddForce(new Vector2 (0f, 10f), ForceMode2D.Impulse);
+            rigibodyPlayer.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
             collision.gameObject.SendMessage("Muere");
         }
     }
@@ -318,12 +382,12 @@ public class PlayerController : MonoBehaviour
     //------------------------------DETECCION CON TRIGGERS-----------------------------------------------
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Pinchos" )  //DETECCION PINCHOS
+        if (collision.gameObject.tag == "Pinchos")  //DETECCION PINCHOS
         {
             muertePlayer(true);
         }
 
-        if(collision.gameObject.tag == "CaidaVacio") //DETECCION CAIDA VACIO
+        if (collision.gameObject.tag == "CaidaVacio") //DETECCION CAIDA VACIO
         {
             muertePlayer(false);
         }
@@ -339,7 +403,7 @@ public class PlayerController : MonoBehaviour
     //------------------------------DETECCION CON LA  PUERTA FINAL-----------------------------------------------
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "NoSaltar")
+        if (collision.gameObject.tag == "NoSaltar")
         {
             noSaltes = true;
             isPuedoSaltar = false;
@@ -354,11 +418,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "NoSaltar")
+        if (collision.gameObject.tag == "NoSaltar")
         {
             noSaltes = false;
         }
-        
+
     }
 
 
@@ -399,7 +463,7 @@ public class PlayerController : MonoBehaviour
         if (anim)
         {
             animatorPlayer.Play("Muerte");  //Animación de muerte
-                                            
+
             rigibodyPlayer.velocity = Vector2.zero;
             rigibodyPlayer.AddForce(new Vector2(0.0f, fuerzaSaltoPlayer), ForceMode2D.Impulse);//Cuando nos matan, hacemos un salto
         }
@@ -409,7 +473,7 @@ public class PlayerController : MonoBehaviour
         //isMuerto = true;
 
         //Lanzar el evento de Delegado
-        PlayerMuerto?.Invoke(); 
+        PlayerMuerto?.Invoke();
     }
 
     //-------------METODO PARA COMPROBAR SI ESTAMOS INTERACTUANDO CON UNA ESCALERA----
@@ -445,7 +509,7 @@ public class PlayerController : MonoBehaviour
             //Comnprobación si pulsamos arriba y si estamos dentro de una escalera
             if (ejeVertical > 0 && !enEscalera && rigibodyPlayer.velocity.y >= 0) entroEscalera(escaleraActiva);
         }
-        else if (enEscalera) salgoEscalera(); 
+        else if (enEscalera) salgoEscalera();
 
 
         //Comprobación si pulsamos abajo y tenemos una escalera justo debajo
@@ -468,19 +532,19 @@ public class PlayerController : MonoBehaviour
 
 
         //Movernos cuando estamos en la escalera
-        if (enEscalera) 
+        if (enEscalera)
         {
             //Cambiar animaciones
             if (ejeVertical != 0) animatorPlayer.Play("SubeEscalera");
             else animatorPlayer.Play("QuietoEscalera");
-            
-                
 
-            nuevaVelocidad = new Vector2(rigibodyPlayer.velocity.x, 
+
+
+            nuevaVelocidad = new Vector2(rigibodyPlayer.velocity.x,
                                          velocidadPlayer * ejeVertical);
             rigibodyPlayer.MovePosition(rigibodyPlayer.position + nuevaVelocidad * Time.deltaTime);
         }
-    } 
+    }
 
     private void entroEscalera(GameObject escalera)
     {
@@ -509,6 +573,56 @@ public class PlayerController : MonoBehaviour
     private void OnDisable()
     {
         GameController.respawn -= Respawn;
+    } 
+
+    private void ValidaCoyoteTime()
+    {
+        if(!isTocaSuelo && coyoteTime)
+        {
+            tiempoCoyote += Time.deltaTime;
+            if (tiempoCoyote > tiempoCoyoteTime) coyoteTime = false;
+        }
+    }
+
+    private void ControlBufferSalto()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            tiempoBuffer = tiempoBufferSalto;
+        }
+        else
+        {
+            tiempoBuffer -= Time.deltaTime;
+        }
+    }
+
+    private void checkPolvoPies()
+    {
+        if(isTocaSuelo && ejeHorizontal != 0)
+        {
+            emisionPolvoPies.rateOverTime = 40;
+        }
+        else 
+        {
+            emisionPolvoPies.rateOverTime = 0;
+        }
+    }
+
+    private void SalirGame()
+    {
+        if (isPausa)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape) && !scapePulsada)
+            {
+                GameController.SalirGame();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+
+            }
+
+        }
     }
 
 }

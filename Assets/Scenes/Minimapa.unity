@@ -808,7 +808,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 858451b169521f74989e4e560664a49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 5
   arrayHuecos:
   - {fileID: 1215437934}
   - {fileID: 949429060}
@@ -822,14 +821,16 @@ MonoBehaviour:
   - {fileID: 1757952811}
   - {fileID: 1086638523}
   - {fileID: 509589728}
-  player: {fileID: 671641734}
-  titulo: {fileID: 1894742589}
   arraySpr_Texto:
   - {fileID: 21300000, guid: 0cc93ea416dd9524881a29a9d3deb6fe, type: 3}
   - {fileID: 21300000, guid: 75eed0f180043824084167207d23a13a, type: 3}
   - {fileID: 21300000, guid: e2f0cbe6145d17043a1752a8765310c7, type: 3}
   - {fileID: 21300000, guid: a6964552175329c4bbc2c30c3413ffb2, type: 3}
+  player: {fileID: 671641734}
+  titulo: {fileID: 1894742589}
   snd_Camino: {fileID: 1494263567}
+  audioFondo: {fileID: 1823548796}
+  audioCamino: {fileID: 1494263565}
 --- !u!4 &1130948264
 Transform:
   m_ObjectHideFlags: 0
