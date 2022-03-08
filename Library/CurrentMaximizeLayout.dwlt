@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 679, y: 342}
-  m_MaxSize: {x: 12004, y: 8042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 36034
+  controlID: 20189
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,10 +135,10 @@ MonoBehaviour:
     y: 0
     width: 1090
     height: 635
-  m_MinSize: {x: 403, y: 342}
-  m_MaxSize: {x: 8003, y: 8042}
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
-  controlID: 35962
+  controlID: 20190
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 35889
+  controlID: 20127
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -217,10 +217,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: dc180100
-      m_LastClickedID: 71900
-      m_ExpandedIDs: 7e44ffff6845ffff7e47ffff9449ffff4053ffffa453ffff8654ffffa858ffffc058ffff48edffff40fbffff5a5c0000d4030100661801005a190100
+      scrollPos: {x: 0, y: 82.117645}
+      m_SelectedIDs: 50ecffff
+      m_LastClickedID: -5040
+      m_ExpandedIDs: 50ecffff44f3ffff40fbffff484300000644000016440000c6440000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -307,9 +307,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.699678, y: -0.42701143, z: -12.709927}
+    m_Target: {x: -3.4721985, y: 1.3678325, z: -4.401036}
     speed: 2
-    m_Value: {x: -3.699678, y: -0.42701143, z: -12.709927}
+    m_Value: {x: -3.4721985, y: 1.3678325, z: -4.401036}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -360,9 +360,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.1893053
+    m_Target: 3.6217313
     speed: 2
-    m_Value: 6.1893053
+    m_Value: 3.6217313
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -408,10 +408,10 @@ MonoBehaviour:
     y: 364
     width: 1090
     height: 271
-  m_MinSize: {x: 201, y: 121}
-  m_MaxSize: {x: 8001, y: 4021}
+  m_MinSize: {x: 333, y: 271}
+  m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
-  controlID: 35963
+  controlID: 20191
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -422,23 +422,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 581
+    width: 633
     height: 271
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -461,7 +461,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 437
-    width: 580
+    width: 632
     height: 250
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -477,22 +477,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts/Scena2
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts/Scena2
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "D:\\Unity Proyects\\Dino\\Dino Matem\xE1tica"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 30}
-    m_SelectedIDs: c0450000
-    m_LastClickedID: 17856
-    m_ExpandedIDs: 000000009a4500009c4500009e450000a0450000
+    scrollPos: {x: 0, y: 138}
+    m_SelectedIDs: 56480000
+    m_LastClickedID: 18518
+    m_ExpandedIDs: 00000000124800001448000016480000184800004248000026490000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -520,7 +520,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009a4500009c4500009e450000a0450000
+    m_ExpandedIDs: 000000001248000014480000164800001848000026490000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -545,9 +545,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: dc180100
-    m_LastClickedInstanceID: 71900
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 50ecffff
+    m_LastClickedInstanceID: -5040
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300000a580000ec42000030580000f4420000c8f5ffffea4200000a4300004c430000126500009c4400007c440000804400004a43000054430000b04c0000344300008e430000bc43000066510000e6450000e245000000000000ee450000625e00002858000024580000b6450000a24f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 437
-    width: 580
+    width: 632
     height: 250
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &13
@@ -616,9 +616,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 581
+    x: 633
     y: 0
-    width: 509
+    width: 457
     height: 271
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
@@ -648,14 +648,14 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 581
+    x: 633
     y: 437
-    width: 507
+    width: 455
     height: 250
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 71900
+  m_LastSelectedObjectID: -5040
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -861,7 +861,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 215
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0

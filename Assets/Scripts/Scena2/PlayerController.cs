@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     public delegate void MiDelegado();
     public event MiDelegado PlayerMuerto;
 
+    //Para métodos estaticos
+    //static PlayerController current;
+
     [Header("Valores del Personaje")]
     [SerializeField] private float velocidadPlayer;
     [SerializeField] private float fuerzaSaltoPlayer;
@@ -47,10 +50,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject objSaltoPlayer;
     [SerializeField] private GameObject objMuertePlayer;
 
-    [Header("Componentes para Pausa")]
+    /*[Header("Componentes para Pausa")]
     [SerializeField] private GameObject pantallaPausa;
     private bool isPausa = false;
-    private bool scapePulsada;
+    private bool scapePulsada;*/
 
     //Componentes
     private Rigidbody2D rigibodyPlayer; //rPlayer
@@ -91,7 +94,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        scapePulsada = false;
+        //scapePulsada = false;
     }
 
     //------------------------------------------METODO START-----------------------------------
@@ -133,10 +136,11 @@ public class PlayerController : MonoBehaviour
             checkPolvoPies();
         }
 
+        /*Controlar la tecla escape(Si ha sido clicada o no)
         if (!Input.GetKeyDown(KeyCode.Escape)) scapePulsada = false;
 
-        //Si el juego esta pausado y damos clic en salir 
-        SalirGame();
+        //Opciones cuando el juego esta pausado
+        SeleccionarOpcionesPausa();*/
     }
 
 
@@ -192,15 +196,11 @@ public class PlayerController : MonoBehaviour
             if (saltoMejorado) saltoMejoradoPlayerController();
         }
 
-        //Para Pausar el juego
+        /*Para Pausar el juego
         if (Input.GetKeyDown(KeyCode.Escape) && !scapePulsada)
         {
-            pantallaPausa.SetActive(true);
-            isPausa = true;
-            Time.timeScale = 0;
-            GameController.PausarGame();
-            scapePulsada = true;
-        }
+            pausa();
+        }*/
 
         
     }
@@ -608,21 +608,38 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void SalirGame()
+
+   /* //======================================CONTROL DE PAUSA-=============================
+    private void pausa()
+    {
+        pantallaPausa.SetActive(true);
+        isPausa = true;
+        Time.timeScale = 0; //Paralizar el tiempo
+        GameController.PausarGame();
+        scapePulsada = true;
+    }
+   */
+   /* private void SeleccionarOpcionesPausa()
     {
         if (isPausa)
         {
+            //Reanudar Juego
             if (Input.GetKeyDown(KeyCode.Escape) && !scapePulsada)
+            {
+                pantallaPausa.SetActive(false);
+                isPausa = false;
+                Time.timeScale = 1;
+                GameController.ReanudarGame();
+                scapePulsada = true;
+            }
+
+            //Salir del juego(nivel)
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 GameController.SalirGame();
             }
 
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-
-            }
-
         }
-    }
+    }*/
 
 }

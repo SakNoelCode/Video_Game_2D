@@ -56,25 +56,33 @@
     <Analyzer Include="D:\Data Program\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Quiz\Options.cs" />
     <Compile Include="Assets\Scripts\Enemigo\EnemigoSimple1.cs" />
+    <Compile Include="Assets\Scripts\Quiz\QuizController.cs" />
     <Compile Include="Assets\Scripts\Scena2\GameController.cs" />
+    <Compile Include="Assets\Scripts\Quiz\QuizUI.cs" />
     <Compile Include="Assets\Scripts\Monedas\CoinController.cs" />
     <Compile Include="Assets\Scripts\Scena2\ActivarMensaje2.cs" />
     <Compile Include="Assets\Scripts\Plataformas\Plataforma_Recorrido.cs" />
+    <Compile Include="Assets\Scripts\Variables\Variables.cs" />
     <Compile Include="Assets\Menu\MenuController.cs" />
     <Compile Include="Assets\Scripts\PinchosRoca\Pinchos_Roca_Recorrido.cs" />
     <Compile Include="Assets\Scripts\Enemigo\RecorridoEnemigo.cs" />
     <Compile Include="Assets\Scripts\CheckPoint\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\Plataformas\Plataforma_Cae.cs" />
     <Compile Include="Assets\Scripts\Puerta\Puerta.cs" />
+    <Compile Include="Assets\Scripts\Quiz\Question.cs" />
+    <Compile Include="Assets\Scripts\Quiz\QuizDB.cs" />
     <Compile Include="Assets\Scripts\Scena2\CameraController.cs" />
+    <Compile Include="Assets\Minimapa\MinimapaController.cs" />
+    <Compile Include="Assets\Scripts\Quiz\OptionsButtons.cs" />
     <Compile Include="Assets\Scripts\Monedas\MonedaPuerta.cs" />
+    <Compile Include="Assets\Scripts\Quiz\Cartel.cs" />
     <Compile Include="Assets\Scripts\Plataformas\Plataforma_Movil.cs" />
     <Compile Include="Assets\Scripts\Scena2\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PinchosRoca\Pinchos_Roca_Movil.cs" />
     <Compile Include="Assets\Scripts\Plataformas\PlataformasAtravesables.cs" />
-    <Compile Include="Assets\Minimapa\MinimapaController.cs" />
-    <Compile Include="Assets\Scripts\Variables\Variables.cs" />
+    <Compile Include="Assets\Scripts\Pausa\Pausa.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

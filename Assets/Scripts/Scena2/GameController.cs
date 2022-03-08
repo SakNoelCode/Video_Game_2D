@@ -177,9 +177,13 @@ public class GameController: MonoBehaviour
     public static void PausarGame()
     {
         gameOn = false;
-        current.musicaFondo.Stop();
+        current.musicaFondo.Pause();
     }
-
+    public static void ReanudarGame()
+    {
+        gameOn = true;
+        current.musicaFondo.Play();
+    }
     public static void SalirGame()
     {
         SceneManager.LoadScene("Minimapa");
