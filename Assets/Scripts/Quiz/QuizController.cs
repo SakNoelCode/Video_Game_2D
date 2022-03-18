@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class QuizController : MonoBehaviour
 {
-    /* [SerializeField] private AudioClip sound_rptaCorrecta = null;
-     [SerializeField] private AudioClip sound_rptaIncorrecta =null;*/
     [SerializeField] private GameObject canvasQuiz;
 
     //Manejo del sonido
@@ -18,7 +16,6 @@ public class QuizController : MonoBehaviour
     [SerializeField] private Color colorIncorrecta = Color.black;
        
     private float tiempoEspera = 1f;
-    //private AudioSource audioSource =null;
 
 
     [SerializeField] private GameObject go_quizDB = null;
@@ -26,8 +23,7 @@ public class QuizController : MonoBehaviour
     private QuizDB m_quizDB = null;
     private QuizUI m_quizUI = null;
 
-
-    private bool continueGame = false;
+    public static bool finQuizz = false;
 
     private void Start()
     {
@@ -36,17 +32,11 @@ public class QuizController : MonoBehaviour
 
         snd_correcta = snd_Correcta.GetComponent<AudioSource>();
         snd_incorrecta = snd_Incorrecta.GetComponent<AudioSource>();
-        //m_quizUI = GameObject.FindObjectOfType<QuizUI>();
-        //audioSource = GetComponent<AudioSource>();
         NextQuestion();
     }
 
     private void Update()
     {
-        if (continueGame)
-        {
-            volverGame();
-        }
     }
 
     private void NextQuestion()
@@ -61,10 +51,6 @@ public class QuizController : MonoBehaviour
 
     private IEnumerator ColoreaBotonRoutine(OptionsButtons optionbutton)
     {
-        /*if (audioSource.isPlaying)
-        {
-            audioSource.Stop();
-        }*/
         if (optionbutton.options.isCorrecta)
         {
             snd_correcta.Play();
@@ -73,25 +59,26 @@ public class QuizController : MonoBehaviour
         {
             snd_incorrecta.Play();
         }
-        /*
-        audioSource.clip = optionbutton.options.isCorrecta ? sound_rptaCorrecta : sound_rptaIncorrecta;
-        */
+
         optionbutton.SetColor(optionbutton.options.isCorrecta ? colorCorrecta : colorIncorrecta);
 
-        //audioSource.Play();
-        Debug.Log("Ejecutado1");
-
-        continueGame = true;
+        
 
         yield return new WaitForSeconds(tiempoEspera);
 
-        //Debug.Log(tiempoEspera);
+        //NextQuestion();
+        cerrarQuiz();
     }
 
-    private void volverGame()
+    private void cerrarQuiz()
     {
-        Time.timeScale = 1;
+        finQuizz = true;
+        Cartel.colisionWithPlayer = false;
         GameController.ReanudarGame();
         canvasQuiz.SetActive(false);
+
+        Debug.Log("Quizz terminada");
+        NextQuestion();
     }
+    
 }

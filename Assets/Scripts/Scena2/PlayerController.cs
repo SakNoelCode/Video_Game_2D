@@ -50,11 +50,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject objSaltoPlayer;
     [SerializeField] private GameObject objMuertePlayer;
 
-    /*[Header("Componentes para Pausa")]
-    [SerializeField] private GameObject pantallaPausa;
-    private bool isPausa = false;
-    private bool scapePulsada;*/
-
     //Componentes
     private Rigidbody2D rigibodyPlayer; //rPlayer
     private Animator animatorPlayer;   //aPlayer //Variables para las animaciones
@@ -119,7 +114,7 @@ public class PlayerController : MonoBehaviour
         GameController.respawn += Respawn;
 
         //Sistema de Partículas
-        emisionPolvoPies = polvoPies.emission; 
+        emisionPolvoPies = polvoPies.emission;
     }
 
 
@@ -136,11 +131,14 @@ public class PlayerController : MonoBehaviour
             checkPolvoPies();
         }
 
-        /*Controlar la tecla escape(Si ha sido clicada o no)
-        if (!Input.GetKeyDown(KeyCode.Escape)) scapePulsada = false;
 
-        //Opciones cuando el juego esta pausado
-        SeleccionarOpcionesPausa();*/
+        if (QuizController.finQuizz)
+        {
+            continuarPlayer();
+            Debug.Log("QUE CHO VERGA");
+        }
+        
+
     }
 
 
@@ -202,7 +200,7 @@ public class PlayerController : MonoBehaviour
             pausa();
         }*/
 
-        
+
     }
 
 
@@ -254,7 +252,7 @@ public class PlayerController : MonoBehaviour
             asSaltoPlayer.Play();
             //TiempoBufferSalto
             tiempoBuffer = 0;
-        } 
+        }
     }
 
     private void saltoParaAbajo()
@@ -573,11 +571,11 @@ public class PlayerController : MonoBehaviour
     private void OnDisable()
     {
         GameController.respawn -= Respawn;
-    } 
+    }
 
     private void ValidaCoyoteTime()
     {
-        if(!isTocaSuelo && coyoteTime)
+        if (!isTocaSuelo && coyoteTime)
         {
             tiempoCoyote += Time.deltaTime;
             if (tiempoCoyote > tiempoCoyoteTime) coyoteTime = false;
@@ -598,48 +596,23 @@ public class PlayerController : MonoBehaviour
 
     private void checkPolvoPies()
     {
-        if(isTocaSuelo && ejeHorizontal != 0)
+        if (isTocaSuelo && ejeHorizontal != 0)
         {
             emisionPolvoPies.rateOverTime = 40;
         }
-        else 
+        else
         {
             emisionPolvoPies.rateOverTime = 0;
         }
     }
 
 
-   /* //======================================CONTROL DE PAUSA-=============================
-    private void pausa()
+    /* //======================================CONTROL QUIZZ PLAYER-=============================*/
+    private void continuarPlayer()
     {
-        pantallaPausa.SetActive(true);
-        isPausa = true;
-        Time.timeScale = 0; //Paralizar el tiempo
-        GameController.PausarGame();
-        scapePulsada = true;
+        rigibodyPlayer.gravityScale = gravedad;
+        QuizController.finQuizz = false;
     }
-   */
-   /* private void SeleccionarOpcionesPausa()
-    {
-        if (isPausa)
-        {
-            //Reanudar Juego
-            if (Input.GetKeyDown(KeyCode.Escape) && !scapePulsada)
-            {
-                pantallaPausa.SetActive(false);
-                isPausa = false;
-                Time.timeScale = 1;
-                GameController.ReanudarGame();
-                scapePulsada = true;
-            }
 
-            //Salir del juego(nivel)
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                GameController.SalirGame();
-            }
-
-        }
-    }*/
 
 }
