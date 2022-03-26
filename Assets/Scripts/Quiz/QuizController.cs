@@ -65,7 +65,6 @@ public class QuizController : MonoBehaviour
         
 
         yield return new WaitForSeconds(tiempoEspera);
-
         //NextQuestion();
         cerrarQuiz();
     }
@@ -76,8 +75,6 @@ public class QuizController : MonoBehaviour
         Cartel.colisionWithPlayer = false;
         GameController.ReanudarGame();
         canvasQuiz.SetActive(false);
-
-        Debug.Log("Quizz terminada");
         NextQuestion();
     }
     

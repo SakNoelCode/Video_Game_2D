@@ -142,7 +142,7 @@ MonoBehaviour:
   puntosMov:
   - {fileID: 5921851170100742101}
   - {fileID: 5921851171575092619}
-  velocidadEnemigo: 2
+  velocidadEnemigo: 1.3
   goContEnemigo: {fileID: 5921851170282040921}
   parteCuerpo: {fileID: 5921851171785433296}
   parteCabeza: {fileID: 5921851171872189687}

@@ -37,10 +37,6 @@ public class Cartel : MonoBehaviour
             aPlayer.Play("quieto");            
             GameController.PausarGame();
             canvasQuiz.SetActive(true);
-
-            Debug.Log("Colisión hecha" + colisionWithPlayer);
-            //cartel.SetActive(false);
-
         }
     }
 }

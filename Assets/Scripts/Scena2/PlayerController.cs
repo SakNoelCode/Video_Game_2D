@@ -49,13 +49,15 @@ public class PlayerController : MonoBehaviour
     [Header("Efectos de Sonido")]
     [SerializeField] private GameObject objSaltoPlayer;
     [SerializeField] private GameObject objMuertePlayer;
+    [SerializeField] private GameObject objGolpeEnemigo;
+    [SerializeField] private GameObject objMuerteEnemigo;
 
     //Componentes
     private Rigidbody2D rigibodyPlayer; //rPlayer
     private Animator animatorPlayer;   //aPlayer //Variables para las animaciones
     private CapsuleCollider2D capsulecoliderPlayer; //ccPlayer
     private SpriteRenderer spritePlayer;  //sPlayer                           
-    private AudioSource asSaltoPlayer, asMuertePlayer;//Variables para obtener los sonidos
+    private AudioSource asSaltoPlayer, asMuertePlayer,asGolpeEnemigo,asMuerteEnemigo;//Variables para obtener los sonidos
 
     //Obtención del movimiento Horizontal y Vertical
     private float ejeHorizontal;        //h
@@ -110,6 +112,8 @@ public class PlayerController : MonoBehaviour
 
         asSaltoPlayer = objSaltoPlayer.GetComponent<AudioSource>();
         asMuertePlayer = objMuertePlayer.GetComponent<AudioSource>();
+        asGolpeEnemigo = objGolpeEnemigo.GetComponent<AudioSource>();
+        asMuerteEnemigo = objMuerteEnemigo.GetComponent<AudioSource>();
 
         GameController.respawn += Respawn;
 
@@ -131,11 +135,10 @@ public class PlayerController : MonoBehaviour
             checkPolvoPies();
         }
 
-
+        //Detectar final del Quizz
         if (QuizController.finQuizz)
         {
             continuarPlayer();
-            Debug.Log("QUE CHO VERGA");
         }
         
 
@@ -358,12 +361,14 @@ public class PlayerController : MonoBehaviour
             tocarEnemigo(collision.transform.position.x);
         }
 
+        //Matar Enemigo
         if (collision.gameObject.tag == "ChepaEnemigo" && !isTocado)
         {
             //Impulsar hacia arriba
             rigibodyPlayer.velocity = Vector2.zero;
             rigibodyPlayer.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
             collision.gameObject.SendMessage("Muere");
+            asMuerteEnemigo.Play();
         }
     }
 
@@ -430,6 +435,9 @@ public class PlayerController : MonoBehaviour
         {
             if (vidaPlayer > 1)
             {
+                //Sonido
+                asGolpeEnemigo.Play();
+
                 //Cambiar color
                 Color nuevoColor = new Color(255f / 255, 100f / 255, 100f / 255);
                 spritePlayer.color = nuevoColor;

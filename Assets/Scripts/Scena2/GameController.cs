@@ -116,6 +116,7 @@ public class GameController: MonoBehaviour
                                                            sprFundidoNegro.color.g,
                                                            sprFundidoNegro.color.b,
                                                            1);
+
                 //Desactivar fundido máscara
                 sprColorMascara.color = new Color(sprColorMascara.color.r,
                                               sprColorMascara.color.g,
@@ -235,6 +236,7 @@ public class GameController: MonoBehaviour
                                                        sprFundidoNegro.color.g,
                                                        sprFundidoNegro.color.b,
                                                        alpha);
+
             yield return null;
         }
             //Hacer al fundido negro completamente transparente
@@ -242,7 +244,7 @@ public class GameController: MonoBehaviour
                                               sprFundidoNegro.color.g,
                                               sprFundidoNegro.color.b,
                                               0);
-        
+
         gameOn = true;
         musicaFondo.Play();  /////Poner a la musica en Play
 
