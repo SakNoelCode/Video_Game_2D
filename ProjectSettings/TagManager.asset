@@ -17,6 +17,7 @@ TagManager:
   - SueltaMonedas
   - FinNivel
   - TerrenoAtravesable
+  - PinchosMuerte
   layers:
   - Default
   - TransparentFX

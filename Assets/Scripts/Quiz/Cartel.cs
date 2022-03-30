@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Cartel : MonoBehaviour
 {
-
-
     [SerializeField] private GameObject canvasQuiz;
     [SerializeField] private GameObject cartel;
     [SerializeField] private GameObject player;
@@ -23,8 +21,7 @@ public class Cartel : MonoBehaviour
     }
 
     private void Update()
-    {
-       
+    {  
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,9 +31,10 @@ public class Cartel : MonoBehaviour
             colisionWithPlayer = true;
             rbPlayer.velocity = Vector3.zero;
             rbPlayer.gravityScale = 0;
-            aPlayer.Play("quieto");            
             GameController.PausarGame();
+            aPlayer.Play("quieto");
             canvasQuiz.SetActive(true);
+            cartel.SetActive(false);
         }
     }
 }

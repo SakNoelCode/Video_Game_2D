@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameController: MonoBehaviour
+public class GameController : MonoBehaviour
 {
     public delegate void Respawn();
     public static event Respawn respawn;
@@ -21,6 +21,7 @@ public class GameController: MonoBehaviour
     [SerializeField] private GameObject puerta;
     [SerializeField] private PlayerController playerController;
     [SerializeField] private CheckPoint checkP;
+    [SerializeField] private int MonedasPuertaNivel;
 
 
     //Variable que controla al Player y a la camara, si se pueden mover o no
@@ -29,6 +30,9 @@ public class GameController: MonoBehaviour
     private Image sprFundidoNegro;
     private AudioSource musicaFondo;
 
+    //Gestión de CheckPoint
+    //public static int identificadorCheckPoint = 0;
+    //public static bool nuevoCheckPoint = false;
 
     //Gestion de monedas en la Puerta Final
     public static int monedas;
@@ -72,6 +76,7 @@ public class GameController: MonoBehaviour
         animacionPuerta = puerta.GetComponent<Animator>();
 
         playerController.PlayerMuerto += PlayerMuerto;//Suscribirse al evento
+        //Suscribirse al evento del CheckPoint según el identificador
         checkP.checkP += chekPoint;
 
         StartCoroutine(FundidoNegroOFF(0.5f));
@@ -79,7 +84,7 @@ public class GameController: MonoBehaviour
         //Gestión de las monedas en la Puerta final
         textoPuerta = contadorMonedasPuerta.GetComponent<TextMesh>();
         monedas = monedasIni;
-        monedasPuerta = 5;
+        monedasPuerta = MonedasPuertaNivel;
 
         //Actualizar valor de las monedas en la Puerta
         if (monedasPuerta < 10) textoPuerta.text = "0" + monedasPuerta;
@@ -89,6 +94,14 @@ public class GameController: MonoBehaviour
 
     private void Update()
     {
+        //Suscribirse al checkPoint
+        /*if(nuevoCheckPoint)
+        {
+            checkP[identificadorCheckPoint].checkP += chekPoint;
+            nuevoCheckPoint = false;
+            Debug.Log("Suscrito al checkPoint " + identificadorCheckPoint);
+        }*/
+
         if (fundidoOn)
         {
             //Mover la escala del Sprite Renderer de la máscara

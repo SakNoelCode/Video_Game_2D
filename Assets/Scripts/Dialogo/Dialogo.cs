@@ -18,7 +18,7 @@ public class Dialogo : MonoBehaviour
     
     void Update()
     {
-        if(isPlayerCerca && Input.GetButtonDown("Fire1"))
+        if(isPlayerCerca && Input.GetKeyDown(KeyCode.Return))
         {
             if (!isDialogoIniciado) //El dialogo aún no Inicia
             {

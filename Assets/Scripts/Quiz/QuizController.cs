@@ -54,6 +54,7 @@ public class QuizController : MonoBehaviour
         if (optionbutton.options.isCorrecta)
         {
             snd_correcta.Play();
+            GameController.sumaMonedas();
         }
         else
         {

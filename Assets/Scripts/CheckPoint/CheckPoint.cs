@@ -10,6 +10,7 @@ public class CheckPoint : MonoBehaviour
 
     [SerializeField] private Sprite spriteOn;
     [SerializeField] private GameObject posPlayer;
+    //[SerializeField] private int identificador;
 
     private SpriteRenderer sprCheckPoint;
     private AudioSource    sonidoCheckPoint;
@@ -43,7 +44,7 @@ public class CheckPoint : MonoBehaviour
 
     private void destruyeObjetos()
     {
-        foreach(GameObject moneda in monedas)
+        foreach (GameObject moneda in monedas)
         {
             if (!moneda.activeSelf) Destroy(moneda);
         }

@@ -387,6 +387,10 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Pinchos")  //DETECCION PINCHOS
         {
+            tocarEnemigo(collision.transform.position.x);
+        }
+        if (collision.gameObject.tag == "PinchosMuerte")  //DETECCION PINCHOS
+        {
             muertePlayer(true);
         }
 
