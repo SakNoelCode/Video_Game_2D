@@ -25,7 +25,7 @@ public class PlataformasAtravesables : MonoBehaviour
     {
         piePlayer = player.transform.position.y - (ccPlayer.size.y / 2);
         comprobarPosPlayer();
-    }
+    }  
         
     private void comprobarPosPlayer()
     {

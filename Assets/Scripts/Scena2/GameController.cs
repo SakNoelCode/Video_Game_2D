@@ -20,19 +20,19 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject zonaNoPermitirPaso;
     [SerializeField] private GameObject puerta;
     [SerializeField] private PlayerController playerController;
-    [SerializeField] private CheckPoint checkP;
+    //[SerializeField] private CheckPoint checkP;
+    [SerializeField] private CheckPoint[] checkP;
     [SerializeField] private int MonedasPuertaNivel;
 
+    //Gestión de CheckPoint
+    public static int identificadorCheckPoint;
+    public static bool nuevoCheckPoint = false;
 
     //Variable que controla al Player y a la camara, si se pueden mover o no
     public static bool gameOn = false;
-
+ 
     private Image sprFundidoNegro;
     private AudioSource musicaFondo;
-
-    //Gestión de CheckPoint
-    //public static int identificadorCheckPoint = 0;
-    //public static bool nuevoCheckPoint = false;
 
     //Gestion de monedas en la Puerta Final
     public static int monedas;
@@ -65,6 +65,7 @@ public class GameController : MonoBehaviour
         fundidoNegro.SetActive(true);
         monedasIni = 0;
         fundidoOn = false;
+        identificadorCheckPoint = 0;
     }
 
 
@@ -77,7 +78,8 @@ public class GameController : MonoBehaviour
 
         playerController.PlayerMuerto += PlayerMuerto;//Suscribirse al evento
         //Suscribirse al evento del CheckPoint según el identificador
-        checkP.checkP += chekPoint;
+        //checkP.checkP += chekPoint;
+        checkP[identificadorCheckPoint].checkP += chekPoint;
 
         StartCoroutine(FundidoNegroOFF(0.5f));
 
@@ -95,12 +97,12 @@ public class GameController : MonoBehaviour
     private void Update()
     {
         //Suscribirse al checkPoint
-        /*if(nuevoCheckPoint)
+        if(nuevoCheckPoint)
         {
             checkP[identificadorCheckPoint].checkP += chekPoint;
             nuevoCheckPoint = false;
-            Debug.Log("Suscrito al checkPoint " + identificadorCheckPoint);
-        }*/
+            monedasIni = int.Parse(contadorMonedas.text);  //Actualizar valor de MonedasIni
+        }
 
         if (fundidoOn)
         {
@@ -138,6 +140,7 @@ public class GameController : MonoBehaviour
                 fundidoOn = false;
 
                 //Realizar acciones después del fundido
+                //Le quitamos 1 para que no afecte cuando sume 1
                 monedas = monedasIni - 1;
                 sumaMonedas();
                 respawn();

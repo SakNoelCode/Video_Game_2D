@@ -22,6 +22,8 @@ public class EnemigoSimple1 : MonoBehaviour
     private Vector3 escalaIni,escalaTemp;
     private float direccion = 1;   //      1---Mira derecha     -1---Mira izquierda
 
+    //private bool isActiva = true;
+
     //------------------------------------------METODO START-----------------------------------
     void Start()
     {
@@ -42,17 +44,24 @@ public class EnemigoSimple1 : MonoBehaviour
     //------------------------------------------METODO FIXED UPDATE-----------------------------------
     void FixedUpdate()
     {
-        float lado = Mathf.Sign(player.transform.position.x 
+        
+        if (player != null)
+        {
+            float lado = Mathf.Sign(player.transform.position.x
             - transform.position.x);  // 1 o -1
-        //Si nos ve el enemigo
-        if((Mathf.Abs(transform.position.x - player.transform.position.x) < 5) && (lado == direccion))
-        {
-            atacar();
+                                      
+            //Si nos ve el enemigo
+            if ((Mathf.Abs(transform.position.x - player.transform.position.x) < 5) && (lado == direccion))
+            {
+                atacar();
+            }
+            else
+            {
+                patrulla();
+            }
+
         }
-        else
-        {
-            patrulla();
-        }
+        
     }
 
     private void patrulla()
@@ -109,6 +118,7 @@ public class EnemigoSimple1 : MonoBehaviour
 
     public void Muere()
     {
+        //isActiva = false;
         polyColCuerpo.enabled = false;
         polColCabeza.enabled = false;
         StartCoroutine("FadeOut");

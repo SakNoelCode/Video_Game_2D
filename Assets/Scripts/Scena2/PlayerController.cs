@@ -177,8 +177,6 @@ public class PlayerController : MonoBehaviour
 
     private void recibePulsaciones()
     {
-        //if (Input.GetKey(KeyCode.R)) GameController.playerMuerto = true;
-
         ejeHorizontal = Input.GetAxisRaw("Horizontal");
 
         ejeVertical = Input.GetAxisRaw("Vertical");
@@ -196,14 +194,6 @@ public class PlayerController : MonoBehaviour
             //Salto Mejorado
             if (saltoMejorado) saltoMejoradoPlayerController();
         }
-
-        /*Para Pausar el juego
-        if (Input.GetKeyDown(KeyCode.Escape) && !scapePulsada)
-        {
-            pausa();
-        }*/
-
-
     }
 
 
@@ -274,7 +264,6 @@ public class PlayerController : MonoBehaviour
                 hitTerreno.transform.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
                 hitTerreno.transform.gameObject.tag = "Untagged";
                 hitTerreno.transform.gameObject.layer = LayerMask.NameToLayer("Default");
-                Debug.Log(hitTerreno);
             }
         }
     }

@@ -20,6 +20,7 @@ public class ActivarMensaje2 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            mensaje.SetActive(true);
             StartCoroutine("FadeIn");
         }
     }
@@ -29,6 +30,7 @@ public class ActivarMensaje2 : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             StartCoroutine("FadeOut");
+            mensaje.SetActive(false);
         }
     }
 

@@ -10,13 +10,14 @@ public class CheckPoint : MonoBehaviour
 
     [SerializeField] private Sprite spriteOn;
     [SerializeField] private GameObject posPlayer;
-    //[SerializeField] private int identificador;
+    [SerializeField] private int identificador;
 
     private SpriteRenderer sprCheckPoint;
     private AudioSource    sonidoCheckPoint;
     private BoxCollider2D  boxColider;
 
     public GameObject[] monedas;
+    //public GameObject[] enemigos;
 
     //Este método se ejecuta antes del Start
     void Awake()
@@ -39,14 +40,19 @@ public class CheckPoint : MonoBehaviour
             checkP?.Invoke();
             PlayerController.posInicialPlayer = posPlayer.transform.position;
             destruyeObjetos();
+            GameController.identificadorCheckPoint = identificador;
+            GameController.nuevoCheckPoint = true;
         }   
     }
 
     private void destruyeObjetos()
-    {
+    {   
         foreach (GameObject moneda in monedas)
         {
-            if (!moneda.activeSelf) Destroy(moneda);
+            if (moneda!=null)
+            {
+                if (!moneda.activeSelf) Destroy(moneda);
+            }
         }
     }
 }
