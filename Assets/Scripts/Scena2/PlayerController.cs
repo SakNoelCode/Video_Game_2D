@@ -336,6 +336,7 @@ public class PlayerController : MonoBehaviour
 
 
     //------------------------------DETECCION MEDIANTE TAGS Y COLISIONES---------------------------------------
+    //----------------------LAS COLISIONES SE COMPORTAN COMO OBJETOS QUE PODEMOS CHOCAR
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "PlataformaMovil")
@@ -372,6 +373,7 @@ public class PlayerController : MonoBehaviour
 
 
     //------------------------------DETECCION CON TRIGGERS-----------------------------------------------
+    //---------------------------LOS TRIGGERS SE COMPORTAN COMO ACTIVAR UNA ALARMA------
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Pinchos")  //DETECCION PINCHOS

@@ -82,8 +82,8 @@
     <Compile Include="Assets\Scripts\Plataformas\Plataforma_Movil.cs" />
     <Compile Include="Assets\Scripts\Scena2\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PinchosRoca\Pinchos_Roca_Movil.cs" />
-    <Compile Include="Assets\Scripts\Plataformas\PlataformasAtravesables.cs" />
     <Compile Include="Assets\Scripts\Dialogo\Dialogo.cs" />
+    <Compile Include="Assets\Scripts\Plataformas\PlataformasAtravesables.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

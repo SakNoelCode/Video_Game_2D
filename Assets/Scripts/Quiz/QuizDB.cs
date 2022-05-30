@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class QuizDB: MonoBehaviour
+public class QuizDB : MonoBehaviour
 {
     [SerializeField] private List<Question> listQuestions = null;
     private List<Question> m_questionBackup = null;
@@ -11,6 +11,7 @@ public class QuizDB: MonoBehaviour
     private void Awake()
     {
         m_questionBackup = listQuestions.ToList();
+        //Debug.Log("Hola" + listQuestions.Capacity);
     }
 
 
