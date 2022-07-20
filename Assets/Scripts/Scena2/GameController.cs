@@ -295,22 +295,32 @@ public class GameController : MonoBehaviour
         current.StartCoroutine("FundidoNegroFinNivel");
 
         //Salir al minimapa
-        if (Variables.Maxnivel < 3)
+        if (Variables.Maxnivel < 5)
         {
             //Comprobaciones
             //estadoPos(0)  = No se ha descubierto
-            //estadoPos(1)  = 
+            //estadoPos(1)  = Se ha descubierto
             //estadoPos(2)  = Tiene que aparecer poco a poco
 
-            if (Variables.nivel == 1 && Variables.estadoPos2 == 0)
+            if (Variables.nivel == 1 && Variables.estadoPos1 == 0)
+            {
+                Variables.Maxnivel++;
+                Variables.estadoPos1 = 2;
+            }
+            if (Variables.nivel == 2 && Variables.estadoPos2 == 0)
             {
                 Variables.Maxnivel++;
                 Variables.estadoPos2 = 2;
             }
-            if (Variables.nivel == 2 && Variables.estadoPos3 == 0)
+            if (Variables.nivel == 3 && Variables.estadoPos3 == 0)
             {
                 Variables.Maxnivel++;
                 Variables.estadoPos3 = 2;
+            }
+            if (Variables.nivel == 4 && Variables.estadoPos4 == 0)
+            {
+                Variables.Maxnivel++;
+                Variables.estadoPos4 = 2;
             }
         }
 

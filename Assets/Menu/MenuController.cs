@@ -90,6 +90,7 @@ public class MenuController : MonoBehaviour
     {
         if (v != 0)
         {
+            //Comprobación del tiempo de espera
             if (tiempoV == 0 || tiempoV > tiempoCambiarOpcion)
             {
                 if (v == 1 && opcionOpciones > 1) seleccionaOpcion(opcionOpciones - 1); //Subir Opcion

@@ -12,12 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Minimapa.unity
     guid: d8c71bfcf7034c3429042ea1a24e1451
   - enabled: 1
-    path: Assets/Scenes/Nivel1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Nivel_0.unity
+    guid: 62942960e1da3e14dab1dcbdbf5bf15a
   - enabled: 1
-    path: Assets/Scenes/Nivel2.unity
-    guid: 070fea95fd6140f438347453dd5c74f2
+    path: Assets/Scenes/Nivel_1.unity
+    guid: fe8db53ffd73ffb4f892081c86ea90e8
   - enabled: 1
-    path: Assets/Scenes/Nivel3.unity
-    guid: dbdc6b84fdc53004db27b61ba3161f6d
+    path: Assets/Scenes/Nivel_2.unity
+    guid: acb8811ae3031f94984378196847b909
+  - enabled: 1
+    path: Assets/Scenes/Nivel_3.unity
+    guid: 3760be3bc624560478739be3b6cd6998
+  - enabled: 1
+    path: Assets/Scenes/Nivel_4.unity
+    guid: 334ecffa9c2475747bbbb8bf07ef0320
   m_configObjects: {}

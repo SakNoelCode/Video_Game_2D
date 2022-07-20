@@ -8,13 +8,16 @@ public static class Variables
     public static int Maxnivel { get; set; }
     public static bool isIniciado { get; set; }
 
-    //Comprobaciones
-    //estadoPos(0)  = No se ha descubierto
+    //Comprobaciones de las posiciones del minimapa
+    //estadoPos(0)  = Desactivado
     //estadoPos(1)  = Ya se descubrió
     //estadoPos(2)  = Tiene que aparecer poco a poco
+    public static int estadoPosMenu { get; set; }
+    public static int estadoPos0 { get; set; }
     public static int estadoPos1 { get; set; }
     public static int estadoPos2 { get; set; }
     public static int estadoPos3 { get; set; }
+    public static int estadoPos4 { get; set; }
 
 
 }
