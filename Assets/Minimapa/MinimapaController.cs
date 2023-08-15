@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MinimapaController : MonoBehaviour
 {
-    [SerializeField] private Transform[] arrayHuecos;
+    [SerializeField] private Transform[] arrayPosiciones;
     [SerializeField] private Transform[] arrayCaminos;
-    [SerializeField] private SpriteRenderer[] arrayPosiciones;
+    [SerializeField] private SpriteRenderer[] arrayPosicionesIcon;
     [SerializeField] private Sprite[] arraySpr_Texto;
     [SerializeField] private Transform player;
     [SerializeField] private SpriteRenderer titulo;
     [SerializeField] private AudioSource snd_Camino;
 
     private int posPlayer = 0;  //posiciones del player en el minimapa (0,1,2,3,4,5)
-    private int maxNivel;   
+    private int maxNivel;   //Nivel al que podemos ir (1,2,3,4,5)
     private bool puedoMoverme = false;
     private string escena;
 
@@ -51,11 +51,11 @@ public class MinimapaController : MonoBehaviour
         maxNivel = Variables.Maxnivel;
 
         //Manejar la variable PuedoMoverme
-        if (Variables.estadoPos0 != 2 &&
+        if (Variables.estadoPosMenu != 2 &&
+            Variables.estadoPos0 != 2 &&
             Variables.estadoPos1 != 2 &&
             Variables.estadoPos2 != 2 &&
-            Variables.estadoPos3 != 2 &&
-            Variables.estadoPos4 != 2)
+            Variables.estadoPos3 != 2)
         {
             puedoMoverme = true;
         }
@@ -65,68 +65,71 @@ public class MinimapaController : MonoBehaviour
         }
 
         //Poner al Player en su Hueco correspondiente
-        player.position = arrayHuecos[posPlayer].position;
+        player.position = arrayPosiciones[posPlayer].position;
 
         //--------------------------COMPROBACION PARA CAMINOS-----------------------------
-        //Abrir camino [0]
+        //Abrir camino cuando estemos en la posicion de Menú 
         if (Variables.estadoPosMenu == 1)  //Si la posición ya se descubrió
         {
             arrayCaminos[0].localScale = new Vector3(1.6f, 1, 1); //Mostrar Camino
-            arrayPosiciones[0].enabled = true;  //Mostrar la Pos(Sprite)
+            arrayPosicionesIcon[0].enabled = true;  //Mostrar la Pos(Sprite)
 
         }
         else if (Variables.estadoPosMenu == 2) //Si la posición debe mostrarse con animaciones
         {
-            StartCoroutine("AbreCamino", 0);
+            StartCoroutine("AbreCamino", 0); //Menú tiene la posición 0
         }
 
-        //Abrir camino [1]
+        //Abrir camino cuando estemos en la posicion de Tutorial
         if (Variables.estadoPos0 == 1)  //Si la posición ya se descubrió
         {
             arrayCaminos[1].localScale = new Vector3(1.6f, 1, 1); //Mostrar Camino
-            arrayPosiciones[1].enabled = true;  //Mostrar la Pos(Sprite)
+            arrayPosicionesIcon[1].enabled = true;  //Mostrar la Pos(Sprite)
 
         }
         else if (Variables.estadoPos0 == 2) //Si la posición debe mostrarse con animaciones
         {
-            StartCoroutine("AbreCamino", 1);
+            StartCoroutine("AbreCamino", 1); //Tutorial tiene la posición 1
         }
 
-        //Abrir camino [2]
+        //Abrir camino cuando estemos en la posicion de Nivel 1
         if (Variables.estadoPos1 == 1)  //Si la posición ya se descubrió
         {
             arrayCaminos[2].localScale = new Vector3(1.6f, 1, 1); //Mostrar Camino
-            arrayPosiciones[2].enabled = true;  //Mostrar la Pos(Sprite)
+            arrayPosicionesIcon[2].enabled = true;  //Mostrar la Pos(Sprite)
 
         }
         else if (Variables.estadoPos1 == 2) //Si la posición debe mostrarse con animaciones
         {
-            StartCoroutine("AbreCamino", 2);
+            StartCoroutine("AbreCamino", 2); //Nivel 1 tiene la posición 2
         }
 
-        //Abrir camino [3]
+        //Abrir camino cuando estemos en la posicion de Nivel 2
         if (Variables.estadoPos2 == 1)  //Si la posición ya se descubrió
         {
             arrayCaminos[3].localScale = new Vector3(1.6f, 1, 1); //Mostrar Camino
-            arrayPosiciones[3].enabled = true;  //Mostrar la Pos(Sprite)
+            arrayPosicionesIcon[3].enabled = true;  //Mostrar la Pos(Sprite)
 
         }
         else if (Variables.estadoPos2 == 2) //Si la posición debe mostrarse con animaciones
         {
-            StartCoroutine("AbreCamino", 3);
+            StartCoroutine("AbreCamino", 3); //Nivel 2 tiene la posición 3
         }
 
-        //Abrir camino [4]
+        //Abrir camino cuando estemos en la posicion de Nivel 3
         if (Variables.estadoPos3 == 1)  //Si la posición ya se descubrió
         {
             arrayCaminos[4].localScale = new Vector3(1.6f, 1, 1); //Mostrar Camino
-            arrayPosiciones[4].enabled = true;  //Mostrar la Pos(Sprite)
+            arrayPosicionesIcon[4].enabled = true;  //Mostrar la Pos(Sprite)
 
         }
         else if (Variables.estadoPos3 == 2) //Si la posición debe mostrarse con animaciones
         {
-            StartCoroutine("AbreCamino", 4);
+            StartCoroutine("AbreCamino", 4); //Nivel 3 tiene la posición 4
         }
+
+        //Abrir camino cuando estemos en la posicion de Nivel 4
+
     }
 
     // -------------------------------------------Metodo Update-----------------------
@@ -142,13 +145,7 @@ public class MinimapaController : MonoBehaviour
             puedoMoverme = false;
             StartCoroutine("MuevePlayer", horizontal);
         }
-        if((vertical==1 &&  puedoMoverme && posPlayer==3) ||  //Moverse de abaj. a arrib.
-            vertical ==-1 && puedoMoverme && posPlayer==2)    //Moverse de arrib. a abaj.
-        {
-            puedoMoverme = false;
-            StartCoroutine("MuevePlayerVertical",vertical);
-        }
-
+        
         //Detectar el clic y entrar en la escena
         if(Input.GetButton("Submit") && puedoMoverme)
         {
@@ -178,17 +175,17 @@ public class MinimapaController : MonoBehaviour
         } while (porcentaje < 1.6);
         snd_Camino.Stop();
         puedoMoverme = true;
-        arrayPosiciones[numCamino].enabled = true;
+        arrayPosicionesIcon[numCamino].enabled = true; //Mostar el icono
 
-        //Comprobaciones
+        //Comprobaciones (Si el camino que se abrió es ??)
         //estadoPos(0)  = No se ha descubierto
         //estadoPos(1)  = Descubierto
         //estadoPos(2)  = Tiene que aparecer poco a poco
         if (numCamino == 0) Variables.estadoPosMenu = 1;
-        //if (numCamino == 1) Variables.estadoPos1 = 1;
-       // if (numCamino == 2) Variables.estadoPos2 = 1;
-        //if (numCamino == 3) Variables.estadoPos3 = 1;
-        //if (numCamino == 4) Variables.estadoPos4 = 1;
+        if (numCamino == 1) Variables.estadoPos0 = 1;
+        if (numCamino == 2) Variables.estadoPos1 = 1;
+        if (numCamino == 3) Variables.estadoPos2 = 1;
+        if (numCamino == 4) Variables.estadoPos3 = 1;
     }
 
     IEnumerator MuevePlayer(int mov)
@@ -199,29 +196,12 @@ public class MinimapaController : MonoBehaviour
         do
         {
             player.transform.Translate(0.025f * mov, 0, 0);
-            distancia = arrayHuecos[posPlayer].position - player.position;
+            distancia = arrayPosiciones[posPlayer].position - player.position;
             yield return new WaitForSeconds(0.01f);
         } while (distancia.sqrMagnitude > 0.001f);
 
-        player.position = arrayHuecos[posPlayer].position;
+        player.position = arrayPosiciones[posPlayer].position;
         titulo.sprite = arraySpr_Texto[posPlayer];
-        yield return new WaitForSeconds(0.15f);
-        puedoMoverme = true;
-    }
-
-    IEnumerator MuevePlayerVertical(int mov)
-    {
-        posPlayer += mov;
-        Vector3 distancia = Vector3.zero;
-
-        do
-        {
-            player.transform.Translate(0, 0.25f * mov, 0);
-            distancia = arrayHuecos[posPlayer].position - player.position;
-            yield return new WaitForSeconds(0.01f);
-        } while (distancia.sqrMagnitude > 0.01f);
-
-        player.position = arrayHuecos[posPlayer].position;
         yield return new WaitForSeconds(0.15f);
         puedoMoverme = true;
     }

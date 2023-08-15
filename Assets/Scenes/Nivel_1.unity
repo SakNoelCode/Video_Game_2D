@@ -995,7 +995,7 @@ MonoBehaviour:
   - {fileID: 75470986}
   - {fileID: 918760493}
   - {fileID: 1786162219}
-  MonedasPuertaNivel: 20
+  MonedasPuertaNivel: 1
   mascara: {fileID: 821596843}
   sprColorMascara: {fileID: 201381959}
   velocidadMascara: 3
@@ -1593,11 +1593,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6640600263525242743, guid: 5d82136d3d233264a9fe291d281998e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.65
+      value: 144.05
       objectReference: {fileID: 0}
     - target: {fileID: 6640600263525242743, guid: 5d82136d3d233264a9fe291d281998e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.09
+      value: 4.99
       objectReference: {fileID: 0}
     - target: {fileID: 6640600263525242743, guid: 5d82136d3d233264a9fe291d281998e0, type: 3}
       propertyPath: m_LocalPosition.z

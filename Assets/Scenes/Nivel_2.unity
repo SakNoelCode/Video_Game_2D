@@ -42462,7 +42462,7 @@ MonoBehaviour:
   - {fileID: 1033562058}
   - {fileID: 1407138202}
   - {fileID: 1672396381}
-  MonedasPuertaNivel: 20
+  MonedasPuertaNivel: 1
   mascara: {fileID: 710570096}
   sprColorMascara: {fileID: 1767776912}
   velocidadMascara: 3
@@ -52450,11 +52450,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 96.48
+      value: 88.91
       objectReference: {fileID: 0}
     - target: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14
+      value: 6.07
       objectReference: {fileID: 0}
     - target: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52759,11 +52759,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6640600263525242743, guid: 5d82136d3d233264a9fe291d281998e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.98
+      value: 89.59
       objectReference: {fileID: 0}
     - target: {fileID: 6640600263525242743, guid: 5d82136d3d233264a9fe291d281998e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.93
+      value: 6.64
       objectReference: {fileID: 0}
     - target: {fileID: 6640600263525242743, guid: 5d82136d3d233264a9fe291d281998e0, type: 3}
       propertyPath: m_LocalPosition.z
