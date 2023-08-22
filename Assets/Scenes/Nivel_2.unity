@@ -445,15 +445,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 5 - 4?"
+  text: "\xBFCu\xE1nto es 10 + 11?"
   options:
-  - text: 1
+  - text: 21
     isCorrecta: 1
-  - text: 2
+  - text: 20
     isCorrecta: 0
-  - text: 3
+  - text: 22
     isCorrecta: 0
-  - text: 4
+  - text: 23
     isCorrecta: 0
 --- !u!1 &21484099
 GameObject:
@@ -1797,16 +1797,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 9 - 2?"
+  text: "\xBFCu\xE1nto es 7 + 9?"
   options:
-  - text: 7
+  - text: 12
+    isCorrecta: 0
+  - text: 14
+    isCorrecta: 0
+  - text: 15
+    isCorrecta: 0
+  - text: 16
     isCorrecta: 1
-  - text: 9
-    isCorrecta: 0
-  - text: 10
-    isCorrecta: 0
-  - text: 8
-    isCorrecta: 0
 --- !u!1 &227941942
 GameObject:
   m_ObjectHideFlags: 0
@@ -34419,15 +34419,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 12 - 6?"
+  text: "Si a 5 unidades le agregamos 0 unidades. \xBFCu\xE1ntas unidades hay?"
   options:
-  - text: 6
+  - text: 5
     isCorrecta: 1
+  - text: 4
+    isCorrecta: 0
+  - text: 6
+    isCorrecta: 0
   - text: 7
-    isCorrecta: 0
-  - text: 8
-    isCorrecta: 0
-  - text: 9
     isCorrecta: 0
 --- !u!4 &268295189 stripped
 Transform:
@@ -34745,15 +34745,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 11 - 6?"
+  text: "Si a 5 unidades le agregamos 15 unidades. \xBFCu\xE1ntas unidades hay?"
   options:
-  - text: 4
+  - text: 10
     isCorrecta: 0
-  - text: 5
+  - text: 20
     isCorrecta: 1
-  - text: 6
+  - text: 15
     isCorrecta: 0
-  - text: 7
+  - text: 14
     isCorrecta: 0
 --- !u!1 &302050583
 GameObject:
@@ -34798,15 +34798,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 9 - 5?"
+  text: "\xBFCu\xE1nto es 12 + 12?"
   options:
-  - text: 5
+  - text: 22
     isCorrecta: 0
-  - text: 4
+  - text: 24
     isCorrecta: 1
-  - text: 6
+  - text: 23
     isCorrecta: 0
-  - text: 8
+  - text: 21
     isCorrecta: 0
 --- !u!1001 &305431435
 PrefabInstance:
@@ -35038,15 +35038,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 11 - 5?"
+  text: "\xBFCu\xE1nto es 11 + 11?"
   options:
-  - text: 11
+  - text: 21
     isCorrecta: 0
-  - text: 10
+  - text: 24
     isCorrecta: 0
-  - text: 8
+  - text: 23
     isCorrecta: 0
-  - text: 6
+  - text: 22
     isCorrecta: 1
 --- !u!1 &337077615
 GameObject:
@@ -35091,15 +35091,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 4 - 2?"
+  text: "\xBFCu\xE1nto es 8 + 8?"
   options:
-  - text: 1
+  - text: 15
     isCorrecta: 0
-  - text: 2
+  - text: 16
     isCorrecta: 1
-  - text: 3
+  - text: 14
     isCorrecta: 0
-  - text: 4
+  - text: 11
     isCorrecta: 0
 --- !u!1 &353244322
 GameObject:
@@ -35130,14 +35130,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 12 - 1?"
+  text: "\xBFCu\xE1nto es 6 + 7?"
   options:
   - text: 10
     isCorrecta: 0
   - text: 11
-    isCorrecta: 1
-  - text: 13
     isCorrecta: 0
+  - text: 13
+    isCorrecta: 1
   - text: 9
     isCorrecta: 0
 --- !u!4 &353244324
@@ -35296,15 +35296,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 6 - 6?"
+  text: "\xBFCu\xE1nto es 6 + 3 + 5?"
   options:
-  - text: 0
+  - text: 14
     isCorrecta: 1
-  - text: 1
+  - text: 13
     isCorrecta: 0
-  - text: 2
+  - text: 15
     isCorrecta: 0
-  - text: 3
+  - text: 16
     isCorrecta: 0
 --- !u!1001 &374010746
 PrefabInstance:
@@ -35419,15 +35419,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 3 - 2?"
+  text: "\xBFCu\xE1nto es 8 + 9?"
   options:
-  - text: 0
+  - text: 15
     isCorrecta: 0
-  - text: 1
+  - text: 17
     isCorrecta: 1
-  - text: 2
+  - text: 14
     isCorrecta: 0
-  - text: 3
+  - text: 16
     isCorrecta: 0
 --- !u!1 &381833865
 GameObject:
@@ -36334,12 +36334,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFQue operaci\xF3n representa el s\xEDmbolo  - ?"
+  text: "\xBFQue operaci\xF3n representa el s\xEDmbolo  ( + ) ?"
   options:
   - text: Suma
-    isCorrecta: 0
-  - text: Resta
     isCorrecta: 1
+  - text: Resta
+    isCorrecta: 0
   - text: "Multiplicaci\xF3n"
     isCorrecta: 0
   - text: "Divisi\xF3n"
@@ -36416,15 +36416,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 8 - 4?"
+  text: "\xBFCu\xE1nto es 10 + 10?"
   options:
-  - text: 5
+  - text: 21
     isCorrecta: 0
-  - text: 6
+  - text: 19
     isCorrecta: 0
-  - text: 4
+  - text: 20
     isCorrecta: 1
-  - text: 3
+  - text: 18
     isCorrecta: 0
 --- !u!4 &523808579 stripped
 Transform:
@@ -39937,16 +39937,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 10 - 6?"
+  text: Cuanto es 0 + 0
   options:
+  - text: 0
+    isCorrecta: 1
   - text: 1
     isCorrecta: 0
   - text: 2
     isCorrecta: 0
   - text: 3
     isCorrecta: 0
-  - text: 4
-    isCorrecta: 1
 --- !u!1 &609086620
 GameObject:
   m_ObjectHideFlags: 0
@@ -40108,7 +40108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7129806865722231671, guid: 0f7b89b5424fcdc4094e7c446675990f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.08
+      value: 8.42
       objectReference: {fileID: 0}
     - target: {fileID: 7129806865722231671, guid: 0f7b89b5424fcdc4094e7c446675990f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -41468,15 +41468,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 10 - 2?"
+  text: "\xBFCu\xE1nto es 7 + 8?"
   options:
-  - text: 10
+  - text: 12
     isCorrecta: 0
-  - text: 9
-    isCorrecta: 0
-  - text: 8
+  - text: 15
     isCorrecta: 1
-  - text: 6
+  - text: 16
+    isCorrecta: 0
+  - text: 18
     isCorrecta: 0
 --- !u!1001 &779380736
 PrefabInstance:
@@ -41710,15 +41710,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 5 - 2?"
+  text: "\xBFCu\xE1nto es 7 + 12?"
   options:
-  - text: 3
+  - text: 19
     isCorrecta: 1
-  - text: 4
+  - text: 20
     isCorrecta: 0
-  - text: 5
+  - text: 12
     isCorrecta: 0
-  - text: 6
+  - text: 21
     isCorrecta: 0
 --- !u!1001 &812367979
 PrefabInstance:
@@ -42163,15 +42163,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 7 - 5?"
+  text: "Si a 8 unidades le agregamos 6 unidades. \xBFCu\xE1ntas unidades hay?"
   options:
-  - text: 5
+  - text: 11
     isCorrecta: 0
-  - text: 4
+  - text: 13
     isCorrecta: 0
-  - text: 3
+  - text: 12
     isCorrecta: 0
-  - text: 2
+  - text: 14
     isCorrecta: 1
 --- !u!4 &848741112 stripped
 Transform:
@@ -42353,15 +42353,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 6 - 5?"
+  text: "Si a 7 unidades le agregamos 7 unidades. \xBFCu\xE1ntas unidades hay?"
   options:
-  - text: 0
+  - text: 12
     isCorrecta: 0
-  - text: 1
+  - text: 14
     isCorrecta: 1
-  - text: 2
+  - text: 13
     isCorrecta: 0
-  - text: 3
+  - text: 11
     isCorrecta: 0
 --- !u!1 &883559031
 GameObject:
@@ -42462,7 +42462,7 @@ MonoBehaviour:
   - {fileID: 1033562058}
   - {fileID: 1407138202}
   - {fileID: 1672396381}
-  MonedasPuertaNivel: 1
+  MonedasPuertaNivel: 15
   mascara: {fileID: 710570096}
   sprColorMascara: {fileID: 1767776912}
   velocidadMascara: 3
@@ -42715,15 +42715,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 11 - 11?"
+  text: "\xBFCuantos meses hay en 2 a\xF1os?"
   options:
-  - text: 1
+  - text: 12
     isCorrecta: 0
-  - text: 2
+  - text: 16
     isCorrecta: 0
-  - text: 0
+  - text: 24
     isCorrecta: 1
-  - text: 3
+  - text: 28
     isCorrecta: 0
 --- !u!4 &932559784 stripped
 Transform:
@@ -43128,15 +43128,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 4 - 3?"
+  text: "\xBFCu\xE1nto es 9 +10?"
   options:
-  - text: 1
+  - text: 19
     isCorrecta: 1
-  - text: 2
+  - text: 20
     isCorrecta: 0
-  - text: 3
+  - text: 21
     isCorrecta: 0
-  - text: 4
+  - text: 22
     isCorrecta: 0
 --- !u!4 &1003557299 stripped
 Transform:
@@ -43186,16 +43186,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 8 - 2?"
+  text: "\xBFCu\xE1nto es 7 + 10?"
   options:
-  - text: 8
+  - text: 12
     isCorrecta: 0
-  - text: 6
+  - text: 15
+    isCorrecta: 0
+  - text: 16
+    isCorrecta: 0
+  - text: 17
     isCorrecta: 1
-  - text: 7
-    isCorrecta: 0
-  - text: 10
-    isCorrecta: 0
 --- !u!4 &1021625559 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5921851170282040922, guid: c2acd0727d2da1548ac580d78d3e366b, type: 3}
@@ -43214,7 +43214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3401914481214377163, guid: 0cfad1f59eb0cf64a82a5c0636535b8f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.156
+      value: -5.32
       objectReference: {fileID: 0}
     - target: {fileID: 3401914481214377163, guid: 0cfad1f59eb0cf64a82a5c0636535b8f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -43266,20 +43266,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3401914481214377166, guid: 0cfad1f59eb0cf64a82a5c0636535b8f, type: 3}
       propertyPath: lineaDialogo.Array.data[0]
-      value: "Explorador, te encuentras en la isla de la SUSTRACCI\xD3N."
+      value: Hola explorador, te encuentras el segundo nivel de las ADICION.
       objectReference: {fileID: 0}
     - target: {fileID: 3401914481214377166, guid: 0cfad1f59eb0cf64a82a5c0636535b8f, type: 3}
       propertyPath: lineaDialogo.Array.data[1]
-      value: Detente cuando veas carteles.
+      value: "Ahora las operaciones te pondr\xE1n m\xE1s a prueba."
       objectReference: {fileID: 0}
     - target: {fileID: 3401914481214377166, guid: 0cfad1f59eb0cf64a82a5c0636535b8f, type: 3}
       propertyPath: lineaDialogo.Array.data[2]
-      value: "Te mostrar\xE1n pistas y consejos sobre como funciona esta operaci\xF3n."
+      value: "\xBFCrees que puedas superarlo?"
       objectReference: {fileID: 0}
     - target: {fileID: 3401914481214377166, guid: 0cfad1f59eb0cf64a82a5c0636535b8f, type: 3}
       propertyPath: lineaDialogo.Array.data[3]
-      value: "Recuerda recolectar m\xEDnimo 20 monedas para que puedas avanzar al
-        siguiente nivel."
+      value: "Recuerda recolectar m\xEDnimo 20 monedas, para que puedas continuar."
       objectReference: {fileID: 0}
     - target: {fileID: 3401914481214377167, guid: 0cfad1f59eb0cf64a82a5c0636535b8f, type: 3}
       propertyPath: m_Name
@@ -43753,15 +43752,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 10 - 5?"
+  text: "\xBFCu\xE1nto es 11 + 12?"
   options:
-  - text: 10
+  - text: 21
     isCorrecta: 0
-  - text: 7
+  - text: 22
     isCorrecta: 0
-  - text: 5
+  - text: 23
     isCorrecta: 1
-  - text: 4
+  - text: 20
     isCorrecta: 0
 --- !u!4 &1070235200 stripped
 Transform:
@@ -44015,15 +44014,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 9 - 3?"
+  text: "\xBFCu\xE1nto es 8 + 12?"
   options:
-  - text: 10
+  - text: 19
     isCorrecta: 0
-  - text: 9
+  - text: 22
     isCorrecta: 0
-  - text: 8
+  - text: 21
     isCorrecta: 0
-  - text: 6
+  - text: 20
     isCorrecta: 1
 --- !u!1 &1120811512
 GameObject:
@@ -44205,15 +44204,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 9 - 7?"
+  text: "\xBFCu\xE1nto es 6 + 4 + 6?"
   options:
-  - text: 1
+  - text: 14
     isCorrecta: 0
-  - text: 2
+  - text: 16
     isCorrecta: 1
-  - text: 3
+  - text: 15
     isCorrecta: 0
-  - text: 4
+  - text: 12
     isCorrecta: 0
 --- !u!1 &1131086576
 GameObject:
@@ -44258,16 +44257,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 10 - 3?"
+  text: "\xBFCu\xE1nto es 8 + 11?"
   options:
-  - text: 10
-    isCorrecta: 0
-  - text: 9
-    isCorrecta: 0
-  - text: 8
-    isCorrecta: 0
-  - text: 7
+  - text: 19
     isCorrecta: 1
+  - text: 20
+    isCorrecta: 0
+  - text: 22
+    isCorrecta: 0
+  - text: 21
+    isCorrecta: 0
 --- !u!1001 &1131791500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44564,15 +44563,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 12 - 9?"
+  text: "\xBFCu\xE1nto es 10 + 10 + 5?"
   options:
-  - text: 1
+  - text: 21
     isCorrecta: 0
-  - text: 2
+  - text: 22
     isCorrecta: 0
-  - text: 3
+  - text: 25
     isCorrecta: 1
-  - text: 4
+  - text: 30
     isCorrecta: 0
 --- !u!1001 &1158627346
 PrefabInstance:
@@ -45155,15 +45154,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 5 - 3?"
+  text: "\xBFCu\xE1nto es 9 +9?"
   options:
-  - text: 1
+  - text: 17
     isCorrecta: 0
-  - text: 2
+  - text: 18
     isCorrecta: 1
-  - text: 3
+  - text: 20
     isCorrecta: 0
-  - text: 4
+  - text: 21
     isCorrecta: 0
 --- !u!4 &1229760249 stripped
 Transform:
@@ -45243,11 +45242,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4187727ecf405e14c90163d9034ecbc4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a407a9617d157c44d951ca54207c7254, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -45341,7 +45340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e86cc698dec1940b2782ab0097cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posMinCamara: {x: -3, y: -20}
+  posMinCamara: {x: -5, y: -20}
   posMaxCamara: {x: 210, y: 80}
   objetoASeguir: {fileID: 957474392}
   tiempoRetardoCamara: 0.2
@@ -45364,7 +45363,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237059862}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: -10}
+  m_LocalPosition: {x: -5, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 548638589}
@@ -45413,15 +45412,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 8 - 6?"
+  text: "\xBFCu\xE1nto es 6 + 3 + 2?"
   options:
-  - text: 1
+  - text: 12
     isCorrecta: 0
-  - text: 2
+  - text: 11
     isCorrecta: 1
-  - text: 3
+  - text: 14
     isCorrecta: 0
-  - text: 4
+  - text: 16
     isCorrecta: 0
 --- !u!1001 &1244502833
 PrefabInstance:
@@ -45713,15 +45712,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 12 - 12?"
+  text: "\xBFCu\xE1ntas minutos hay en 10 minutos?"
   options:
-  - text: 0
+  - text: 10
     isCorrecta: 1
-  - text: 1
+  - text: 12
     isCorrecta: 0
-  - text: 2
+  - text: 0
     isCorrecta: 0
-  - text: 3
+  - text: 5
     isCorrecta: 0
 --- !u!4 &1258557144 stripped
 Transform:
@@ -49153,15 +49152,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 11 - 4?"
+  text: "\xBFCu\xE1nto es 9 +12?"
   options:
-  - text: 8
+  - text: 22
     isCorrecta: 0
-  - text: 9
+  - text: 24
     isCorrecta: 0
-  - text: 10
+  - text: 23
     isCorrecta: 0
-  - text: 7
+  - text: 21
     isCorrecta: 1
 --- !u!4 &1318393468 stripped
 Transform:
@@ -49569,15 +49568,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 12 - 10?"
+  text: "\xBFCu\xE1nto es 12 + 1 + 3?"
   options:
-  - text: 1
+  - text: 15
     isCorrecta: 0
-  - text: 2
+  - text: 16
     isCorrecta: 1
-  - text: 3
+  - text: 13
     isCorrecta: 0
-  - text: 4
+  - text: 14
     isCorrecta: 0
 --- !u!1 &1374802855
 GameObject:
@@ -49880,15 +49879,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 11 - 7?"
+  text: "\xBFCu\xE1nto es 6 + 3 + 10?"
   options:
-  - text: 1
+  - text: 21
     isCorrecta: 0
-  - text: 2
+  - text: 22
     isCorrecta: 0
-  - text: 3
+  - text: 20
     isCorrecta: 0
-  - text: 4
+  - text: 19
     isCorrecta: 1
 --- !u!4 &1413438933 stripped
 Transform:
@@ -50075,15 +50074,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 10 - 7?"
+  text: "\xBFCu\xE1nto es 6 + 4 + 4?"
   options:
-  - text: 1
+  - text: 11
     isCorrecta: 0
-  - text: 2
+  - text: 12
     isCorrecta: 0
-  - text: 3
+  - text: 14
     isCorrecta: 1
-  - text: 4
+  - text: 13
     isCorrecta: 0
 --- !u!1001 &1435719406
 PrefabInstance:
@@ -50504,15 +50503,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 5 - 1?"
+  text: "\xBFCu\xE1nto es 6 + 11?"
   options:
-  - text: 3
+  - text: 15
     isCorrecta: 0
-  - text: 4
+  - text: 17
     isCorrecta: 1
-  - text: 7
+  - text: 16
     isCorrecta: 0
-  - text: 8
+  - text: 12
     isCorrecta: 0
 --- !u!4 &1473246891 stripped
 Transform:
@@ -50702,15 +50701,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 6 - 1?"
+  text: "\xBFCu\xE1nto es 6 + 10?"
   options:
-  - text: 5
+  - text: 12
+    isCorrecta: 0
+  - text: 16
     isCorrecta: 1
-  - text: 9
+  - text: 18
     isCorrecta: 0
-  - text: 4
-    isCorrecta: 0
-  - text: 8
+  - text: 20
     isCorrecta: 0
 --- !u!1001 &1499495031
 PrefabInstance:
@@ -50816,15 +50815,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 12 - 4?"
+  text: "\xBFCu\xE1nto es 9 +11?"
   options:
-  - text: 8
+  - text: 20
     isCorrecta: 1
-  - text: 9
+  - text: 21
     isCorrecta: 0
-  - text: 10
+  - text: 19
     isCorrecta: 0
-  - text: 11
+  - text: 18
     isCorrecta: 0
 --- !u!1001 &1505304026
 PrefabInstance:
@@ -51196,8 +51195,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585289291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.0029, y: 0.1112, z: 5}
-  m_LocalScale: {x: 18.53668, y: 8.046393, z: 1}
+  m_LocalPosition: {x: -4.9268, y: 0.3396, z: 8}
+  m_LocalScale: {x: 16.554554, y: 9.783294, z: 1}
   m_Children: []
   m_Father: {fileID: 368046003}
   m_RootOrder: 0
@@ -51308,15 +51307,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 8 - 7?"
+  text: "\xBFCu\xE1nto es 7 + 3 + 6?"
   options:
-  - text: 1
+  - text: 16
     isCorrecta: 1
-  - text: 2
+  - text: 17
     isCorrecta: 0
-  - text: 3
+  - text: 15
     isCorrecta: 0
-  - text: 4
+  - text: 14
     isCorrecta: 0
 --- !u!1001 &1604416128
 PrefabInstance:
@@ -51501,12 +51500,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 11 - 9?"
+  text: "\xBFCu\xE1nto es 0 + 1 + 0?"
   options:
   - text: 1
-    isCorrecta: 0
-  - text: 2
     isCorrecta: 1
+  - text: 2
+    isCorrecta: 0
   - text: 3
     isCorrecta: 0
   - text: 4
@@ -51858,16 +51857,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 11 - 1?"
+  text: "\xBFCu\xE1nto es 6 + 8?"
   options:
   - text: 11
     isCorrecta: 0
   - text: 9
     isCorrecta: 0
   - text: 10
-    isCorrecta: 1
-  - text: 8
     isCorrecta: 0
+  - text: 14
+    isCorrecta: 1
 --- !u!4 &1634346304
 Transform:
   m_ObjectHideFlags: 0
@@ -52202,15 +52201,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 8 - 5?"
+  text: "Si a 5 unidades le agregamos 10 unidades. \xBFCu\xE1ntas unidades hay?"
   options:
-  - text: 2
+  - text: 12
     isCorrecta: 0
-  - text: 4
+  - text: 13
     isCorrecta: 0
-  - text: 3
+  - text: 15
     isCorrecta: 1
-  - text: 1
+  - text: 16
     isCorrecta: 0
 --- !u!4 &1686989804 stripped
 Transform:
@@ -52670,15 +52669,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 5 - 5?"
+  text: "Si a 20 unidades le agregamos 1 unidad. \xBFCu\xE1ntas unidades hay?"
   options:
-  - text: 3
+  - text: 23
     isCorrecta: 0
-  - text: 2
+  - text: 22
     isCorrecta: 0
-  - text: 0
+  - text: 21
     isCorrecta: 1
-  - text: 1
+  - text: 20
     isCorrecta: 0
 --- !u!1 &1731690116
 GameObject:
@@ -52723,15 +52722,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 12 - 7?"
+  text: "\xBFCu\xE1nto es 6 + 3 + 8?"
   options:
-  - text: 4
+  - text: 12
     isCorrecta: 0
-  - text: 5
+  - text: 17
     isCorrecta: 1
-  - text: 6
+  - text: 16
     isCorrecta: 0
-  - text: 7
+  - text: 14
     isCorrecta: 0
 --- !u!4 &1733145781 stripped
 Transform:
@@ -52759,11 +52758,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6640600263525242743, guid: 5d82136d3d233264a9fe291d281998e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 89.59
+      value: -10.56
       objectReference: {fileID: 0}
     - target: {fileID: 6640600263525242743, guid: 5d82136d3d233264a9fe291d281998e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.64
+      value: 0.96
       objectReference: {fileID: 0}
     - target: {fileID: 6640600263525242743, guid: 5d82136d3d233264a9fe291d281998e0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -53304,15 +53303,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 9 - 6?"
+  text: "\xBFCu\xE1nto es 9 + 2 + 2?"
   options:
-  - text: 1
+  - text: 12
     isCorrecta: 0
-  - text: 2
+  - text: 11
     isCorrecta: 0
-  - text: 3
+  - text: 13
     isCorrecta: 1
-  - text: 4
+  - text: 14
     isCorrecta: 0
 --- !u!4 &1786644709 stripped
 Transform:
@@ -53639,15 +53638,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 12 - 3?"
+  text: "\xBFCu\xE1nto es 8 + 10?"
   options:
-  - text: 12
+  - text: 15
     isCorrecta: 0
-  - text: 11
+  - text: 19
     isCorrecta: 0
-  - text: 10
+  - text: 20
     isCorrecta: 0
-  - text: 9
+  - text: 18
     isCorrecta: 1
 --- !u!1001 &1832981620
 PrefabInstance:
@@ -53933,15 +53932,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 12 - 2?"
+  text: "\xBFCu\xE1nto es 7 + 7?"
   options:
-  - text: 11
-    isCorrecta: 0
-  - text: 9
-    isCorrecta: 0
-  - text: 10
+  - text: 14
     isCorrecta: 1
-  - text: 8
+  - text: 12
+    isCorrecta: 0
+  - text: 13
+    isCorrecta: 0
+  - text: 16
     isCorrecta: 0
 --- !u!4 &1860955032 stripped
 Transform:
@@ -54444,15 +54443,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 7 - 2?"
+  text: "\xBFCu\xE1nto es 7 + 11?"
   options:
-  - text: 6
+  - text: 17
     isCorrecta: 0
-  - text: 5
+  - text: 18
     isCorrecta: 1
-  - text: 3
+  - text: 16
     isCorrecta: 0
-  - text: 7
+  - text: 15
     isCorrecta: 0
 --- !u!1 &1939493686
 GameObject:
@@ -54489,7 +54488,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -7, y: 0}
+  m_AnchoredPosition: {x: -7.000122, y: 0}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1939493688
@@ -54740,15 +54739,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 2 - 1?"
+  text: "\xBFCu\xE1nto es 6 + 12?"
   options:
-  - text: 2
+  - text: 20
     isCorrecta: 0
-  - text: 0
+  - text: 14
     isCorrecta: 0
-  - text: 1
+  - text: 18
     isCorrecta: 1
-  - text: 4
+  - text: 16
     isCorrecta: 0
 --- !u!1001 &1992582856
 PrefabInstance:
@@ -54844,15 +54843,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 1 - 1?"
+  text: "\xBFCu\xE1nto es 6 + 6?"
   options:
-  - text: 0
+  - text: 12
     isCorrecta: 1
-  - text: 1
+  - text: 13
     isCorrecta: 0
-  - text: 2
+  - text: 11
     isCorrecta: 0
-  - text: 3
+  - text: 10
     isCorrecta: 0
 --- !u!4 &1995254778
 Transform:
@@ -54911,15 +54910,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 7 - 6?"
+  text: "\xBFCu\xE1nto es 6 + 3 + 4?"
   options:
-  - text: 1
+  - text: 13
     isCorrecta: 1
-  - text: 2
+  - text: 12
     isCorrecta: 0
-  - text: 3
+  - text: 11
     isCorrecta: 0
-  - text: 4
+  - text: 14
     isCorrecta: 0
 --- !u!1 &2002549240
 GameObject:
@@ -55841,15 +55840,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 12 - 5?"
+  text: "\xBFCu\xE1nto es 10 + 12?"
   options:
-  - text: 7
+  - text: 22
     isCorrecta: 1
-  - text: 8
+  - text: 20
     isCorrecta: 0
-  - text: 10
+  - text: 23
     isCorrecta: 0
-  - text: 9
+  - text: 24
     isCorrecta: 0
 --- !u!4 &2118393281 stripped
 Transform:
@@ -56113,13 +56112,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 8 - 1?"
+  text: "\xBFCu\xE1nto es 6 + 9?"
   options:
-  - text: 9
+  - text: 12
     isCorrecta: 0
-  - text: 8
+  - text: 14
     isCorrecta: 0
-  - text: 7
+  - text: 15
     isCorrecta: 1
   - text: 10
     isCorrecta: 0
@@ -56213,7 +56212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136610617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9829, y: -0.2856, z: 3}
+  m_LocalPosition: {x: -2.9829, y: -0.2856, z: 5}
   m_LocalScale: {x: 18.457315, y: 10.4, z: 1}
   m_Children: []
   m_Father: {fileID: 368046003}

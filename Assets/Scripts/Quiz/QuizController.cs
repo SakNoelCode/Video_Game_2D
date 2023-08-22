@@ -15,7 +15,7 @@ public class QuizController : MonoBehaviour
     [SerializeField] private Color colorCorrecta = Color.black;
     [SerializeField] private Color colorIncorrecta = Color.black;
        
-    private float tiempoEspera = 1f;
+    private float tiempoEspera = 0.5f;
 
 
     [SerializeField] private GameObject go_quizDB = null;
@@ -42,6 +42,7 @@ public class QuizController : MonoBehaviour
     private void NextQuestion()
     {
         m_quizUI.construct(m_quizDB.GetRandom(),GiveAnswer);
+        m_quizUI.activaButtons();
     }
 
     private void GiveAnswer(OptionsButtons optionButton)
@@ -63,8 +64,7 @@ public class QuizController : MonoBehaviour
 
         optionbutton.SetColor(optionbutton.options.isCorrecta ? colorCorrecta : colorIncorrecta);
 
-        
-
+        m_quizUI.desactivaButtons();
         yield return new WaitForSeconds(tiempoEspera);
         //NextQuestion();
         cerrarQuiz();

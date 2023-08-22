@@ -200,6 +200,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
   m_PrefabInstance: {fileID: 1957541099}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &27087693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 27087694}
+  - component: {fileID: 27087695}
+  m_Layer: 0
+  m_Name: Pregunta_18
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &27087694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27087693}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &27087695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27087693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 10 - 3?"
+  options:
+  - text: 10
+    isCorrecta: 0
+  - text: 9
+    isCorrecta: 0
+  - text: 8
+    isCorrecta: 0
+  - text: 7
+    isCorrecta: 1
 --- !u!4 &28009773 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5921851170282040922, guid: c2acd0727d2da1548ac580d78d3e366b, type: 3}
@@ -210,59 +263,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
   m_PrefabInstance: {fileID: 980684339}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &33953458
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 33953459}
-  - component: {fileID: 33953460}
-  m_Layer: 0
-  m_Name: Pregunta_24
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &33953459
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 33953458}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &33953460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 33953458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 3 * 6?"
-  options:
-  - text: 12
-    isCorrecta: 0
-  - text: 15
-    isCorrecta: 0
-  - text: 18
-    isCorrecta: 1
-  - text: 20
-    isCorrecta: 0
 --- !u!1001 &35369329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -666,112 +666,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
---- !u!1 &125885168
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 125885169}
-  - component: {fileID: 125885170}
-  m_Layer: 0
-  m_Name: Pregunta_28
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &125885169
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125885168}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &125885170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125885168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 3 * 12?"
-  options:
-  - text: 12
-    isCorrecta: 0
-  - text: 36
-    isCorrecta: 1
-  - text: 30
-    isCorrecta: 0
-  - text: 42
-    isCorrecta: 0
---- !u!1 &125979769
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 125979770}
-  - component: {fileID: 125979771}
-  m_Layer: 0
-  m_Name: Pregunta_38
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &125979770
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125979769}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 37
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &125979771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125979769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 5 * 7?"
-  options:
-  - text: 35
-    isCorrecta: 1
-  - text: 30
-    isCorrecta: 0
-  - text: 40
-    isCorrecta: 0
-  - text: 20
-    isCorrecta: 0
 --- !u!1 &129431543
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +803,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
   m_PrefabInstance: {fileID: 888018177}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &143970982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 143970983}
+  - component: {fileID: 143970984}
+  m_Layer: 0
+  m_Name: Pregunta_25
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &143970983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143970982}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &143970984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143970982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 5 - 4?"
+  options:
+  - text: 1
+    isCorrecta: 1
+  - text: 2
+    isCorrecta: 0
+  - text: 3
+    isCorrecta: 0
+  - text: 4
+    isCorrecta: 0
 --- !u!1 &146990166
 GameObject:
   m_ObjectHideFlags: 0
@@ -2583,59 +2530,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
---- !u!1 &184773412
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 184773414}
-  - component: {fileID: 184773413}
-  m_Layer: 0
-  m_Name: Pregunta_51
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &184773413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184773412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 8 * 8?"
-  options:
-  - text: 64
-    isCorrecta: 1
-  - text: 65
-    isCorrecta: 0
-  - text: 69
-    isCorrecta: 0
-  - text: 72
-    isCorrecta: 0
---- !u!4 &184773414
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184773412}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 50
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &188547947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2732,112 +2626,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &198512159
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 198512160}
-  - component: {fileID: 198512161}
-  m_Layer: 0
-  m_Name: Pregunta_35
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &198512160
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198512159}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 34
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &198512161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198512159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 4 * 12?"
-  options:
-  - text: 48
-    isCorrecta: 1
-  - text: 36
-    isCorrecta: 0
-  - text: 50
-    isCorrecta: 0
-  - text: 32
-    isCorrecta: 0
---- !u!1 &203072636
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 203072638}
-  - component: {fileID: 203072637}
-  m_Layer: 0
-  m_Name: Pregunta_53
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &203072637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203072636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 8 * 12?"
-  options:
-  - text: 96
-    isCorrecta: 1
-  - text: 94
-    isCorrecta: 0
-  - text: 92
-    isCorrecta: 0
-  - text: 81
-    isCorrecta: 0
---- !u!4 &203072638
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203072636}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 52
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &218938305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2904,59 +2692,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5921851170282040922, guid: c2acd0727d2da1548ac580d78d3e366b, type: 3}
   m_PrefabInstance: {fileID: 218938305}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &220327455
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 220327456}
-  - component: {fileID: 220327457}
-  m_Layer: 0
-  m_Name: Pregunta_14
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &220327456
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 220327455}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &220327457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 220327455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 2 * 6?"
-  options:
-  - text: 10
-    isCorrecta: 0
-  - text: 12
-    isCorrecta: 1
-  - text: 13
-    isCorrecta: 0
-  - text: 15
-    isCorrecta: 0
 --- !u!4 &229067502 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
@@ -3164,6 +2899,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
   m_PrefabInstance: {fileID: 231998592}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &244116274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 244116275}
+  - component: {fileID: 244116276}
+  m_Layer: 0
+  m_Name: Pregunta_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &244116275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244116274}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &244116276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244116274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 1 - 1?"
+  options:
+  - text: 0
+    isCorrecta: 1
+  - text: 1
+    isCorrecta: 0
+  - text: 2
+    isCorrecta: 0
+  - text: 3
+    isCorrecta: 0
 --- !u!1 &252297555
 GameObject:
   m_ObjectHideFlags: 0
@@ -3275,165 +3063,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
---- !u!1 &255784930
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 255784932}
-  - component: {fileID: 255784931}
-  m_Layer: 0
-  m_Name: Pregunta_1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &255784931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255784930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFQue operaci\xF3n representa el s\xEDmbolo (*)?"
-  options:
-  - text: Suma
-    isCorrecta: 0
-  - text: Resta
-    isCorrecta: 0
-  - text: "Multiplicaci\xF3n"
-    isCorrecta: 1
-  - text: "Divisi\xF3n"
-    isCorrecta: 0
---- !u!4 &255784932
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255784930}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &255976283
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 255976284}
-  - component: {fileID: 255976285}
-  m_Layer: 0
-  m_Name: Pregunta_27
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &255976284
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255976283}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 26
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &255976285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255976283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 3 * 9?"
-  options:
-  - text: 27
-    isCorrecta: 1
-  - text: 25
-    isCorrecta: 0
-  - text: 18
-    isCorrecta: 0
-  - text: 26
-    isCorrecta: 0
---- !u!1 &256050406
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 256050407}
-  - component: {fileID: 256050408}
-  m_Layer: 0
-  m_Name: Pregunta_12
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &256050407
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256050406}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &256050408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256050406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 2 * 4?"
-  options:
-  - text: 5
-    isCorrecta: 0
-  - text: 8
-    isCorrecta: 1
-  - text: 7
-    isCorrecta: 0
-  - text: 6
-    isCorrecta: 0
 --- !u!1 &266832053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3509,112 +3138,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
   m_PrefabInstance: {fileID: 852592588}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &284818878
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 284818880}
-  - component: {fileID: 284818879}
-  m_Layer: 0
-  m_Name: Pregunta_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &284818879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284818878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 1 * 1?"
-  options:
-  - text: 1
-    isCorrecta: 1
-  - text: 0
-    isCorrecta: 0
-  - text: 2
-    isCorrecta: 0
-  - text: 3
-    isCorrecta: 0
---- !u!4 &284818880
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284818878}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &286740321
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 286740322}
-  - component: {fileID: 286740323}
-  m_Layer: 0
-  m_Name: Pregunta_7
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &286740322
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286740321}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &286740323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286740321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 1 * 8?"
-  options:
-  - text: 8
-    isCorrecta: 1
-  - text: 9
-    isCorrecta: 0
-  - text: 7
-    isCorrecta: 0
-  - text: 6
-    isCorrecta: 0
 --- !u!1 &290346535
 GameObject:
   m_ObjectHideFlags: 0
@@ -3960,6 +3483,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301556331}
   m_CullTransparentMesh: 1
+--- !u!1 &311283308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 311283309}
+  - component: {fileID: 311283310}
+  m_Layer: 0
+  m_Name: Pregunta_47
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &311283309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311283308}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 50
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &311283310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311283308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 11 - 9?"
+  options:
+  - text: 1
+    isCorrecta: 0
+  - text: 2
+    isCorrecta: 1
+  - text: 3
+    isCorrecta: 0
+  - text: 4
+    isCorrecta: 0
 --- !u!1001 &314209553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4109,6 +3685,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
   m_PrefabInstance: {fileID: 1837600196}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &328196083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 328196084}
+  - component: {fileID: 328196085}
+  m_Layer: 0
+  m_Name: Pregunta_10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &328196084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328196083}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &328196085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328196083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 10 - 2?"
+  options:
+  - text: 10
+    isCorrecta: 0
+  - text: 9
+    isCorrecta: 0
+  - text: 8
+    isCorrecta: 1
+  - text: 6
+    isCorrecta: 0
 --- !u!4 &330636639 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
@@ -4249,6 +3878,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
   m_PrefabInstance: {fileID: 367555958}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &368526469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 368526470}
+  - component: {fileID: 368526471}
+  m_Layer: 0
+  m_Name: Pregunta_12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &368526470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368526469}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &368526471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368526469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 8 - 2?"
+  options:
+  - text: 8
+    isCorrecta: 0
+  - text: 6
+    isCorrecta: 1
+  - text: 7
+    isCorrecta: 0
+  - text: 10
+    isCorrecta: 0
 --- !u!4 &368748910 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
@@ -4593,6 +4275,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
   m_PrefabInstance: {fileID: 391566437}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &392701185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 392701186}
+  - component: {fileID: 392701187}
+  m_Layer: 0
+  m_Name: Pregunta_48
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &392701186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392701185}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 51
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &392701187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392701185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 12 - 10?"
+  options:
+  - text: 1
+    isCorrecta: 0
+  - text: 2
+    isCorrecta: 1
+  - text: 3
+    isCorrecta: 0
+  - text: 4
+    isCorrecta: 0
 --- !u!1 &397542552
 GameObject:
   m_ObjectHideFlags: 0
@@ -4931,6 +4666,59 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &424930558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 424930559}
+  - component: {fileID: 424930560}
+  m_Layer: 0
+  m_Name: Pregunta_20
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &424930559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424930558}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &424930560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424930558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 5 - 3?"
+  options:
+  - text: 1
+    isCorrecta: 0
+  - text: 2
+    isCorrecta: 1
+  - text: 3
+    isCorrecta: 0
+  - text: 4
+    isCorrecta: 0
 --- !u!1 &446586933
 GameObject:
   m_ObjectHideFlags: 0
@@ -5032,112 +4820,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8159326330739608197, guid: 2631f0daad932c7498e3bd321a862e5a, type: 3}
   m_PrefabInstance: {fileID: 852949342}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &453123379
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 453123380}
-  - component: {fileID: 453123381}
-  m_Layer: 0
-  m_Name: Pregunta_45
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &453123380
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453123379}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 44
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &453123381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453123379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 6 * 9?"
-  options:
-  - text: 36
-    isCorrecta: 0
-  - text: 45
-    isCorrecta: 0
-  - text: 54
-    isCorrecta: 1
-  - text: 50
-    isCorrecta: 0
---- !u!1 &461099336
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 461099337}
-  - component: {fileID: 461099338}
-  m_Layer: 0
-  m_Name: Pregunta_40
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &461099337
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461099336}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 39
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &461099338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461099336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 5 * 9?"
-  options:
-  - text: 40
-    isCorrecta: 0
-  - text: 45
-    isCorrecta: 1
-  - text: 30
-    isCorrecta: 0
-  - text: 35
-    isCorrecta: 0
 --- !u!4 &469045931 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5921851170282040922, guid: c2acd0727d2da1548ac580d78d3e366b, type: 3}
@@ -5148,6 +4830,165 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
   m_PrefabInstance: {fileID: 1107593253}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &482731398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 482731399}
+  - component: {fileID: 482731400}
+  m_Layer: 0
+  m_Name: Pregunta_34
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &482731399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482731398}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &482731400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482731398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 12 - 6?"
+  options:
+  - text: 6
+    isCorrecta: 1
+  - text: 7
+    isCorrecta: 0
+  - text: 8
+    isCorrecta: 0
+  - text: 9
+    isCorrecta: 0
+--- !u!1 &492754104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 492754105}
+  - component: {fileID: 492754106}
+  m_Layer: 0
+  m_Name: Pregunta_22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &492754105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492754104}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &492754106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492754104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 12 - 4?"
+  options:
+  - text: 8
+    isCorrecta: 1
+  - text: 9
+    isCorrecta: 0
+  - text: 10
+    isCorrecta: 0
+  - text: 11
+    isCorrecta: 0
+--- !u!1 &501689370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 501689371}
+  - component: {fileID: 501689372}
+  m_Layer: 0
+  m_Name: Pregunta_31
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &501689371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501689370}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &501689372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501689370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 7 - 5?"
+  options:
+  - text: 5
+    isCorrecta: 0
+  - text: 4
+    isCorrecta: 0
+  - text: 3
+    isCorrecta: 0
+  - text: 2
+    isCorrecta: 1
 --- !u!1 &505142531
 GameObject:
   m_ObjectHideFlags: 0
@@ -5431,59 +5272,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8159326330739608197, guid: 2631f0daad932c7498e3bd321a862e5a, type: 3}
   m_PrefabInstance: {fileID: 2103388844}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &540611004
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 540611005}
-  - component: {fileID: 540611006}
-  m_Layer: 0
-  m_Name: Pregunta_33
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &540611005
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 540611004}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 32
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &540611006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 540611004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 4 * 8?"
-  options:
-  - text: 18
-    isCorrecta: 0
-  - text: 24
-    isCorrecta: 0
-  - text: 30
-    isCorrecta: 0
-  - text: 32
-    isCorrecta: 1
 --- !u!1 &542094998
 GameObject:
   m_ObjectHideFlags: 0
@@ -5711,59 +5499,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
   m_PrefabInstance: {fileID: 552447696}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &553625092
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 553625094}
-  - component: {fileID: 553625093}
-  m_Layer: 0
-  m_Name: Pregunta_4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &553625093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553625092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 1 * 3?"
-  options:
-  - text: 1
-    isCorrecta: 0
-  - text: 2
-    isCorrecta: 0
-  - text: 3
-    isCorrecta: 1
-  - text: 4
-    isCorrecta: 0
---- !u!4 &553625094
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553625092}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &554300410 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3249580595546085314, guid: b6d1da9087dd1f043ac8e041d8b393f6, type: 3}
@@ -5986,59 +5721,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
---- !u!1 &576125969
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 576125970}
-  - component: {fileID: 576125971}
-  m_Layer: 0
-  m_Name: Pregunta_13
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &576125970
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576125969}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &576125971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576125969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 2 * 5?"
-  options:
-  - text: 6
-    isCorrecta: 0
-  - text: 7
-    isCorrecta: 0
-  - text: 10
-    isCorrecta: 1
-  - text: 12
-    isCorrecta: 0
 --- !u!1001 &595685469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6111,59 +5793,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5921851170282040922, guid: c2acd0727d2da1548ac580d78d3e366b, type: 3}
   m_PrefabInstance: {fileID: 1269285704}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &624814223
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 624814224}
-  - component: {fileID: 624814225}
-  m_Layer: 0
-  m_Name: Pregunta_49
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &624814224
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624814223}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 48
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &624814225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624814223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 7 * 9?"
-  options:
-  - text: 61
-    isCorrecta: 0
-  - text: 65
-    isCorrecta: 0
-  - text: 50
-    isCorrecta: 0
-  - text: 63
-    isCorrecta: 1
 --- !u!1001 &635962703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6291,6 +5920,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6d1da9087dd1f043ac8e041d8b393f6, type: 3}
+--- !u!1 &654962874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 654962875}
+  - component: {fileID: 654962876}
+  m_Layer: 0
+  m_Name: Pregunta_35
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &654962875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654962874}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &654962876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654962874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 11 - 6?"
+  options:
+  - text: 4
+    isCorrecta: 0
+  - text: 5
+    isCorrecta: 1
+  - text: 6
+    isCorrecta: 0
+  - text: 7
+    isCorrecta: 0
 --- !u!1 &657382773
 GameObject:
   m_ObjectHideFlags: 0
@@ -6366,6 +6048,112 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657382773}
   m_CullTransparentMesh: 1
+--- !u!1 &660900302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 660900303}
+  - component: {fileID: 660900304}
+  m_Layer: 0
+  m_Name: Pregunta_14
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &660900303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660900302}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &660900304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660900302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 5 - 2?"
+  options:
+  - text: 3
+    isCorrecta: 1
+  - text: 4
+    isCorrecta: 0
+  - text: 5
+    isCorrecta: 0
+  - text: 6
+    isCorrecta: 0
+--- !u!1 &663087274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 663087275}
+  - component: {fileID: 663087276}
+  m_Layer: 0
+  m_Name: Pregunta_16
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &663087275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663087274}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &663087276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663087274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 3 - 2?"
+  options:
+  - text: 0
+    isCorrecta: 0
+  - text: 1
+    isCorrecta: 1
+  - text: 2
+    isCorrecta: 0
+  - text: 3
+    isCorrecta: 0
 --- !u!1001 &672937557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6462,66 +6250,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listQuestions:
-  - {fileID: 255784931}
-  - {fileID: 284818879}
-  - {fileID: 1292261081}
-  - {fileID: 553625093}
-  - {fileID: 1683969087}
-  - {fileID: 1660189442}
-  - {fileID: 286740323}
-  - {fileID: 1454505838}
-  - {fileID: 1536036363}
-  - {fileID: 1357393089}
-  - {fileID: 1209419133}
-  - {fileID: 256050408}
-  - {fileID: 576125971}
-  - {fileID: 220327457}
-  - {fileID: 1872465631}
-  - {fileID: 1441336402}
-  - {fileID: 1972207709}
-  - {fileID: 1179953909}
-  - {fileID: 1007543423}
-  - {fileID: 1395646539}
-  - {fileID: 1760965702}
-  - {fileID: 2016027441}
-  - {fileID: 1496743301}
-  - {fileID: 33953460}
-  - {fileID: 867903456}
-  - {fileID: 909537514}
-  - {fileID: 255976285}
-  - {fileID: 125885170}
-  - {fileID: 1519235486}
-  - {fileID: 1346410809}
-  - {fileID: 1502534321}
-  - {fileID: 1208351914}
-  - {fileID: 540611006}
-  - {fileID: 1033886397}
-  - {fileID: 198512161}
-  - {fileID: 843681973}
-  - {fileID: 1415573058}
-  - {fileID: 125979771}
-  - {fileID: 1281736167}
-  - {fileID: 461099338}
-  - {fileID: 1302288030}
-  - {fileID: 1164563779}
-  - {fileID: 1616114980}
-  - {fileID: 1750564980}
-  - {fileID: 453123381}
-  - {fileID: 1314513286}
-  - {fileID: 1062219034}
-  - {fileID: 1739166009}
-  - {fileID: 624814225}
-  - {fileID: 2080772521}
-  - {fileID: 184773413}
-  - {fileID: 1124171824}
-  - {fileID: 203072637}
-  - {fileID: 1859544014}
-  - {fileID: 1737717563}
-  - {fileID: 1401190005}
-  - {fileID: 715598173}
-  - {fileID: 1015480250}
-  - {fileID: 838284575}
-  - {fileID: 1939083338}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &685649389
 Transform:
   m_ObjectHideFlags: 0
@@ -6532,67 +6320,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -681.98755, y: -300, z: 0}
   m_LocalScale: {x: 1.863354, y: 1.863354, z: 1.863354}
-  m_Children:
-  - {fileID: 255784932}
-  - {fileID: 284818880}
-  - {fileID: 1292261082}
-  - {fileID: 553625094}
-  - {fileID: 1683969086}
-  - {fileID: 1660189441}
-  - {fileID: 286740322}
-  - {fileID: 1454505837}
-  - {fileID: 1536036362}
-  - {fileID: 1357393088}
-  - {fileID: 1209419132}
-  - {fileID: 256050407}
-  - {fileID: 576125970}
-  - {fileID: 220327456}
-  - {fileID: 1872465630}
-  - {fileID: 1441336401}
-  - {fileID: 1972207708}
-  - {fileID: 1179953908}
-  - {fileID: 1007543422}
-  - {fileID: 1395646538}
-  - {fileID: 1760965701}
-  - {fileID: 2016027440}
-  - {fileID: 1496743300}
-  - {fileID: 33953459}
-  - {fileID: 867903455}
-  - {fileID: 909537513}
-  - {fileID: 255976284}
-  - {fileID: 125885169}
-  - {fileID: 1519235485}
-  - {fileID: 1346410808}
-  - {fileID: 1502534320}
-  - {fileID: 1208351913}
-  - {fileID: 540611005}
-  - {fileID: 1033886396}
-  - {fileID: 198512160}
-  - {fileID: 843681972}
-  - {fileID: 1415573057}
-  - {fileID: 125979770}
-  - {fileID: 1281736166}
-  - {fileID: 461099337}
-  - {fileID: 1302288029}
-  - {fileID: 1164563778}
-  - {fileID: 1616114979}
-  - {fileID: 1750564979}
-  - {fileID: 453123380}
-  - {fileID: 1314513285}
-  - {fileID: 1062219033}
-  - {fileID: 1739166008}
-  - {fileID: 624814224}
-  - {fileID: 2080772520}
-  - {fileID: 184773414}
-  - {fileID: 1124171825}
-  - {fileID: 203072638}
-  - {fileID: 1859544015}
-  - {fileID: 1737717564}
-  - {fileID: 1401190006}
-  - {fileID: 715598174}
-  - {fileID: 1015480251}
-  - {fileID: 838284576}
-  - {fileID: 1939083339}
+  m_Children: []
   m_Father: {fileID: 1307004779}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6850,59 +6578,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 0.13}
   m_EdgeRadius: 0
---- !u!1 &715598172
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 715598174}
-  - component: {fileID: 715598173}
-  m_Layer: 0
-  m_Name: Pregunta_57
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &715598173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715598172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 10 * 11?"
-  options:
-  - text: 100
-    isCorrecta: 0
-  - text: 110
-    isCorrecta: 1
-  - text: 120
-    isCorrecta: 0
-  - text: 121
-    isCorrecta: 0
---- !u!4 &715598174
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715598172}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 56
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &722158608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7074,6 +6749,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5921851170282040922, guid: c2acd0727d2da1548ac580d78d3e366b, type: 3}
   m_PrefabInstance: {fileID: 1110724702}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &731223364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 731223365}
+  - component: {fileID: 731223366}
+  m_Layer: 0
+  m_Name: Pregunta_37
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &731223365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731223364}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &731223366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731223364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 9 - 6?"
+  options:
+  - text: 1
+    isCorrecta: 0
+  - text: 2
+    isCorrecta: 0
+  - text: 3
+    isCorrecta: 1
+  - text: 4
+    isCorrecta: 0
 --- !u!1 &733455095
 GameObject:
   m_ObjectHideFlags: 0
@@ -7756,6 +7484,112 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &766322440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 766322441}
+  - component: {fileID: 766322442}
+  m_Layer: 0
+  m_Name: Pregunta_15
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &766322441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766322440}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &766322442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766322440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 4 - 2?"
+  options:
+  - text: 1
+    isCorrecta: 0
+  - text: 2
+    isCorrecta: 1
+  - text: 3
+    isCorrecta: 0
+  - text: 4
+    isCorrecta: 0
+--- !u!1 &787918949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 787918950}
+  - component: {fileID: 787918951}
+  m_Layer: 0
+  m_Name: Pregunta_5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &787918950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787918949}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &787918951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787918949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 8 - 1?"
+  options:
+  - text: 9
+    isCorrecta: 0
+  - text: 8
+    isCorrecta: 0
+  - text: 7
+    isCorrecta: 1
+  - text: 10
+    isCorrecta: 0
 --- !u!4 &793779613 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
@@ -7875,7 +7709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
---- !u!1 &838284574
+--- !u!1 &811599148
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7883,51 +7717,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 838284576}
-  - component: {fileID: 838284575}
+  - component: {fileID: 811599149}
+  - component: {fileID: 811599150}
   m_Layer: 0
-  m_Name: Pregunta_59
+  m_Name: Pregunta_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &838284575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838284574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 11 * 12?"
-  options:
-  - text: 130
-    isCorrecta: 0
-  - text: 132
-    isCorrecta: 1
-  - text: 131
-    isCorrecta: 0
-  - text: 130
-    isCorrecta: 0
---- !u!4 &838284576
+--- !u!4 &811599149
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838284574}
+  m_GameObject: {fileID: 811599148}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 58
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &811599150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811599148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 12 - 3?"
+  options:
+  - text: 12
+    isCorrecta: 0
+  - text: 11
+    isCorrecta: 0
+  - text: 10
+    isCorrecta: 0
+  - text: 9
+    isCorrecta: 1
 --- !u!1 &841148273
 GameObject:
   m_ObjectHideFlags: 0
@@ -7964,59 +7798,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
   m_PrefabInstance: {fileID: 2011607969}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &843681971
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 843681972}
-  - component: {fileID: 843681973}
-  m_Layer: 0
-  m_Name: Pregunta_36
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &843681972
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843681971}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 35
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &843681973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843681971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 5 * 5?"
-  options:
-  - text: 30
-    isCorrecta: 0
-  - text: 25
-    isCorrecta: 1
-  - text: 20
-    isCorrecta: 0
-  - text: 15
-    isCorrecta: 0
 --- !u!1001 &852592588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8164,6 +7945,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8159326330739608197, guid: 2631f0daad932c7498e3bd321a862e5a, type: 3}
   m_PrefabInstance: {fileID: 1245086217}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &860533352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860533353}
+  - component: {fileID: 860533354}
+  m_Layer: 0
+  m_Name: Pregunta_45
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &860533353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860533352}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 48
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &860533354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860533352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 8 - 7?"
+  options:
+  - text: 1
+    isCorrecta: 1
+  - text: 2
+    isCorrecta: 0
+  - text: 3
+    isCorrecta: 0
+  - text: 4
+    isCorrecta: 0
 --- !u!1001 &860926768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8245,59 +8079,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2acd0727d2da1548ac580d78d3e366b, type: 3}
---- !u!1 &867903454
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 867903455}
-  - component: {fileID: 867903456}
-  m_Layer: 0
-  m_Name: Pregunta_25
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &867903455
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867903454}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &867903456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867903454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 3 * 7?"
-  options:
-  - text: 7
-    isCorrecta: 0
-  - text: 14
-    isCorrecta: 0
-  - text: 18
-    isCorrecta: 0
-  - text: 21
-    isCorrecta: 1
 --- !u!1 &870059804
 GameObject:
   m_ObjectHideFlags: 0
@@ -8622,59 +8403,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5921851170282040922, guid: c2acd0727d2da1548ac580d78d3e366b, type: 3}
   m_PrefabInstance: {fileID: 2118456255}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &909537512
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 909537513}
-  - component: {fileID: 909537514}
-  m_Layer: 0
-  m_Name: Pregunta_26
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &909537513
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909537512}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &909537514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909537512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 3 * 8?"
-  options:
-  - text: 16
-    isCorrecta: 0
-  - text: 8
-    isCorrecta: 0
-  - text: 21
-    isCorrecta: 0
-  - text: 24
-    isCorrecta: 1
 --- !u!1 &922766083
 GameObject:
   m_ObjectHideFlags: 0
@@ -9090,6 +8818,59 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &943823453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 943823454}
+  - component: {fileID: 943823455}
+  m_Layer: 0
+  m_Name: Pregunta_43
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &943823454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943823453}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 46
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &943823455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943823453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 10 - 7?"
+  options:
+  - text: 1
+    isCorrecta: 0
+  - text: 2
+    isCorrecta: 0
+  - text: 3
+    isCorrecta: 1
+  - text: 4
+    isCorrecta: 0
 --- !u!1 &953487508
 GameObject:
   m_ObjectHideFlags: 0
@@ -9235,6 +9016,59 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6640600263525242737, guid: 5d82136d3d233264a9fe291d281998e0, type: 3}
   m_PrefabInstance: {fileID: 960341182}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &968014869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 968014870}
+  - component: {fileID: 968014871}
+  m_Layer: 0
+  m_Name: Pregunta_9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &968014870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968014869}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &968014871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968014869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 12 - 2?"
+  options:
+  - text: 11
+    isCorrecta: 0
+  - text: 9
+    isCorrecta: 0
+  - text: 10
+    isCorrecta: 1
+  - text: 8
+    isCorrecta: 0
 --- !u!1001 &980684339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9444,112 +9278,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1007543421
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1007543422}
-  - component: {fileID: 1007543423}
-  m_Layer: 0
-  m_Name: Pregunta_19
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1007543422
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007543421}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1007543423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007543421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 2 * 11?"
-  options:
-  - text: 22
-    isCorrecta: 1
-  - text: 21
-    isCorrecta: 0
-  - text: 20
-    isCorrecta: 0
-  - text: 24
-    isCorrecta: 0
---- !u!1 &1015480249
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1015480251}
-  - component: {fileID: 1015480250}
-  m_Layer: 0
-  m_Name: Pregunta_58
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1015480250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015480249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 11 * 11?"
-  options:
-  - text: 121
-    isCorrecta: 1
-  - text: 112
-    isCorrecta: 0
-  - text: 108
-    isCorrecta: 0
-  - text: 125
-    isCorrecta: 0
---- !u!4 &1015480251
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015480249}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 57
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1018922432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9620,6 +9348,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
   m_PrefabInstance: {fileID: 1018922432}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1028454643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1028454644}
+  - component: {fileID: 1028454645}
+  m_Layer: 0
+  m_Name: Pregunta_24
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1028454644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028454643}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1028454645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028454643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 8 - 4?"
+  options:
+  - text: 5
+    isCorrecta: 0
+  - text: 6
+    isCorrecta: 0
+  - text: 4
+    isCorrecta: 1
+  - text: 3
+    isCorrecta: 0
 --- !u!1001 &1031475733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9690,59 +9471,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
   m_PrefabInstance: {fileID: 1031475733}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1033886395
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1033886396}
-  - component: {fileID: 1033886397}
-  m_Layer: 0
-  m_Name: Pregunta_34
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1033886396
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033886395}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 33
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1033886397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033886395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 4 * 9?"
-  options:
-  - text: 20
-    isCorrecta: 0
-  - text: 36
-    isCorrecta: 1
-  - text: 40
-    isCorrecta: 0
-  - text: 18
-    isCorrecta: 0
 --- !u!4 &1040832358 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8159326330739608197, guid: 2631f0daad932c7498e3bd321a862e5a, type: 3}
@@ -9831,59 +9559,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
   m_PrefabInstance: {fileID: 252417070}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1062219032
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1062219033}
-  - component: {fileID: 1062219034}
-  m_Layer: 0
-  m_Name: Pregunta_47
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1062219033
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062219032}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 46
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1062219034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062219032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 7 * 7?"
-  options:
-  - text: 41
-    isCorrecta: 0
-  - text: 49
-    isCorrecta: 1
-  - text: 50
-    isCorrecta: 0
-  - text: 36
-    isCorrecta: 0
 --- !u!1 &1065781722
 GameObject:
   m_ObjectHideFlags: 0
@@ -10159,6 +9834,59 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1091907210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1091907211}
+  - component: {fileID: 1091907212}
+  m_Layer: 0
+  m_Name: Pregunta_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1091907211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091907210}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1091907212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091907210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 11 - 1?"
+  options:
+  - text: 11
+    isCorrecta: 0
+  - text: 9
+    isCorrecta: 0
+  - text: 10
+    isCorrecta: 1
+  - text: 8
+    isCorrecta: 0
 --- !u!1001 &1103442079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10523,7 +10251,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
   m_PrefabInstance: {fileID: 1417277950}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1124171823
+--- !u!1 &1127121964
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10531,51 +10259,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1124171825}
-  - component: {fileID: 1124171824}
+  - component: {fileID: 1127121965}
+  - component: {fileID: 1127121966}
   m_Layer: 0
-  m_Name: Pregunta_52
+  m_Name: Pregunta_50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1124171824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1124171823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 8 * 9?"
-  options:
-  - text: 72
-    isCorrecta: 1
-  - text: 75
-    isCorrecta: 0
-  - text: 65
-    isCorrecta: 0
-  - text: 81
-    isCorrecta: 0
---- !u!4 &1124171825
+--- !u!4 &1127121965
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1124171823}
+  m_GameObject: {fileID: 1127121964}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 51
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1127121966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127121964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 12 - 12?"
+  options:
+  - text: 0
+    isCorrecta: 1
+  - text: 1
+    isCorrecta: 0
+  - text: 2
+    isCorrecta: 0
+  - text: 3
+    isCorrecta: 0
 --- !u!1001 &1127218545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10884,112 +10612,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8159326330739608197, guid: 2631f0daad932c7498e3bd321a862e5a, type: 3}
   m_PrefabInstance: {fileID: 2136261281}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1164563777
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1164563778}
-  - component: {fileID: 1164563779}
-  m_Layer: 0
-  m_Name: Pregunta_42
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1164563778
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1164563777}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 41
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1164563779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1164563777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 6 * 6?"
-  options:
-  - text: 12
-    isCorrecta: 0
-  - text: 18
-    isCorrecta: 0
-  - text: 30
-    isCorrecta: 0
-  - text: 36
-    isCorrecta: 1
---- !u!1 &1179953907
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1179953908}
-  - component: {fileID: 1179953909}
-  m_Layer: 0
-  m_Name: Pregunta_18
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1179953908
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179953907}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1179953909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179953907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 2 * 10?"
-  options:
-  - text: 16
-    isCorrecta: 0
-  - text: 20
-    isCorrecta: 1
-  - text: 21
-    isCorrecta: 0
-  - text: 14
-    isCorrecta: 0
 --- !u!1 &1181344977
 GameObject:
   m_ObjectHideFlags: 0
@@ -11158,117 +10780,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187206851}
   m_CullTransparentMesh: 1
+--- !u!1 &1191411856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1191411857}
+  - component: {fileID: 1191411858}
+  m_Layer: 0
+  m_Name: Pregunta_38
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1191411857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191411856}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1191411858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191411856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 8 - 6?"
+  options:
+  - text: 1
+    isCorrecta: 0
+  - text: 2
+    isCorrecta: 1
+  - text: 3
+    isCorrecta: 0
+  - text: 4
+    isCorrecta: 0
 --- !u!4 &1206011196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
   m_PrefabInstance: {fileID: 1566579154}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1208351912
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1208351913}
-  - component: {fileID: 1208351914}
-  m_Layer: 0
-  m_Name: Pregunta_32
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1208351913
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208351912}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 31
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1208351914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208351912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 4 * 7?"
-  options:
-  - text: 14
-    isCorrecta: 0
-  - text: 21
-    isCorrecta: 0
-  - text: 28
-    isCorrecta: 1
-  - text: 30
-    isCorrecta: 0
---- !u!1 &1209419131
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1209419132}
-  - component: {fileID: 1209419133}
-  m_Layer: 0
-  m_Name: Pregunta_11
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1209419132
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1209419131}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1209419133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1209419131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 2 * 3?"
-  options:
-  - text: 3
-    isCorrecta: 0
-  - text: 4
-    isCorrecta: 0
-  - text: 6
-    isCorrecta: 1
-  - text: 5
-    isCorrecta: 0
 --- !u!1 &1226709966
 GameObject:
   m_ObjectHideFlags: 0
@@ -11634,7 +11203,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
   m_PrefabInstance: {fileID: 1281007585}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1281736165
+--- !u!1 &1287211985
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11642,104 +11211,104 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1281736166}
-  - component: {fileID: 1281736167}
+  - component: {fileID: 1287211986}
+  - component: {fileID: 1287211987}
   m_Layer: 0
-  m_Name: Pregunta_39
+  m_Name: Pregunta_36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1281736166
+--- !u!4 &1287211986
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281736165}
+  m_GameObject: {fileID: 1287211985}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 38
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1281736167
+--- !u!114 &1287211987
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281736165}
+  m_GameObject: {fileID: 1287211985}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 5 * 8?"
-  options:
-  - text: 40
-    isCorrecta: 1
-  - text: 45
-    isCorrecta: 0
-  - text: 35
-    isCorrecta: 0
-  - text: 30
-    isCorrecta: 0
---- !u!1 &1292261080
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1292261082}
-  - component: {fileID: 1292261081}
-  m_Layer: 0
-  m_Name: Pregunta_3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1292261081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1292261080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 1 * 2?"
+  text: "\xBFCu\xE1nto es 10 - 6?"
   options:
   - text: 1
     isCorrecta: 0
   - text: 2
-    isCorrecta: 1
+    isCorrecta: 0
   - text: 3
     isCorrecta: 0
   - text: 4
-    isCorrecta: 0
---- !u!4 &1292261082
+    isCorrecta: 1
+--- !u!1 &1288458814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1288458815}
+  - component: {fileID: 1288458816}
+  m_Layer: 0
+  m_Name: Pregunta_21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1288458815
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1292261080}
+  m_GameObject: {fileID: 1288458814}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 2
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1288458816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288458814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 4 - 3?"
+  options:
+  - text: 1
+    isCorrecta: 1
+  - text: 2
+    isCorrecta: 0
+  - text: 3
+    isCorrecta: 0
+  - text: 4
+    isCorrecta: 0
 --- !u!1001 &1292441341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11854,59 +11423,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
---- !u!1 &1302288028
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1302288029}
-  - component: {fileID: 1302288030}
-  m_Layer: 0
-  m_Name: Pregunta_41
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1302288029
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302288028}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 40
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1302288030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302288028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 5 * 11?"
-  options:
-  - text: 50
-    isCorrecta: 0
-  - text: 54
-    isCorrecta: 0
-  - text: 53
-    isCorrecta: 0
-  - text: 55
-    isCorrecta: 1
 --- !u!1001 &1305801014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12059,6 +11575,56 @@ RectTransform:
   - {fileID: 685649389}
   - {fileID: 922766084}
   - {fileID: 953487509}
+  - {fileID: 1654526469}
+  - {fileID: 244116275}
+  - {fileID: 1693757131}
+  - {fileID: 1091907211}
+  - {fileID: 787918950}
+  - {fileID: 1891502709}
+  - {fileID: 1946476839}
+  - {fileID: 1934038800}
+  - {fileID: 968014870}
+  - {fileID: 328196084}
+  - {fileID: 1592022253}
+  - {fileID: 368526470}
+  - {fileID: 1587228464}
+  - {fileID: 660900303}
+  - {fileID: 766322441}
+  - {fileID: 663087275}
+  - {fileID: 811599149}
+  - {fileID: 27087694}
+  - {fileID: 1835925553}
+  - {fileID: 424930559}
+  - {fileID: 1288458815}
+  - {fileID: 492754105}
+  - {fileID: 1488550622}
+  - {fileID: 1028454644}
+  - {fileID: 143970983}
+  - {fileID: 1711175241}
+  - {fileID: 1404872710}
+  - {fileID: 1820969789}
+  - {fileID: 1384235887}
+  - {fileID: 2136872153}
+  - {fileID: 501689371}
+  - {fileID: 1344094971}
+  - {fileID: 1598654891}
+  - {fileID: 482731399}
+  - {fileID: 654962875}
+  - {fileID: 1287211986}
+  - {fileID: 731223365}
+  - {fileID: 1191411857}
+  - {fileID: 1780998308}
+  - {fileID: 1633357630}
+  - {fileID: 1841222497}
+  - {fileID: 1922855774}
+  - {fileID: 943823454}
+  - {fileID: 1457836389}
+  - {fileID: 860533353}
+  - {fileID: 1648059270}
+  - {fileID: 311283309}
+  - {fileID: 392701186}
+  - {fileID: 1898042230}
+  - {fileID: 1127121965}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12067,59 +11633,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1314513284
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1314513285}
-  - component: {fileID: 1314513286}
-  m_Layer: 0
-  m_Name: Pregunta_46
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1314513285
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1314513284}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 45
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1314513286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1314513284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 6 * 12?"
-  options:
-  - text: 72
-    isCorrecta: 1
-  - text: 56
-    isCorrecta: 0
-  - text: 70
-    isCorrecta: 0
-  - text: 54
-    isCorrecta: 0
 --- !u!4 &1327727851 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7129806865722231671, guid: 0f7b89b5424fcdc4094e7c446675990f, type: 3}
@@ -12182,7 +11695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
---- !u!1 &1346410807
+--- !u!1 &1344094970
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12190,50 +11703,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1346410808}
-  - component: {fileID: 1346410809}
+  - component: {fileID: 1344094971}
+  - component: {fileID: 1344094972}
   m_Layer: 0
-  m_Name: Pregunta_30
+  m_Name: Pregunta_32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1346410808
+--- !u!4 &1344094971
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346410807}
+  m_GameObject: {fileID: 1344094970}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 29
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1346410809
+--- !u!114 &1344094972
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346410807}
+  m_GameObject: {fileID: 1344094970}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 4 * 5?"
+  text: "\xBFCu\xE1nto es 6 - 5?"
   options:
-  - text: 20
+  - text: 0
+    isCorrecta: 0
+  - text: 1
     isCorrecta: 1
-  - text: 15
+  - text: 2
     isCorrecta: 0
-  - text: 19
-    isCorrecta: 0
-  - text: 21
+  - text: 3
     isCorrecta: 0
 --- !u!1001 &1349078581
 PrefabInstance:
@@ -12308,59 +11821,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3249580595546085314, guid: b6d1da9087dd1f043ac8e041d8b393f6, type: 3}
   m_PrefabInstance: {fileID: 1349078581}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1357393087
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1357393088}
-  - component: {fileID: 1357393089}
-  m_Layer: 0
-  m_Name: Pregunta_10
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1357393088
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357393087}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1357393089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357393087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 2 * 2?"
-  options:
-  - text: 1
-    isCorrecta: 0
-  - text: 2
-    isCorrecta: 0
-  - text: 3
-    isCorrecta: 0
-  - text: 4
-    isCorrecta: 1
 --- !u!1001 &1361856041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12567,6 +12027,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382285807}
   m_CullTransparentMesh: 1
+--- !u!1 &1384235886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1384235887}
+  - component: {fileID: 1384235888}
+  m_Layer: 0
+  m_Name: Pregunta_29
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1384235887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384235886}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1384235888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384235886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 9 - 5?"
+  options:
+  - text: 5
+    isCorrecta: 0
+  - text: 4
+    isCorrecta: 1
+  - text: 6
+    isCorrecta: 0
+  - text: 8
+    isCorrecta: 0
 --- !u!1001 &1386715732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12629,59 +12142,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
   m_PrefabInstance: {fileID: 1386715732}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1395646537
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1395646538}
-  - component: {fileID: 1395646539}
-  m_Layer: 0
-  m_Name: Pregunta_20
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1395646538
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395646537}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1395646539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395646537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 2 * 12?"
-  options:
-  - text: 24
-    isCorrecta: 1
-  - text: 22
-    isCorrecta: 0
-  - text: 20
-    isCorrecta: 0
-  - text: 30
-    isCorrecta: 0
 --- !u!4 &1396005814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8159326330739608197, guid: 2631f0daad932c7498e3bd321a862e5a, type: 3}
@@ -12752,7 +12212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6d1da9087dd1f043ac8e041d8b393f6, type: 3}
---- !u!1 &1401190004
+--- !u!1 &1404872709
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12760,51 +12220,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1401190006}
-  - component: {fileID: 1401190005}
+  - component: {fileID: 1404872710}
+  - component: {fileID: 1404872711}
   m_Layer: 0
-  m_Name: Pregunta_56
+  m_Name: Pregunta_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1401190005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1401190004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 10 * 10?"
-  options:
-  - text: 105
-    isCorrecta: 0
-  - text: 110
-    isCorrecta: 0
-  - text: 100
-    isCorrecta: 1
-  - text: 90
-    isCorrecta: 0
---- !u!4 &1401190006
+--- !u!4 &1404872710
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1401190004}
+  m_GameObject: {fileID: 1404872709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 55
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1404872711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404872709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 11 - 5?"
+  options:
+  - text: 11
+    isCorrecta: 0
+  - text: 10
+    isCorrecta: 0
+  - text: 8
+    isCorrecta: 0
+  - text: 6
+    isCorrecta: 1
 --- !u!1 &1406445653
 GameObject:
   m_ObjectHideFlags: 0
@@ -12942,59 +12402,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
---- !u!1 &1415573056
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1415573057}
-  - component: {fileID: 1415573058}
-  m_Layer: 0
-  m_Name: Pregunta_37
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1415573057
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415573056}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 36
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1415573058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415573056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 5 * 6?"
-  options:
-  - text: 25
-    isCorrecta: 0
-  - text: 35
-    isCorrecta: 0
-  - text: 30
-    isCorrecta: 1
-  - text: 45
-    isCorrecta: 0
 --- !u!1001 &1417277950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13193,59 +12600,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8159326330739608197, guid: 2631f0daad932c7498e3bd321a862e5a, type: 3}
   m_PrefabInstance: {fileID: 2040204154}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1441336400
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1441336401}
-  - component: {fileID: 1441336402}
-  m_Layer: 0
-  m_Name: Pregunta_16
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1441336401
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441336400}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1441336402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441336400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 2 * 8?"
-  options:
-  - text: 10
-    isCorrecta: 0
-  - text: 12
-    isCorrecta: 0
-  - text: 15
-    isCorrecta: 0
-  - text: 16
-    isCorrecta: 1
 --- !u!4 &1442456269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
@@ -13321,7 +12675,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 0.13}
   m_EdgeRadius: 0
---- !u!1 &1454505836
+--- !u!1 &1457836388
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13329,52 +12683,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1454505837}
-  - component: {fileID: 1454505838}
+  - component: {fileID: 1457836389}
+  - component: {fileID: 1457836390}
   m_Layer: 0
-  m_Name: Pregunta_8
+  m_Name: Pregunta_44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1454505837
+--- !u!4 &1457836389
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454505836}
+  m_GameObject: {fileID: 1457836388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 7
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1454505838
+--- !u!114 &1457836390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454505836}
+  m_GameObject: {fileID: 1457836388}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 1 * 10?"
+  text: "\xBFCu\xE1nto es 9 - 7?"
   options:
-  - text: 9
+  - text: 1
     isCorrecta: 0
-  - text: 8
-    isCorrecta: 0
-  - text: 10
+  - text: 2
     isCorrecta: 1
-  - text: 11
+  - text: 3
     isCorrecta: 0
---- !u!1 &1496743299
+  - text: 4
+    isCorrecta: 0
+--- !u!1 &1488550621
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13382,8 +12736,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1496743300}
-  - component: {fileID: 1496743301}
+  - component: {fileID: 1488550622}
+  - component: {fileID: 1488550623}
   m_Layer: 0
   m_Name: Pregunta_23
   m_TagString: Untagged
@@ -13391,42 +12745,42 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1496743300
+--- !u!4 &1488550622
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496743299}
+  m_GameObject: {fileID: 1488550621}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 22
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1496743301
+--- !u!114 &1488550623
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496743299}
+  m_GameObject: {fileID: 1488550621}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 3 * 5?"
+  text: "\xBFCu\xE1nto es 11 - 4?"
   options:
-  - text: 12
+  - text: 8
     isCorrecta: 0
-  - text: 15
+  - text: 9
+    isCorrecta: 0
+  - text: 10
+    isCorrecta: 0
+  - text: 7
     isCorrecta: 1
-  - text: 16
-    isCorrecta: 0
-  - text: 20
-    isCorrecta: 0
 --- !u!1001 &1498893831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13489,59 +12843,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
   m_PrefabInstance: {fileID: 1498893831}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1502534319
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1502534320}
-  - component: {fileID: 1502534321}
-  m_Layer: 0
-  m_Name: Pregunta_31
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1502534320
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502534319}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 30
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1502534321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502534319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 4 * 6?"
-  options:
-  - text: 12
-    isCorrecta: 0
-  - text: 24
-    isCorrecta: 1
-  - text: 20
-    isCorrecta: 0
-  - text: 22
-    isCorrecta: 0
 --- !u!1 &1505495302
 GameObject:
   m_ObjectHideFlags: 0
@@ -13745,117 +13046,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2acd0727d2da1548ac580d78d3e366b, type: 3}
---- !u!1 &1519235484
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1519235485}
-  - component: {fileID: 1519235486}
-  m_Layer: 0
-  m_Name: Pregunta_29
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1519235485
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519235484}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 28
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1519235486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519235484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 4 * 4?"
-  options:
-  - text: 12
-    isCorrecta: 0
-  - text: 8
-    isCorrecta: 0
-  - text: 16
-    isCorrecta: 1
-  - text: 14
-    isCorrecta: 0
 --- !u!4 &1534007136 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
   m_PrefabInstance: {fileID: 1080407433}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1536036361
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1536036362}
-  - component: {fileID: 1536036363}
-  m_Layer: 0
-  m_Name: Pregunta_9
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1536036362
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536036361}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1536036363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536036361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 1 * 12?"
-  options:
-  - text: 11
-    isCorrecta: 0
-  - text: 10
-    isCorrecta: 0
-  - text: 9
-    isCorrecta: 0
-  - text: 12
-    isCorrecta: 1
 --- !u!1001 &1560853524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14066,6 +13261,165 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5921851170282040922, guid: c2acd0727d2da1548ac580d78d3e366b, type: 3}
   m_PrefabInstance: {fileID: 314209553}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1587228463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1587228464}
+  - component: {fileID: 1587228465}
+  m_Layer: 0
+  m_Name: Pregunta_13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1587228464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587228463}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1587228465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587228463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 7 - 2?"
+  options:
+  - text: 6
+    isCorrecta: 0
+  - text: 5
+    isCorrecta: 1
+  - text: 3
+    isCorrecta: 0
+  - text: 7
+    isCorrecta: 0
+--- !u!1 &1592022252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1592022253}
+  - component: {fileID: 1592022254}
+  m_Layer: 0
+  m_Name: Pregunta_11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1592022253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592022252}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1592022254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592022252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 9 - 2?"
+  options:
+  - text: 7
+    isCorrecta: 1
+  - text: 9
+    isCorrecta: 0
+  - text: 10
+    isCorrecta: 0
+  - text: 8
+    isCorrecta: 0
+--- !u!1 &1598654890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1598654891}
+  - component: {fileID: 1598654892}
+  m_Layer: 0
+  m_Name: Pregunta_33
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1598654891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598654890}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1598654892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598654890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 5 - 5?"
+  options:
+  - text: 3
+    isCorrecta: 0
+  - text: 2
+    isCorrecta: 0
+  - text: 0
+    isCorrecta: 1
+  - text: 1
+    isCorrecta: 0
 --- !u!1001 &1599360513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14141,7 +13495,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
   m_PrefabInstance: {fileID: 1841375268}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1616114978
+--- !u!1 &1633357629
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14149,51 +13503,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1616114979}
-  - component: {fileID: 1616114980}
+  - component: {fileID: 1633357630}
+  - component: {fileID: 1633357631}
   m_Layer: 0
-  m_Name: Pregunta_43
+  m_Name: Pregunta_40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1616114979
+--- !u!4 &1633357630
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616114978}
+  m_GameObject: {fileID: 1633357629}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 42
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1616114980
+--- !u!114 &1633357631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616114978}
+  m_GameObject: {fileID: 1633357629}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 6 * 7?"
+  text: "\xBFCu\xE1nto es 6 - 6?"
   options:
-  - text: 36
-    isCorrecta: 0
-  - text: 38
-    isCorrecta: 0
-  - text: 40
-    isCorrecta: 0
-  - text: 42
+  - text: 0
     isCorrecta: 1
+  - text: 1
+    isCorrecta: 0
+  - text: 2
+    isCorrecta: 0
+  - text: 3
+    isCorrecta: 0
 --- !u!4 &1638531179 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
@@ -14256,6 +13610,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
+--- !u!1 &1648059269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1648059270}
+  - component: {fileID: 1648059271}
+  m_Layer: 0
+  m_Name: Pregunta_46
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1648059270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648059269}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 49
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1648059271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648059269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 12 - 9?"
+  options:
+  - text: 1
+    isCorrecta: 0
+  - text: 2
+    isCorrecta: 0
+  - text: 3
+    isCorrecta: 1
+  - text: 4
+    isCorrecta: 0
 --- !u!1001 &1651027958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14512,7 +13919,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653303122}
   m_CullTransparentMesh: 1
---- !u!1 &1660189440
+--- !u!1 &1654526468
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14520,50 +13927,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1660189441}
-  - component: {fileID: 1660189442}
+  - component: {fileID: 1654526469}
+  - component: {fileID: 1654526470}
   m_Layer: 0
-  m_Name: Pregunta_6
+  m_Name: Pregunta_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1660189441
+--- !u!4 &1654526469
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660189440}
+  m_GameObject: {fileID: 1654526468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 5
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1660189442
+--- !u!114 &1654526470
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660189440}
+  m_GameObject: {fileID: 1654526468}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 1 * 7?"
+  text: "\xBFQue operaci\xF3n representa el s\xEDmbolo  - ?"
   options:
-  - text: 5
+  - text: Suma
     isCorrecta: 0
-  - text: 4
-    isCorrecta: 0
-  - text: 7
+  - text: Resta
     isCorrecta: 1
-  - text: 8
+  - text: "Multiplicaci\xF3n"
+    isCorrecta: 0
+  - text: "Divisi\xF3n"
     isCorrecta: 0
 --- !u!1001 &1669340822
 PrefabInstance:
@@ -14693,59 +14100,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
   m_PrefabInstance: {fileID: 808458719}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1683969085
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1683969086}
-  - component: {fileID: 1683969087}
-  m_Layer: 0
-  m_Name: Pregunta_5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1683969086
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1683969085}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1683969087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1683969085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 1 * 5?"
-  options:
-  - text: 1
-    isCorrecta: 0
-  - text: 3
-    isCorrecta: 0
-  - text: 4
-    isCorrecta: 0
-  - text: 5
-    isCorrecta: 1
 --- !u!4 &1686726668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5921851170282040922, guid: c2acd0727d2da1548ac580d78d3e366b, type: 3}
@@ -14830,11 +14184,117 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687295407}
   m_CullTransparentMesh: 1
+--- !u!1 &1693757130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1693757131}
+  - component: {fileID: 1693757132}
+  m_Layer: 0
+  m_Name: Pregunta_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1693757131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693757130}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1693757132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693757130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 12 - 1?"
+  options:
+  - text: 10
+    isCorrecta: 0
+  - text: 11
+    isCorrecta: 1
+  - text: 13
+    isCorrecta: 0
+  - text: 9
+    isCorrecta: 0
 --- !u!4 &1697172802 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7129806865722231671, guid: 0f7b89b5424fcdc4094e7c446675990f, type: 3}
   m_PrefabInstance: {fileID: 725294525}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1711175240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1711175241}
+  - component: {fileID: 1711175242}
+  m_Layer: 0
+  m_Name: Pregunta_26
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1711175241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711175240}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1711175242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711175240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 12 - 5?"
+  options:
+  - text: 7
+    isCorrecta: 1
+  - text: 8
+    isCorrecta: 0
+  - text: 10
+    isCorrecta: 0
+  - text: 9
+    isCorrecta: 0
 --- !u!1 &1725668057
 GameObject:
   m_ObjectHideFlags: 0
@@ -15063,112 +14523,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
   m_PrefabInstance: {fileID: 1651027958}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1737717562
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1737717564}
-  - component: {fileID: 1737717563}
-  m_Layer: 0
-  m_Name: Pregunta_55
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1737717563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1737717562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 9 * 12?"
-  options:
-  - text: 105
-    isCorrecta: 0
-  - text: 102
-    isCorrecta: 0
-  - text: 108
-    isCorrecta: 1
-  - text: 99
-    isCorrecta: 0
---- !u!4 &1737717564
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1737717562}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 54
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1739166007
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1739166008}
-  - component: {fileID: 1739166009}
-  m_Layer: 0
-  m_Name: Pregunta_48
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1739166008
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739166007}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 47
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1739166009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739166007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 7 * 8?"
-  options:
-  - text: 56
-    isCorrecta: 1
-  - text: 54
-    isCorrecta: 0
-  - text: 52
-    isCorrecta: 0
-  - text: 49
-    isCorrecta: 0
 --- !u!1001 &1741668882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15239,59 +14593,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
   m_PrefabInstance: {fileID: 1741668882}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1750564978
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1750564979}
-  - component: {fileID: 1750564980}
-  m_Layer: 0
-  m_Name: Pregunta_44
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1750564979
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750564978}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 43
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1750564980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750564978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 6 * 8?"
-  options:
-  - text: 36
-    isCorrecta: 0
-  - text: 38
-    isCorrecta: 0
-  - text: 48
-    isCorrecta: 1
-  - text: 40
-    isCorrecta: 0
 --- !u!4 &1754183172 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3249580595546085314, guid: b6d1da9087dd1f043ac8e041d8b393f6, type: 3}
@@ -15313,59 +14614,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
   m_PrefabInstance: {fileID: 1810657256}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1760965700
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1760965701}
-  - component: {fileID: 1760965702}
-  m_Layer: 0
-  m_Name: Pregunta_21
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1760965701
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760965700}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1760965702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760965700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 3 * 3?"
-  options:
-  - text: 5
-    isCorrecta: 0
-  - text: 9
-    isCorrecta: 1
-  - text: 12
-    isCorrecta: 0
-  - text: 10
-    isCorrecta: 0
 --- !u!1001 &1774033040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15508,6 +14756,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2631f0daad932c7498e3bd321a862e5a, type: 3}
+--- !u!1 &1780998307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1780998308}
+  - component: {fileID: 1780998309}
+  m_Layer: 0
+  m_Name: Pregunta_39
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1780998308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780998307}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1780998309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780998307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 7 - 6?"
+  options:
+  - text: 1
+    isCorrecta: 1
+  - text: 2
+    isCorrecta: 0
+  - text: 3
+    isCorrecta: 0
+  - text: 4
+    isCorrecta: 0
 --- !u!1001 &1785198875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15954,6 +15255,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6264b934cd11b5745809ab14ba185ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1820969788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1820969789}
+  - component: {fileID: 1820969790}
+  m_Layer: 0
+  m_Name: Pregunta_28
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1820969789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820969788}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1820969790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820969788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 10 - 5?"
+  options:
+  - text: 10
+    isCorrecta: 0
+  - text: 7
+    isCorrecta: 0
+  - text: 5
+    isCorrecta: 1
+  - text: 4
+    isCorrecta: 0
 --- !u!1 &1821154487
 GameObject:
   m_ObjectHideFlags: 0
@@ -30390,6 +29744,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
+--- !u!1 &1835925552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1835925553}
+  - component: {fileID: 1835925554}
+  m_Layer: 0
+  m_Name: Pregunta_19
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1835925553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835925552}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1835925554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835925552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 9 - 3?"
+  options:
+  - text: 10
+    isCorrecta: 0
+  - text: 9
+    isCorrecta: 0
+  - text: 8
+    isCorrecta: 0
+  - text: 6
+    isCorrecta: 1
 --- !u!1001 &1837600196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30447,6 +29854,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
+--- !u!1 &1841222496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1841222497}
+  - component: {fileID: 1841222498}
+  m_Layer: 0
+  m_Name: Pregunta_41
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1841222497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841222496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1841222498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841222496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 12 - 7?"
+  options:
+  - text: 4
+    isCorrecta: 0
+  - text: 5
+    isCorrecta: 1
+  - text: 6
+    isCorrecta: 0
+  - text: 7
+    isCorrecta: 0
 --- !u!1001 &1841375268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30565,59 +30025,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1859544013
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1859544015}
-  - component: {fileID: 1859544014}
-  m_Layer: 0
-  m_Name: Pregunta_54
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1859544014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859544013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 9 * 9?"
-  options:
-  - text: 80
-    isCorrecta: 0
-  - text: 81
-    isCorrecta: 1
-  - text: 76
-    isCorrecta: 0
-  - text: 78
-    isCorrecta: 0
---- !u!4 &1859544015
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859544013}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 53
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1872415183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30688,7 +30095,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319121732906547896, guid: b5a309289e37afe4fa59cd4820522125, type: 3}
   m_PrefabInstance: {fileID: 1872415183}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1872465629
+--- !u!4 &1889139884 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
+  m_PrefabInstance: {fileID: 182259643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1891502708
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -30696,56 +30108,104 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1872465630}
-  - component: {fileID: 1872465631}
+  - component: {fileID: 1891502709}
+  - component: {fileID: 1891502710}
   m_Layer: 0
-  m_Name: Pregunta_15
+  m_Name: Pregunta_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1872465630
+--- !u!4 &1891502709
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872465629}
+  m_GameObject: {fileID: 1891502708}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 14
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1872465631
+--- !u!114 &1891502710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872465629}
+  m_GameObject: {fileID: 1891502708}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 2 * 7?"
+  text: "\xBFCu\xE1nto es 6 - 1?"
   options:
-  - text: 12
-    isCorrecta: 0
-  - text: 10
-    isCorrecta: 0
-  - text: 14
+  - text: 5
     isCorrecta: 1
-  - text: 11
+  - text: 9
     isCorrecta: 0
---- !u!4 &1889139884 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
-  m_PrefabInstance: {fileID: 182259643}
+  - text: 4
+    isCorrecta: 0
+  - text: 8
+    isCorrecta: 0
+--- !u!1 &1898042229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1898042230}
+  - component: {fileID: 1898042231}
+  m_Layer: 0
+  m_Name: Pregunta_49
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1898042230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898042229}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 52
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1898042231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898042229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 11 - 11?"
+  options:
+  - text: 1
+    isCorrecta: 0
+  - text: 2
+    isCorrecta: 0
+  - text: 0
+    isCorrecta: 1
+  - text: 3
+    isCorrecta: 0
 --- !u!1001 &1899736823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30842,6 +30302,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8799140853149216092, guid: faf263ccf02ddef45a78b47c04517105, type: 3}
   m_PrefabInstance: {fileID: 1379759174}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1922855773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1922855774}
+  - component: {fileID: 1922855775}
+  m_Layer: 0
+  m_Name: Pregunta_42
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1922855774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922855773}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 45
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1922855775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922855773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 11 - 7?"
+  options:
+  - text: 1
+    isCorrecta: 0
+  - text: 2
+    isCorrecta: 0
+  - text: 3
+    isCorrecta: 0
+  - text: 4
+    isCorrecta: 1
 --- !u!1 &1924359240
 GameObject:
   m_ObjectHideFlags: 0
@@ -30965,6 +30478,59 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1934038799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1934038800}
+  - component: {fileID: 1934038801}
+  m_Layer: 0
+  m_Name: Pregunta_8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1934038800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934038799}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1934038801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934038799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 2 - 1?"
+  options:
+  - text: 2
+    isCorrecta: 0
+  - text: 0
+    isCorrecta: 0
+  - text: 1
+    isCorrecta: 1
+  - text: 4
+    isCorrecta: 0
 --- !u!1 &1937158551
 GameObject:
   m_ObjectHideFlags: 0
@@ -31029,7 +30595,7 @@ MonoBehaviour:
   m_Spacing: {x: 30, y: 50}
   m_Constraint: 1
   m_ConstraintCount: 2
---- !u!1 &1939083337
+--- !u!1 &1946476838
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31037,51 +30603,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1939083339}
-  - component: {fileID: 1939083338}
+  - component: {fileID: 1946476839}
+  - component: {fileID: 1946476840}
   m_Layer: 0
-  m_Name: Pregunta_60
+  m_Name: Pregunta_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1939083338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939083337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 12 * 12?"
-  options:
-  - text: 140
-    isCorrecta: 0
-  - text: 130
-    isCorrecta: 0
-  - text: 135
-    isCorrecta: 0
-  - text: 144
-    isCorrecta: 1
---- !u!4 &1939083339
+--- !u!4 &1946476839
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939083337}
+  m_GameObject: {fileID: 1946476838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 59
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1946476840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946476838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 5 - 1?"
+  options:
+  - text: 3
+    isCorrecta: 0
+  - text: 4
+    isCorrecta: 1
+  - text: 7
+    isCorrecta: 0
+  - text: 8
+    isCorrecta: 0
 --- !u!4 &1947779158 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
@@ -31436,59 +31002,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6264b934cd11b5745809ab14ba185ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1972207707
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1972207708}
-  - component: {fileID: 1972207709}
-  m_Layer: 0
-  m_Name: Pregunta_17
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1972207708
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1972207707}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1972207709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1972207707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 2 * 9?"
-  options:
-  - text: 12
-    isCorrecta: 0
-  - text: 15
-    isCorrecta: 0
-  - text: 17
-    isCorrecta: 0
-  - text: 18
-    isCorrecta: 1
 --- !u!4 &1980845095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
@@ -31912,59 +31425,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
---- !u!1 &2016027439
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2016027440}
-  - component: {fileID: 2016027441}
-  m_Layer: 0
-  m_Name: Pregunta_22
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2016027440
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2016027439}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2016027441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2016027439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 3 * 4?"
-  options:
-  - text: 10
-    isCorrecta: 0
-  - text: 11
-    isCorrecta: 0
-  - text: 12
-    isCorrecta: 1
-  - text: 9
-    isCorrecta: 0
 --- !u!1001 &2026774392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32293,59 +31753,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
---- !u!1 &2080772519
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2080772520}
-  - component: {fileID: 2080772521}
-  m_Layer: 0
-  m_Name: Pregunta_50
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2080772520
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080772519}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 685649389}
-  m_RootOrder: 49
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2080772521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080772519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\xBFCu\xE1nto es 7 * 12?"
-  options:
-  - text: 69
-    isCorrecta: 0
-  - text: 67
-    isCorrecta: 0
-  - text: 56
-    isCorrecta: 0
-  - text: 84
-    isCorrecta: 1
 --- !u!1 &2087788198
 GameObject:
   m_ObjectHideFlags: 0
@@ -32900,6 +32307,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8868543399774855981, guid: 1616491edd9ebaa4e922d37c1c8e3ac2, type: 3}
   m_PrefabInstance: {fileID: 1334485072}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2136872152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2136872153}
+  - component: {fileID: 2136872154}
+  m_Layer: 0
+  m_Name: Pregunta_30
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2136872153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136872152}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1307004779}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2136872154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136872152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd95b9f6ea0214facdfe9ccc161382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\xBFCu\xE1nto es 8 - 5?"
+  options:
+  - text: 2
+    isCorrecta: 0
+  - text: 4
+    isCorrecta: 0
+  - text: 3
+    isCorrecta: 1
+  - text: 1
+    isCorrecta: 0
 --- !u!1 &2137368267
 GameObject:
   m_ObjectHideFlags: 0

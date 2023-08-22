@@ -4,7 +4,8 @@ using TMPro;
 
 public class Dialogo : MonoBehaviour
 {
-
+    [SerializeField] private GameObject ObjetosndEncuentro;
+    [SerializeField] private GameObject ObjetosClick;
     [SerializeField] private GameObject warning;
     [SerializeField] private GameObject panelDialogo;
     [SerializeField] private TMP_Text textoDialogo ;
@@ -13,9 +14,16 @@ public class Dialogo : MonoBehaviour
     private float tiempoLinea = 0.05f;
     private bool isPlayerCerca;
     private bool isDialogoIniciado;
+    private AudioSource snd_Encuentro;
+    private AudioSource snd_CLick;
 
     private int lineIndex;
     
+    void Start()
+    {
+        snd_Encuentro = ObjetosndEncuentro.GetComponent<AudioSource>();
+        snd_CLick = ObjetosClick.GetComponent<AudioSource>();
+    }
     void Update()
     {
         if(isPlayerCerca && Input.GetKeyDown(KeyCode.Return))
@@ -38,6 +46,7 @@ public class Dialogo : MonoBehaviour
 
     private void IniciarDialogo()
     {
+        snd_CLick.Play();
         isDialogoIniciado = true;
         panelDialogo.SetActive(true);
         warning.SetActive(false);
@@ -48,6 +57,7 @@ public class Dialogo : MonoBehaviour
 
     private void NextDialogo()
     {
+        snd_CLick.Play();
         lineIndex++;
         if(lineIndex < lineaDialogo.Length)
         {
@@ -80,6 +90,7 @@ public class Dialogo : MonoBehaviour
         {
             isPlayerCerca = true;
             warning.SetActive(true);
+            snd_Encuentro.Play();
         }
     }
 
