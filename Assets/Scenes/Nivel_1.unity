@@ -1772,7 +1772,7 @@ PrefabInstance:
     - target: {fileID: 5921851170774751782, guid: c2acd0727d2da1548ac580d78d3e366b, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 287971014}
+      objectReference: {fileID: 0}
     - target: {fileID: 5921851170774751782, guid: c2acd0727d2da1548ac580d78d3e366b, type: 3}
       propertyPath: velocidadEnemigo
       value: 0
@@ -2770,7 +2770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7129806865959016139, guid: 0f7b89b5424fcdc4094e7c446675990f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f7b89b5424fcdc4094e7c446675990f, type: 3}
@@ -4174,7 +4174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7129806865959016139, guid: 0f7b89b5424fcdc4094e7c446675990f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f7b89b5424fcdc4094e7c446675990f, type: 3}
@@ -6289,7 +6289,7 @@ PrefabInstance:
     - target: {fileID: 5921851170774751782, guid: c2acd0727d2da1548ac580d78d3e366b, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 287971014}
+      objectReference: {fileID: 0}
     - target: {fileID: 5921851170774751782, guid: c2acd0727d2da1548ac580d78d3e366b, type: 3}
       propertyPath: velocidadEnemigo
       value: 0
@@ -26315,7 +26315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7129806865959016139, guid: 0f7b89b5424fcdc4094e7c446675990f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f7b89b5424fcdc4094e7c446675990f, type: 3}
@@ -28407,7 +28407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7129806865959016139, guid: 0f7b89b5424fcdc4094e7c446675990f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f7b89b5424fcdc4094e7c446675990f, type: 3}
