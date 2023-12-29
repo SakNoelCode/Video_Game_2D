@@ -222,8 +222,8 @@ public class MinimapaController : MonoBehaviour
 
 
     //Reiniciar valores cuando cerramos la aplicación, quitar esto cuando el juego este listo
-    private void OnApplicationQuit()
+    /*private void OnApplicationQuit()
     {
         Variables.isIniciado = false;
-    }
+    }*/
 }

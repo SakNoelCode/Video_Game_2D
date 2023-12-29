@@ -10,10 +10,12 @@ public class EnemigoSimple1 : MonoBehaviour
     [SerializeField] private GameObject goContEnemigo;
     [SerializeField] private GameObject parteCuerpo, parteCabeza;
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject sndAtaca;
 
     private PolygonCollider2D polyColCuerpo, polColCabeza;
     private int i = 0;
     private float velocidadNormal;
+    private AudioSource snd_ataca;
 
     //Variables para desvanecer al enemigo
     private SpriteRenderer sprCuerpo, sprCabeza;
@@ -32,6 +34,7 @@ public class EnemigoSimple1 : MonoBehaviour
         polColCabeza = parteCabeza.GetComponent<PolygonCollider2D>();
         sprCuerpo = parteCuerpo.GetComponent<SpriteRenderer>();
         sprCabeza = parteCabeza.GetComponent<SpriteRenderer>();
+        if (sndAtaca != null) { snd_ataca = sndAtaca.GetComponent<AudioSource>(); }
         velocidadNormal = velocidadEnemigo;
     }
 
@@ -51,8 +54,9 @@ public class EnemigoSimple1 : MonoBehaviour
             - transform.position.x);  // 1 o -1
                                       
             //Si nos ve el enemigo
-            if ((Mathf.Abs(transform.position.x - player.transform.position.x) < 5) && (lado == direccion))
+            if ((Mathf.Abs(transform.position.x - player.transform.position.x) < 5) && (lado == direccion) && (Mathf.Abs(transform.position.y - player.transform.position.y) < 3))
             {
+                if(sndAtaca != null) { snd_ataca.Play(); }
                 atacar();
             }
             else

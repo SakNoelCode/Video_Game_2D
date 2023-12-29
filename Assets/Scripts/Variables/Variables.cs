@@ -10,6 +10,8 @@ public static class Variables
     public static int Maxnivel { get; set; } //5 => Nivel máximo al que podemos acceder
     public static bool isIniciado { get; set; }
 
+    //public static int isCloseApp { get; set; } //Controlar cuando salgamos del videojuego
+
     //Comprobaciones de las posiciones del minimapa
     //estadoPos == 0  Desactivado
     //estadoPos == 1  Ya se descubrió

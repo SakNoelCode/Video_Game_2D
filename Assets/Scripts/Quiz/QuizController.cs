@@ -60,6 +60,7 @@ public class QuizController : MonoBehaviour
         else
         {
             snd_incorrecta.Play();
+            GameController.RestaMonedas();
         }
 
         optionbutton.SetColor(optionbutton.options.isCorrecta ? colorCorrecta : colorIncorrecta);
