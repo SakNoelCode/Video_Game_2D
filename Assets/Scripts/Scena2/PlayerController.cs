@@ -250,12 +250,11 @@ public class PlayerController : MonoBehaviour
 
     private void saltoParaAbajo()
     {
-        // Debug.Log(ejeVertical);
+
         RaycastHit2D hitTerreno = Physics2D.Raycast(transform.position,
                                                     Vector2.down,
-                                                    (ccSize.y / 2) + addRayoDebajo,
+                                                    (ccSize.y / 2) + 0.25f,
                                                     capaSuelo);
-
 
         if (hitTerreno)
         {
@@ -265,7 +264,9 @@ public class PlayerController : MonoBehaviour
                 hitTerreno.transform.gameObject.tag = "Untagged";
                 hitTerreno.transform.gameObject.layer = LayerMask.NameToLayer("Default");
             }
+
         }
+
     }
 
     private void comprobarSiTocamosSuelo()
@@ -290,6 +291,7 @@ public class PlayerController : MonoBehaviour
             {
                 polvoSalto.Play();
                 isCayendo = false;
+                //ScreenSkaheCamera.instance.StarShake(0.1f,0.1f); Instancia a screen shake
             }
 
 

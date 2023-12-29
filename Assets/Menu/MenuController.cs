@@ -52,9 +52,9 @@ public class MenuController : MonoBehaviour
     int opcionOpciones, opcionOpcionesAnt;//Encender o Apagar Opciones de Opciones
     bool isPulsadoEnter; //Saber si se pulso enter
     float v, h; //Vertical y horizontal(Desplazamiento)
-    float tiempoV, tiempoH;  
+    float tiempoV, tiempoH;
 
-     
+
     void Awake()
     {
         leerPreferencias();
@@ -68,13 +68,13 @@ public class MenuController : MonoBehaviour
     void ajustarOpciones()
     {
         ajustaMusica();
-        ajustaSonido(); 
+        ajustaSonido();
     }
 
     // Update is called once per frame
     void Update()
     {
-        v = Input.GetAxisRaw("Vertical"); 
+        v = Input.GetAxisRaw("Vertical");
         h = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetButton("Submit")) isPulsadoEnter = false;
@@ -133,7 +133,7 @@ public class MenuController : MonoBehaviour
 
     private void cargarPreferencias()
     {
-        PlayerPrefs.SetInt("VolumenMusica",volumenMusica);
+        PlayerPrefs.SetInt("VolumenMusica", volumenMusica);
         PlayerPrefs.SetInt("VolumenSonido", volumenSonido);
         PlayerPrefs.Save();
     }
@@ -142,6 +142,22 @@ public class MenuController : MonoBehaviour
     {
         volumenMusica = PlayerPrefs.GetInt("VolumenMusica", 5);
         volumenSonido = PlayerPrefs.GetInt("VolumenSonido", 4);
+
+        //Varaibles de los niveles
+        /*
+        if (PlayerPrefs.GetInt("isCloseApp") == 0)
+        {
+            PlayerPrefs.SetInt("isCloseApp", 1);
+            Variables.nivel = PlayerPrefs.GetInt("nivel");
+            Variables.Maxnivel = PlayerPrefs.GetInt("Maxnivel");
+            Variables.estadoPosMenu = PlayerPrefs.GetInt("estadoPosMenu");
+            Variables.estadoPos0 = PlayerPrefs.GetInt("estadoPos0");
+            Variables.estadoPos1 = PlayerPrefs.GetInt("estadoPos1");
+            Variables.estadoPos2 = PlayerPrefs.GetInt("estadoPos2");
+            Variables.estadoPos3 = PlayerPrefs.GetInt("estadoPos3");
+            Variables.estadoPos4 = PlayerPrefs.GetInt("estadoPos4");
+        }*/
+
     }
 
     private void ajustaMusica()
@@ -149,7 +165,7 @@ public class MenuController : MonoBehaviour
         if (volumenMusica == 0) musica_spr[0].enabled = true;
         else musica_spr[0].enabled = false;
 
-        for(int i = 1; i <= 10; i++)
+        for (int i = 1; i <= 10; i++)
         {
             if (i <= volumenMusica) musica_spr[i].sprite = volumenOn;
             else musica_spr[i].sprite = volumenOff;
@@ -168,11 +184,11 @@ public class MenuController : MonoBehaviour
             else sonido_spr[i].sprite = volumenOff;
         }
         GameObject[] sonidos = GameObject.FindGameObjectsWithTag("Sonido");
-        foreach(GameObject sonido in sonidos)
+        foreach (GameObject sonido in sonidos)
         {
             sonido.GetComponent<AudioSource>().volume = volumenSonido / 10f;
         }
-         
+
     }
 
     void CargaPantallaMenu()
@@ -214,17 +230,32 @@ public class MenuController : MonoBehaviour
                 if (v == 1 && opcionMenu > 1) seleccionaMenu(opcionMenu - 1); //Subir Opcion
                 if (v == -1 && opcionMenu < 3) seleccionaMenu(opcionMenu + 1);//Bajar Opcion
                 if (tiempoV > tiempoCambiarOpcion) tiempoV = 0;
-            } 
+            }
             tiempoV += Time.deltaTime;
-        } 
-        if(Input.GetButtonDown("Submit") && !isPulsadoEnter)
+        }
+        if (Input.GetButtonDown("Submit") && !isPulsadoEnter)
         {
             snd_seleccion.Play();
             if (opcionMenu == 1) SceneManager.LoadScene("Minimapa");
             if (opcionMenu == 2) CargaPantallaOpciones();
-            if (opcionMenu == 3) Application.Quit();
+            if (opcionMenu == 3)
+            {
+                /*
+                PlayerPrefs.SetInt("isCloseApp", 0); // 0 cerrado, 1 abierto
+                PlayerPrefs.SetInt("nivel", Variables.nivel);
+                PlayerPrefs.SetInt("Maxnivel", Variables.Maxnivel);
+                PlayerPrefs.SetInt("isIniciado", 1);
+                PlayerPrefs.SetInt("estadoPosMenu", Variables.estadoPosMenu);
+                PlayerPrefs.SetInt("estadoPos0", Variables.estadoPos0);
+                PlayerPrefs.SetInt("estadoPos1", Variables.estadoPos1);
+                PlayerPrefs.SetInt("estadoPos2", Variables.estadoPos2);
+                PlayerPrefs.SetInt("estadoPos3", Variables.estadoPos3);
+                PlayerPrefs.SetInt("estadoPos4", Variables.estadoPos4);
+                PlayerPrefs.Save();*/
+                Application.Quit();
+            }
         }
-    } 
+    }
 
     void seleccionaMenu(int opc) 
     {

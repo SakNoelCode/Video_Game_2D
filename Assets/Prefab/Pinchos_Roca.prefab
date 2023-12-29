@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 8159326330739608196}
   m_Layer: 0
   m_Name: Pinchos_Roca
-  m_TagString: PinchosMuerte
+  m_TagString: Pinchos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

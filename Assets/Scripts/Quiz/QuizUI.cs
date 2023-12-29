@@ -18,4 +18,21 @@ public class QuizUI : MonoBehaviour
             m_buttonList[i].Construct(q.options[i], callback);
         }
     }
+
+    public void desactivaButtons()
+    {
+        foreach (OptionsButtons button in m_buttonList)
+        {
+            button.desactivaButton();
+        }
+    }
+
+    public void activaButtons()
+    {
+        foreach (OptionsButtons button in m_buttonList)
+        {
+            button.activaButton();
+        }
+    }
+
 }
