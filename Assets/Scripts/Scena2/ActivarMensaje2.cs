@@ -5,14 +5,18 @@ using UnityEngine;
 public class ActivarMensaje2 : MonoBehaviour
 {
     [SerializeField] private GameObject mensaje;
+    [SerializeField] private GameObject SndCofreAbriendose;
 
     private SpriteRenderer sprMensaje;
+    private AudioSource snd_cofre;
+    private Animator aniPlayer;
 
     //------------------------------------------METODO START-----------------------------------
     void Start()
     {
         sprMensaje = mensaje.GetComponent<SpriteRenderer>();
-
+        snd_cofre = SndCofreAbriendose.GetComponent<AudioSource>();
+        aniPlayer = GetComponent<Animator>();
         cambiarTransparenciaMensaje(0f);
     }
 
@@ -20,6 +24,8 @@ public class ActivarMensaje2 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            aniPlayer.SetBool("IsCerca",true);
+            snd_cofre.Play();
             mensaje.SetActive(true);
             StartCoroutine("FadeIn");
         }
@@ -29,6 +35,7 @@ public class ActivarMensaje2 : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            aniPlayer.SetBool("IsCerca", false);
             StartCoroutine("FadeOut");
             mensaje.SetActive(false);
         }

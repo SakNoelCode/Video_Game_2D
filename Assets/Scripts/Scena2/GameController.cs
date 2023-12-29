@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject camaraPrincipal;
     [SerializeField] private GameObject zonapuerta;
     [SerializeField] private GameObject zonaNoPermitirPaso;
+    [SerializeField] private GameObject snd_Pausa;
     [SerializeField] private GameObject puerta;
     [SerializeField] private PlayerController playerController;
     //[SerializeField] private CheckPoint checkP;
@@ -32,7 +33,7 @@ public class GameController : MonoBehaviour
     public static bool gameOn = false;
  
     private Image sprFundidoNegro;
-    private AudioSource musicaFondo;
+    private AudioSource musicaFondo,snd_pausa;
 
     //Gestion de monedas en la Puerta Final
     public static int monedas;
@@ -75,6 +76,7 @@ public class GameController : MonoBehaviour
         boxColPuerta = zonapuerta.GetComponent<BoxCollider2D>();
         boxColNoPermitirPaso = zonaNoPermitirPaso.GetComponent<BoxCollider2D>();
         animacionPuerta = puerta.GetComponent<Animator>();
+        snd_pausa = snd_Pausa.GetComponent<AudioSource>();
 
         playerController.PlayerMuerto += PlayerMuerto;//Suscribirse al evento
         //Suscribirse al evento del CheckPoint según el identificador
@@ -195,6 +197,7 @@ public class GameController : MonoBehaviour
     {
         gameOn = false;
         current.musicaFondo.Pause();
+        current.snd_pausa.Play();
     }
     public static void ReanudarGame()
     {
@@ -203,7 +206,7 @@ public class GameController : MonoBehaviour
     }
     public static void SalirGame()
     {
-        SceneManager.LoadScene("Minimapa");
+        SceneManager.LoadScene("Menu");
     }
     // Fin de metodos Publicos para Controlar la Pausa
 
@@ -301,26 +304,25 @@ public class GameController : MonoBehaviour
             //estadoPos(0)  = No se ha descubierto
             //estadoPos(1)  = Se ha descubierto
             //estadoPos(2)  = Tiene que aparecer poco a poco
-
-            if (Variables.nivel == 1 && Variables.estadoPos1 == 0)
+            if (Variables.nivel == 1 && Variables.estadoPos0 == 0)
+            {
+                Variables.Maxnivel++;
+                Variables.estadoPos0 = 2;
+            }
+            if (Variables.nivel == 2 && Variables.estadoPos1 == 0)
             {
                 Variables.Maxnivel++;
                 Variables.estadoPos1 = 2;
             }
-            if (Variables.nivel == 2 && Variables.estadoPos2 == 0)
+            if (Variables.nivel == 3 && Variables.estadoPos2 == 0)
             {
                 Variables.Maxnivel++;
                 Variables.estadoPos2 = 2;
             }
-            if (Variables.nivel == 3 && Variables.estadoPos3 == 0)
+            if (Variables.nivel == 4 && Variables.estadoPos3 == 0)
             {
                 Variables.Maxnivel++;
                 Variables.estadoPos3 = 2;
-            }
-            if (Variables.nivel == 4 && Variables.estadoPos4 == 0)
-            {
-                Variables.Maxnivel++;
-                Variables.estadoPos4 = 2;
             }
         }
 

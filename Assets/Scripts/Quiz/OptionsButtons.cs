@@ -44,7 +44,15 @@ public class OptionsButtons : MonoBehaviour
     {
         m_button.enabled = false;
         m_image.color = c;
-
     }
 
+    public void desactivaButton()
+    {
+        m_button.interactable = false;
+    }
+
+    public void activaButton()
+    {
+        m_button.interactable = true;
+    }
 }

@@ -60,7 +60,7 @@ public class Pausa : MonoBehaviour
 
     public void Salir()
     {
-        GameController.SalirGame();
+        //GameController.SalirGame();
     }
 }
  
