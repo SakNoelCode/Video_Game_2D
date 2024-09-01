@@ -19,11 +19,9 @@
 ## Como acceder al archivo .exe
 1. El archivo .exe es el ejecutable del videojuego
 
-1. La carpeta se encontrará en el directorio raíz con el nombre de **Recursos**, va a ser un archivo comprimido
+1. La carpeta se encontrará en el directorio raíz con el nombre de **Build**, va a ser un archivo comprimido
 
-1. Descomprima el archivo .zip, dentro encontrará la carpeta Build
-
-1. Dentro de la carpeta, ejecute el archivo **Dino Matematica**, este es el videojuego.
+1. Descomprima el archivo .zip, ejecute el archivo **Dino Matematica**, este es el videojuego.
 
 1. A jugar!!!!!
 
